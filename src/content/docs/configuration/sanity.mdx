@@ -17,7 +17,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     After signin on Sanity, you can create your first project [here](https://www.sanity.io/manage?new-project).
 
-3. Set the project id to the `.env` file
+3. Get the project id
 
     After creating the project, you will see the project id under the project name.
 
@@ -26,7 +26,7 @@ import { Steps } from '@astrojs/starlight/components';
     NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id;
     ```
 
-4. Set the dataset to the `.env` file
+4. Get the dataset
 
     The default dataset is `production`, and you can create a new dataset or use the default one.
 
@@ -35,9 +35,9 @@ import { Steps } from '@astrojs/starlight/components';
     NEXT_PUBLIC_SANITY_DATASET=your_dataset;
     ```
 
-5. Set API token to the `.env` file
+5. Get the API token
 
-    Go to the project API settings, click on `Add API token`, create a new token with the permissions of `Editor`, and set it to the `.env` file.
+    Go to the project API settings, click the button `Add API token`, create a new token with the permissions of `Editor`, and set it to the `.env` file.
 
     ```bash
     # .env
@@ -46,8 +46,9 @@ import { Steps } from '@astrojs/starlight/components';
 
 6. Set the CORS origins
 
-    Go to the project API settings, click on `Add CORS origin`, add the origin of your domain (e.g. `https://mkdirs.com`) or `http://localhost:3000` for local development
+    Go to the project API settings, click the button `Add CORS origin`, add the origin of your domain (e.g. `https://mkdirs.com`) or `http://localhost:3000` for local development.
 
+    It's used to allow you to access the Sanity Studio under the `/studio` path, for example, `https://mkdirs.com/studio` or `http://localhost:3000/studio`.
 
 </Steps>
 

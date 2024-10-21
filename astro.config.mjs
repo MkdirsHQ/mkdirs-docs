@@ -14,7 +14,7 @@ export default defineConfig({
 				twitter: 'https://x.com/MkdirsHQ',
 			},
 			logo: {
-				src: './src/assets/logo.png',
+				src: './src/assets/logo-rounded.png',
 				alt: 'Mkdirs Logo',
 			},
 			sidebar: [
@@ -33,6 +33,7 @@ export default defineConfig({
 						{ label: 'Sanity', slug: 'configuration/sanity' },
 						{ label: 'Email', slug: 'configuration/email' },
 						{ label: 'Authentication', slug: 'configuration/authentication' },
+						{ label: 'Stripe', slug: 'configuration/stripe' },
 					],
 				},
 				// {

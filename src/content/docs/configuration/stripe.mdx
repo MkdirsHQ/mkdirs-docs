@@ -1,0 +1,70 @@
+---
+title: Stripe
+description: How to manage the payment with Stripe.
+---
+
+Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
+
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+
+1. Create an account on [Stripe](https://stripe.com/)
+
+    If don't have an account on Stripe, follow their steps to signup [here](https://dashboard.stripe.com/register).
+
+2. Get the Stripe API key
+
+    - Go to your Stripe dashboard.
+    - Select "Developers" on the top right navigation bar.
+    - Select "API keys" on the menu under "Developers".
+    - Hit the button "Reveal live key" (or "Reveal test key" if you are in test mode).
+    - Copy the secret key and set it to the `.env` file.
+
+    ```bash
+    # .env
+    STRIPE_API_KEY=your_stripe_api_key;
+    ```
+
+3. Create a new product in Stripe
+
+    - Go to your Stripe dashboard.
+    - Select "Product Catalog" on the left sidebar.
+    - Hit the button "+ Create Product".
+    - Give your product a clear name and set the one-time fee for user submissions.
+    - Click "Add Product" to create it.
+
+3. Find the price id
+
+    After creating the product, you will see the price id under the product name.
+
+    ```bash
+    # .env
+    NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id;
+    ```
+
+4. Set the dataset to the `.env` file
+
+    The default dataset is `production`, and you can create a new dataset or use the default one.
+
+    ```bash
+    # .env
+    NEXT_PUBLIC_SANITY_DATASET=your_dataset;
+    ```
+
+5. Set API token to the `.env` file
+
+    Go to the project API settings, click on `Add API token`, create a new token with the permissions of `Editor`, and set it to the `.env` file.
+
+    ```bash
+    # .env
+    SANITY_API_TOKEN=your_api_token;
+    ```
+
+6. Set the CORS origins
+
+    Go to the project API settings, click on `Add CORS origin`, add the origin of your domain (e.g. `https://mkdirs.com`) or `http://localhost:3000` for local development
+
+
+</Steps>
+

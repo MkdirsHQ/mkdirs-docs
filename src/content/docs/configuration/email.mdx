@@ -3,7 +3,7 @@ title: Email
 description: How to configure the email.
 ---
 
-Mkdirs uses [Resend](https://resend.com/) for email.
+Mkdirs uses [Resend](https://resend.com/) as the email service.
 
 import { Steps } from '@astrojs/starlight/components';
 
@@ -13,36 +13,34 @@ import { Steps } from '@astrojs/starlight/components';
 
     If don't have an account on Resend, follow their steps to signup [here](https://resend.com/signup).
 
-2. Create a new API key
+2. Get the Resend API key
 
-    After signin on Resend, you can create your first API key.
-
-3. Add the API key to the `.env` file
+    After signin on Resend, you can create your first API key, and set it to the `.env` file.
 
     ```bash
     # .env
     RESEND_API_KEY=your_api_key;
     ```
 
-4. Set the email address to send the emails from
+3. Set the email address to send the emails from
 
-    When you send an email, the email will be sent from the following email address:
+    When your application sends an email, for example, signup emails or reset password emails, the email will be sent from the following email address:
 
     ```bash
     # .env
     RESEND_EMAIL_FROM=support@example.com;
     ```
 
-5. Set the email address to receive the emails
+4. Set the email address to receive the emails
 
-    When there is a new submission, a email will be sent to the following email address:
+    When there is a new submission from a customer, a notification email will be sent to the following email address:
 
     ```bash
     # .env
     RESEND_EMAIL_ADMIN=admin@example.com;
     ```
 
-6. Set the audience id for newsletter
+5. Set the audience id for newsletter
 
     Create a new audience in Resend and set the audience id for newsletter in the `.env` file:
 
