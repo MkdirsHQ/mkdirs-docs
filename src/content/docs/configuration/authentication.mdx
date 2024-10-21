@@ -1,0 +1,55 @@
+---
+title: Authentication
+description: How to configure the authentication.
+---
+
+Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside>
+The auth part is similar at the [authjs](https://authjs.dev/) documentation. You can follow the official documentation [here](https://authjs.dev/getting-started/installation#setup-environment) if you want.
+</Aside>
+
+## Update AUTH_SECRET variable
+
+The only environment variable that is mandatory is the `AUTH_SECRET`. This is a random value used by the library to encrypt tokens and email verification hashes. You can generate one via running:
+
+```bash
+npx auth secret
+```
+
+Alternatively, you can use the openssl CLI, `openssl rand -base64 33`.
+
+Or this [link](https://generate-secret.vercel.app/32) for generate a random secret key.
+
+Then add it to your `.env` file:
+
+```bash
+# .env
+AUTH_SECRET=secret;
+```
+
+## Update Google client variables
+
+If you want to use Google as an authentication provider, you need to update the `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` variables.
+
+You can get the `client_id` and `client_secret` from the [Google Cloud Console](https://console.cloud.google.com/apis/credentials).
+
+```bash
+# .env
+AUTH_GOOGLE_ID = your_secret_client_id.apps.googleusercontent.com;
+AUTH_GOOGLE_SECRET = your_secret_client;
+```
+
+## Update GitHub client variables
+
+If you want to use GitHub as an authentication provider, you need to update the `AUTH_GITHUB_ID` and `AUTH_GITHUB_SECRET` variables.
+
+You can get the `client_id` and `client_secret` from the [GitHub Developer Settings](https://github.com/settings/developers).
+
+```bash
+# .env
+AUTH_GITHUB_ID = your_secret_client_id;
+AUTH_GITHUB_SECRET = your_secret_client;
+```

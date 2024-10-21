@@ -1,0 +1,53 @@
+---
+title: Sanity
+description: How to configure the Sanity.
+---
+
+Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS.
+
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+
+1. Create an account on [Sanity](https://www.sanity.io/)
+
+    If don't have an account on Sanity, follow their steps to signup [here](https://www.sanity.io/login/sign-up).
+
+2. Create a new project
+
+    After signin on Sanity, you can create your first project [here](https://www.sanity.io/manage?new-project).
+
+3. Set the project id to the `.env` file
+
+    After creating the project, you will see the project id under the project name.
+
+    ```bash
+    # .env
+    NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id;
+    ```
+
+4. Set the dataset to the `.env` file
+
+    The default dataset is `production`, and you can create a new dataset or use the default one.
+
+    ```bash
+    # .env
+    NEXT_PUBLIC_SANITY_DATASET=your_dataset;
+    ```
+
+5. Set API token to the `.env` file
+
+    Go to the project API settings, click on `Add API token`, create a new token with the permissions of `Editor`, and set it to the `.env` file.
+
+    ```bash
+    # .env
+    SANITY_API_TOKEN=your_api_token;
+    ```
+
+6. Set the CORS origins
+
+    Go to the project API settings, click on `Add CORS origin`, add the origin of your domain (e.g. `https://mkdirs.com`) or `http://localhost:3000` for local development
+
+
+</Steps>
+
