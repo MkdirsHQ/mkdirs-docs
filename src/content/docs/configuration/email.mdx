@@ -19,7 +19,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
-    # [required if you want to authenticate users by email/password]
+    # [only required if you want to authenticate users by email/password]
     RESEND_API_KEY=your_api_key;
     ```
 
@@ -29,7 +29,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
-    # [required if you want to authenticate users by email/password]
+    # [only required if you want to authenticate users by email/password]
     RESEND_EMAIL_FROM=support@example.com;
     ```
 
@@ -39,7 +39,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
-    # [required if you want to receive notification emails]
+    # [only required if you want to receive notification emails]
     RESEND_EMAIL_ADMIN=admin@example.com;
     ```
 
@@ -51,7 +51,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
-    # [required if you want to send newsletter emails]
+    # [only required if you want to support newsletter]
     RESEND_AUDIENCE_ID=your_audience_id;
     ```
 
