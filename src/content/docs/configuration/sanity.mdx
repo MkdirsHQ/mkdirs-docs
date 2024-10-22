@@ -23,6 +23,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
+    # [required]
     NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id;
     ```
 
@@ -32,6 +33,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
+    # [required]
     NEXT_PUBLIC_SANITY_DATASET=your_dataset;
     ```
 
@@ -41,14 +43,15 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
+    # [required]
     SANITY_API_TOKEN=your_api_token;
     ```
 
-6. Set the CORS origins
+6. Configure the CORS origins
 
-    Go to the project API settings, click the button `Add CORS origin`, add the origin of your domain (e.g. `https://mkdirs.com`) or `http://localhost:3000` for local development.
+    Go to the project API settings, click the button `Add CORS origin`, add the origin of your domain (e.g. `https://your-domain.com`) or `http://localhost:3000` for local development.
 
-    It's used to allow you to access the Sanity Studio under the `/studio` path, for example, `https://mkdirs.com/studio` or `http://localhost:3000/studio`.
+    It's used to allow you to access the Sanity Studio under the `/studio` path, for example, `https://your-domain.com/studio` or `http://localhost:3000/studio`.
 
 </Steps>
 

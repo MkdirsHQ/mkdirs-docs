@@ -23,6 +23,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
+    # [required if you want to support paid submissions]
     STRIPE_API_KEY=your_stripe_api_key;
     ```
 
@@ -38,6 +39,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
+    # [required if you want to support paid submissions]
     NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id;
     ```
 
@@ -47,11 +49,13 @@ import { Steps } from '@astrojs/starlight/components';
     - Select "Developers" on the top right navigation bar.
     - Select "Webhooks" on the menu under "Developers".
     - Hit the button "Add an endpoint". 
-    - Enter the endpoint URL where Stripe will send events to, for example, `https://your-domain.com/api/stripe`.
-    - Set the webhook secret and set it to the `.env` file.
+    - Enter the endpoint URL where Stripe will send events to, for example, `https://your-domain.com/api/webhook`.
+    - Choose the events you want to receive notifications for, common events include `checkout.session.completed`.
+    - Copy the webhook secret and set it to the `.env` file.
 
     ```bash
     # .env
+    # [required if you want to support paid submissions]
     STRIPE_WEBHOOK_SECRET=your_webhook_secret;
     ```
 

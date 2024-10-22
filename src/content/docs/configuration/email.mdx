@@ -19,6 +19,7 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
+    # [required if you want to authenticate users by email/password]
     RESEND_API_KEY=your_api_key;
     ```
 
@@ -28,24 +29,29 @@ import { Steps } from '@astrojs/starlight/components';
 
     ```bash
     # .env
+    # [required if you want to authenticate users by email/password]
     RESEND_EMAIL_FROM=support@example.com;
     ```
 
-4. Set the email address to receive the emails
+4. Set the email address to receive the notification emails
 
     When there is a new submission from a customer, a notification email will be sent to the following email address:
 
     ```bash
     # .env
+    # [required if you want to receive notification emails]
     RESEND_EMAIL_ADMIN=admin@example.com;
     ```
 
 5. Set the audience id for newsletter
 
-    Create a new audience in Resend and set the audience id for newsletter in the `.env` file:
+    Create a new audience in Resend and copy the audience id, then set it to the `.env` file.
+
+    Audience is used to send newsletter emails to your subscribers.
 
     ```bash
     # .env
+    # [required if you want to send newsletter emails]
     RESEND_AUDIENCE_ID=your_audience_id;
     ```
 
