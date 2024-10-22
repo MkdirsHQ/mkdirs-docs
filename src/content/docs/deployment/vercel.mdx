@@ -1,0 +1,65 @@
+---
+title: Vercel
+description: How to deploy Mkdirs on Vercel.
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+You can easily deploy Mkdirs on [Vercel](https://vercel.com/).
+
+## Configuration
+
+<Steps>
+
+1. Create a new project on [Vercel](https://vercel.com/)
+
+    If don't have an account on Vercel, follow their steps to signup [here](https://vercel.com/signup).
+
+2. Get the Vercel API key
+
+    After signin on Vercel, you can create your first API key, and set it to the `.env` file.
+
+    ```bash
+    # .env
+    # [only required if you want to authenticate users by email/password]
+    RESEND_API_KEY=your_api_key
+    ```
+
+3. Set the email address to send the emails from
+
+    When your application sends an email, for example, signup emails or reset password emails, the email will be sent from the following email address:
+
+    ```bash
+    # .env
+    # [only required if you want to authenticate users by email/password]
+    RESEND_EMAIL_FROM=support@example.com
+    ```
+
+4. [Optional] Set the email address to receive the notification emails
+
+    When there is a new submission from a customer, a notification email will be sent to the following email address:
+
+    ```bash
+    # .env
+    # [only required if you want to receive notification emails]
+    RESEND_EMAIL_ADMIN=admin@example.com
+    ```
+
+5. [Optional] Get the audience id for newsletter
+
+    Create a new audience in Resend and copy the audience id, then set it to the `.env` file.
+
+    Audience is used to send newsletter emails to your subscribers.
+
+    ```bash
+    # .env
+    # [only required if you want to support newsletter]
+    RESEND_AUDIENCE_ID=your_audience_id
+    ```
+
+</Steps>
+
+## To be added in the docs
+
+- Add video tutorial.
+- Add detailed guide about email features, such as newsletter.

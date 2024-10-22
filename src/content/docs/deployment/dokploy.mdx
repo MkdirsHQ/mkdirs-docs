@@ -1,0 +1,63 @@
+---
+title: Dokploy
+description: How to deploy Mkdirs on Dokploy.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+I personally recommend using [Dokploy](https://dokploy.com/) to deploy Mkdirs, because it's much easier to setup the whole thing and you get the CI/CD pipeline like Vercel out of the box.
+
+## Deployment on Dokploy
+
+<Steps>
+
+1. Create a new project on Dokploy
+
+    Click on "Create project" and set the project name and description.
+
+2. Create an application in the project
+
+    Click on "Create services" and select "Application", then set the application name and description.
+
+3. Set the source code and build type
+
+    Set the source code to the repository, and set the build type to Dockerfile.
+
+    ![Dokploy Settings](../../../assets/images/dokploy-settings.png)
+
+    ![Dokploy Build Type](../../../assets/images/dokploy-buildtype.png)
+
+4. Set the environment variables
+
+    Copy the content from the `.env` file and paste them in environment settings.
+
+    <Aside type="caution">
+        Some environment variables maybe different in development and production.
+    </Aside>
+
+    ![Dokploy Environment Variables](../../../assets/images/dokploy-env.png) 
+
+5. Set the domain
+
+    Add the domain you want to use, and make sure to check on "HTTPS".
+
+    ![Dokploy Domain](../../../assets/images/dokploy-domain.png)
+
+6. Start to deploy
+
+    Click on "Deploy" and wait for the deployment to finish.
+
+    ![Dokploy Deploy](../../../assets/images/dokploy-deploy.png)
+
+7. Done
+
+    Check the application by visiting the domain you set once the deployment is finished.
+
+</Steps>
+
+
+## To be added in the docs
+
+- Add video tutorial.
+- Add detailed guide about deployment on Dokploy.

@@ -37,6 +37,14 @@ export default defineConfig({
 						{ label: 'Analytics', slug: 'configuration/analytics' },
 					],
 				},
+				{
+					label: 'Deployment',
+					items: [
+						{ label: 'Vercel', slug: 'deployment/vercel' },
+						{ label: 'Docker', slug: 'deployment/docker' },
+						{ label: 'Dokploy', slug: 'deployment/dokploy' },
+					],
+				},
 				// {
 				// 	label: 'Reference',
 				// 	autogenerate: { directory: 'reference' },
