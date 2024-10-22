@@ -34,6 +34,7 @@ export default defineConfig({
 						{ label: 'Email', slug: 'configuration/email' },
 						{ label: 'Authentication', slug: 'configuration/authentication' },
 						{ label: 'Stripe', slug: 'configuration/stripe' },
+						{ label: 'Analytics', slug: 'configuration/analytics' },
 					],
 				},
 				// {

@@ -3,55 +3,53 @@ title: Analytics
 description: How to configure the analytics.
 ---
 
-Mkdirs uses [Google Analytics](https://analytics.google.com/) or [OpenPanel](https://openpanel.dev/) as the analytics service.
-
 import { Steps } from '@astrojs/starlight/components';
+
+Mkdirs uses [Google Analytics](https://analytics.google.com/) or [OpenPanel](https://openpanel.dev/) as the analytics service, but you can also add other analytics services, and we will support more in the future.
+
+## Configuration for Google Analytics
+
+Follow the [official guide](https://support.google.com/analytics/answer/9304153) to set up Google Analytics for a website.
+
+Then copy the Google Analytics ID, and set it to the `.env` file.
+
+```bash
+# .env
+# [only required if you are using Google Analytics]
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
+```
+
+## Configuration for OpenPanel
 
 <Steps>
 
-1. Create an account on [Sanity](https://www.sanity.io/)
+1. Create an account on [OpenPanel](https://openpanel.dev//login)
 
-    If don't have an account on Sanity, follow their steps to signup [here](https://www.sanity.io/login/sign-up).
+   Follow the steps [here](https://dashboard.openpanel.dev/login) to create your account.
 
 2. Create a new project
 
-    After signin on Sanity, you can create your first project [here](https://www.sanity.io/manage?new-project).
+   Hit the `Create Project` button, enter the name of your project, and click the `Create` button.
 
-3. Get the project id
+3. Create a new client
 
-    After creating the project, you will see the project id under the project name.
+   Hit the `...` button next to the project name, and select `Projects`.
 
-    ```bash
-    # .env
-    # [required]
-    NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id;
-    ```
+   Hit the `New Client` button, and enter the domain, then click the `Create` button.
 
-4. Get the dataset
+4. Set the OpenPanel Client ID to the `.env` file
 
-    The default dataset is `production`, and you can create a new dataset or use the default one.
+   Once the client is created, copy the `Client ID` and set it to the `.env` file.
 
     ```bash
     # .env
-    # [required]
-    NEXT_PUBLIC_SANITY_DATASET=your_dataset;
+    # [only required if you are using OpenPanel]
+    NEXT_PUBLIC_OPENPANEL_CLIENT_ID=your_open_panel_client_id;
     ```
-
-5. Get the API token
-
-    Go to the project API settings, click the button `Add API token`, create a new token with the permissions of `Editor`, and set it to the `.env` file.
-
-    ```bash
-    # .env
-    # [required]
-    SANITY_API_TOKEN=your_api_token;
-    ```
-
-6. Configure the CORS origins
-
-    Go to the project API settings, click the button `Add CORS origin`, add the origin of your domain (e.g. `https://your-domain.com`) or `http://localhost:3000` for local development.
-
-    It's used to allow you to access the Sanity Studio under the `/studio` path, for example, `https://your-domain.com/studio` or `http://localhost:3000/studio`.
 
 </Steps>
 
+## To be added in the docs
+
+- Add video tutorial.
+- Add more analytics integrations.

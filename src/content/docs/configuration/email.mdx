@@ -7,6 +7,8 @@ import { Steps } from '@astrojs/starlight/components';
 
 Mkdirs uses [Resend](https://resend.com/) as the email service.
 
+## Configuration
+
 <Steps>
 
 1. Create an account on [Resend](https://resend.com/)
@@ -33,7 +35,7 @@ Mkdirs uses [Resend](https://resend.com/) as the email service.
     RESEND_EMAIL_FROM=support@example.com
     ```
 
-4. Set the email address to receive the notification emails
+4. [Optional] Set the email address to receive the notification emails
 
     When there is a new submission from a customer, a notification email will be sent to the following email address:
 
@@ -43,7 +45,7 @@ Mkdirs uses [Resend](https://resend.com/) as the email service.
     RESEND_EMAIL_ADMIN=admin@example.com
     ```
 
-5. Set the audience id for newsletter
+5. [Optional] Get the audience id for newsletter
 
     Create a new audience in Resend and copy the audience id, then set it to the `.env` file.
 
@@ -57,7 +59,7 @@ Mkdirs uses [Resend](https://resend.com/) as the email service.
 
 </Steps>
 
-## TODO
+## To be added in the docs
 
 - Add video tutorial.
 - Add detailed guide about email features, such as newsletter.
