@@ -26,13 +26,14 @@ import { Steps } from '@astrojs/starlight/components';
     STRIPE_API_KEY=your_stripe_api_key;
     ```
 
-3. Get the price id
+3. Get the product price id
 
     - Go to your Stripe dashboard.
     - Select "Product Catalog" on the left sidebar.
     - Hit the button "+ Create Product".
     - Give your product a clear name and set the one-time fee for user submissions.
     - Click "Add Product" to create it.
+    - Go to the product detail page, click the button "..." in the pricing section.
     - Copy the price id and set it to the `.env` file.
 
     ```bash
@@ -40,6 +41,19 @@ import { Steps } from '@astrojs/starlight/components';
     NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id;
     ```
 
+4. Get the webhook secret
+
+    - Go to your Stripe dashboard.
+    - Select "Developers" on the top right navigation bar.
+    - Select "Webhooks" on the menu under "Developers".
+    - Hit the button "Add an endpoint". 
+    - Enter the endpoint URL where Stripe will send events to, for example, `https://your-domain.com/api/stripe`.
+    - Set the webhook secret and set it to the `.env` file.
+
+    ```bash
+    # .env
+    STRIPE_WEBHOOK_SECRET=your_webhook_secret;
+    ```
 
 </Steps>
 
