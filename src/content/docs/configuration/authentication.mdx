@@ -3,53 +3,61 @@ title: Authentication
 description: How to configure the authentication.
 ---
 
+import { Steps } from '@astrojs/starlight/components';
+
 Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
 
-import { Aside } from '@astrojs/starlight/components';
+<Steps>
 
-<Aside>
-The auth part is similar at the [authjs](https://authjs.dev/) documentation. You can follow the official documentation [here](https://authjs.dev/getting-started/installation#setup-environment) if you want.
-</Aside>
+1. Generate the `AUTH_SECRET` variable
 
-## Update AUTH_SECRET variable
+    `AUTH_SECRET` is a random value, and you can generate one via running:
 
-The only environment variable that is mandatory is the `AUTH_SECRET`. This is a random value used by the library to encrypt tokens and email verification hashes. You can generate one via running:
+    ```bash
+    npx auth secret
 
-```bash
-npx auth secret
-```
+    # or
+    openssl rand -base64 33
+    ```
 
-Alternatively, you can use the openssl CLI, `openssl rand -base64 33`.
+    Then set it to your `.env` file
 
-Or this [link](https://generate-secret.vercel.app/32) for generate a random secret key.
+    ```bash
+    # .env
+    # [required]
+    AUTH_SECRET=secret
+    ```
 
-Then add it to your `.env` file:
+2. Get the GitHub client variables
 
-```bash
-# .env
-AUTH_SECRET=secret;
-```
+    If you want to use GitHub as an OAuth provider, you need to update the `AUTH_GITHUB_ID` and `AUTH_GITHUB_SECRET` variables.
 
-## Update Google client variables
+    Follow the steps [here](https://authjs.dev/guides/configuring-github) to get the `client_id` and `client_secret` from the [GitHub Developer Settings](https://github.com/settings/developers).
 
-If you want to use Google as an authentication provider, you need to update the `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` variables.
+    ```bash
+    # .env
+    # [only required if you want to support GitHub authentication]
+    AUTH_GITHUB_ID = your_secret_client_id
+    AUTH_GITHUB_SECRET = your_secret_client
+    ```
 
-You can get the `client_id` and `client_secret` from the [Google Cloud Console](https://console.cloud.google.com/apis/credentials).
+3. Get the Google client variables
 
-```bash
-# .env
-AUTH_GOOGLE_ID = your_secret_client_id.apps.googleusercontent.com;
-AUTH_GOOGLE_SECRET = your_secret_client;
-```
+    If you want to use Google as an OAuth provider, you need to update the `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` variables.
 
-## Update GitHub client variables
+    You can get the `client_id` and `client_secret` from the [Google Cloud Console](https://console.cloud.google.com/apis/credentials).
 
-If you want to use GitHub as an authentication provider, you need to update the `AUTH_GITHUB_ID` and `AUTH_GITHUB_SECRET` variables.
+    ```bash
+    # .env
+    # [only required if you want to support Google authentication]
+    AUTH_GOOGLE_ID = your_secret_client_id.apps.googleusercontent.com
+    AUTH_GOOGLE_SECRET = your_secret_client
+    ```
 
-Follow the steps [here](https://authjs.dev/guides/configuring-github) to get the `client_id` and `client_secret` from the [GitHub Developer Settings](https://github.com/settings/developers).
+</Steps>
 
-```bash
-# .env
-AUTH_GITHUB_ID = your_secret_client_id;
-AUTH_GITHUB_SECRET = your_secret_client;
-```
+## TODO
+
+- Add video tutorial.
+- Add detailed steps about Google OAuth and GitHub OAuth.
+- Add more tutorials about authentication features.

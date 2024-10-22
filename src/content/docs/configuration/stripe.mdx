@@ -3,9 +3,9 @@ title: Stripe
 description: How to manage the payment with Stripe.
 ---
 
-Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
-
 import { Steps } from '@astrojs/starlight/components';
+
+Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
 
 <Steps>
 
@@ -24,7 +24,7 @@ import { Steps } from '@astrojs/starlight/components';
     ```bash
     # .env
     # [only required if you want to support paid submissions]
-    STRIPE_API_KEY=your_stripe_api_key;
+    STRIPE_API_KEY=your_stripe_api_key
     ```
 
 3. Get the product price id
@@ -40,7 +40,7 @@ import { Steps } from '@astrojs/starlight/components';
     ```bash
     # .env
     # [only required if you want to support paid submissions]
-    NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id;
+    NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id
     ```
 
 4. Get the webhook secret
@@ -56,8 +56,13 @@ import { Steps } from '@astrojs/starlight/components';
     ```bash
     # .env
     # [only required if you want to support paid submissions]
-    STRIPE_WEBHOOK_SECRET=your_webhook_secret;
+    STRIPE_WEBHOOK_SECRET=your_webhook_secret
     ```
 
 </Steps>
 
+## TODO
+
+- Add video tutorial.
+- Add detailed steps about creating product and setting price.
+- Add detailed steps about setting up webhook and testing in dev environment.

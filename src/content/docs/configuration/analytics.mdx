@@ -1,11 +1,11 @@
 ---
-title: Sanity
-description: How to configure the Sanity.
+title: Analytics
+description: How to configure the analytics.
 ---
 
-import { Steps } from '@astrojs/starlight/components';
+Mkdirs uses [Google Analytics](https://analytics.google.com/) or [OpenPanel](https://openpanel.dev/) as the analytics service.
 
-Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS.
+import { Steps } from '@astrojs/starlight/components';
 
 <Steps>
 
@@ -24,7 +24,7 @@ Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS.
     ```bash
     # .env
     # [required]
-    NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+    NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id;
     ```
 
 4. Get the dataset
@@ -34,7 +34,7 @@ Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS.
     ```bash
     # .env
     # [required]
-    NEXT_PUBLIC_SANITY_DATASET=your_dataset
+    NEXT_PUBLIC_SANITY_DATASET=your_dataset;
     ```
 
 5. Get the API token
@@ -44,7 +44,7 @@ Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS.
     ```bash
     # .env
     # [required]
-    SANITY_API_TOKEN=your_api_token
+    SANITY_API_TOKEN=your_api_token;
     ```
 
 6. Configure the CORS origins
@@ -55,8 +55,3 @@ Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS.
 
 </Steps>
 
-## TODO
-
-- Add video tutorial.
-- Add detailed steps about exporting and importing the data.
-- Add more tutorials about Sanity Studio.

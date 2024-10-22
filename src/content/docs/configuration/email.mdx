@@ -3,9 +3,9 @@ title: Email
 description: How to configure the email.
 ---
 
-Mkdirs uses [Resend](https://resend.com/) as the email service.
-
 import { Steps } from '@astrojs/starlight/components';
+
+Mkdirs uses [Resend](https://resend.com/) as the email service.
 
 <Steps>
 
@@ -20,7 +20,7 @@ import { Steps } from '@astrojs/starlight/components';
     ```bash
     # .env
     # [only required if you want to authenticate users by email/password]
-    RESEND_API_KEY=your_api_key;
+    RESEND_API_KEY=your_api_key
     ```
 
 3. Set the email address to send the emails from
@@ -30,7 +30,7 @@ import { Steps } from '@astrojs/starlight/components';
     ```bash
     # .env
     # [only required if you want to authenticate users by email/password]
-    RESEND_EMAIL_FROM=support@example.com;
+    RESEND_EMAIL_FROM=support@example.com
     ```
 
 4. Set the email address to receive the notification emails
@@ -40,7 +40,7 @@ import { Steps } from '@astrojs/starlight/components';
     ```bash
     # .env
     # [only required if you want to receive notification emails]
-    RESEND_EMAIL_ADMIN=admin@example.com;
+    RESEND_EMAIL_ADMIN=admin@example.com
     ```
 
 5. Set the audience id for newsletter
@@ -52,8 +52,12 @@ import { Steps } from '@astrojs/starlight/components';
     ```bash
     # .env
     # [only required if you want to support newsletter]
-    RESEND_AUDIENCE_ID=your_audience_id;
+    RESEND_AUDIENCE_ID=your_audience_id
     ```
 
 </Steps>
 
+## TODO
+
+- Add video tutorial.
+- Add detailed guide about email features, such as newsletter.
