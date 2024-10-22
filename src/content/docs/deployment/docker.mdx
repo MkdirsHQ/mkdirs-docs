@@ -7,9 +7,9 @@ import { Steps } from '@astrojs/starlight/components';
 
 You can easily deploy Mkdirs on [Docker](https://www.docker.com/).
 
-## Deployment with Dockerfile
+## Deploy with Dockerfile
 
-Mkdirs comes with a pre-configured Docker file, so you can deploy it on any Docker-compatible platform.
+Mkdirs comes with a pre-configured Docker file.
 
 ```dockerfile
 # Dockerfile
@@ -75,12 +75,6 @@ ENV HOSTNAME "0.0.0.0"
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
 CMD ["node", "server.js"]
 ```
-
-## Deployment on Dokploy
-
-I personally recommend using [Dokploy](https://dokploy.com/) to deploy Mkdirs, because it's much easier to setup the whole thing and you get the CI/CD pipeline like Vercel out of the box.
-
-![Dokploy Build Type](../../../assets/images/dokploy-buildtype.png)
 
 ## To be added in the docs
 
