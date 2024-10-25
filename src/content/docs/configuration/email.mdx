@@ -13,11 +13,13 @@ Mkdirs uses [Resend](https://resend.com/) as the email service.
 
 1. Create an account on [Resend](https://resend.com/)
 
-    If don't have an account on Resend, follow their steps to signup [here](https://resend.com/signup).
+    If don't have an account on Resend, follow their steps to [signup](https://resend.com/signup).
+
+    After signin on Resend, following their steps to [add your domain to Resend](https://resend.com/docs/dashboard/domains/cloudflare).
 
 2. Get the Resend API key
 
-    After signin on Resend, you can create your first API key, and set it to the `.env` file.
+    Click on `API Keys` on the left navigation bar, then click on the `Create API key` button, and set it to the `.env` file.
 
     ```bash
     # .env
@@ -25,9 +27,11 @@ Mkdirs uses [Resend](https://resend.com/) as the email service.
     RESEND_API_KEY=your_api_key
     ```
 
+    ![Resend Keys](../../../assets/images/resend-keys.png)
+
 3. Set the email address to send the emails from
 
-    When your application sends an email, for example, signup emails or reset password emails, the email will be sent from the following email address:
+    When sending an email, for example, signup emails, the email will be sent from the following email address:
 
     ```bash
     # .env
@@ -49,13 +53,15 @@ Mkdirs uses [Resend](https://resend.com/) as the email service.
 
     Create a new audience in Resend and copy the audience id, then set it to the `.env` file.
 
-    Audience is used to send newsletter emails to your subscribers.
+    This variable is used to support newsletter subscription on the website.
 
     ```bash
     # .env
     # [only required if you want to support newsletter]
     RESEND_AUDIENCE_ID=your_audience_id
     ```
+
+    ![Resend Audience](../../../assets/images/resend-audience.png)
 
 </Steps>
 

@@ -6,7 +6,7 @@ description: How to deploy Mkdirs on Dokploy.
 import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-I personally recommend using [Dokploy](https://dokploy.com/) to deploy Mkdirs, because it's much easier to setup the whole thing and you get the CI/CD pipeline like Vercel out of the box.
+I personally recommend using [Dokploy](https://dokploy.com/) to deploy Mkdirs, because it's much easier to setup the whole thing and you get the automatic CI/CD pipeline like Vercel out of the box.
 
 ## Deploy on Dokploy
 
@@ -14,11 +14,11 @@ I personally recommend using [Dokploy](https://dokploy.com/) to deploy Mkdirs, b
 
 1. Create a new project on Dokploy
 
-    Click on "Create project" and set the project name and description.
+    Click on the `Create project` button and set the project name and description.
 
 2. Create an application in the project
 
-    Click on "Create services" and select "Application", then set the application name and description.
+    Click on the `Create services` button and select `Application`, then set the application name and description.
 
 3. Set the source code and build type
 
@@ -33,22 +33,24 @@ I personally recommend using [Dokploy](https://dokploy.com/) to deploy Mkdirs, b
     Copy the content from the `.env` file and paste them in environment settings.
 
     <Aside type="caution">
-        Some environment variables maybe different in development and production.
+        1. Environment variables maybe different in development and production.
+        2. Add `AUTH_TRUST_HOST=true` to the environment variables.
+        3. Add `AUTH_URL=https://your-domain.com/api/auth` to the environment variables.
     </Aside>
 
     ![Dokploy Environment Variables](../../../assets/images/dokploy-env.png) 
 
-5. Set the domain
+5. Start to deploy
 
-    Add the domain you want to use, and make sure to check on "HTTPS".
-
-    ![Dokploy Domain](../../../assets/images/dokploy-domain.png)
-
-6. Start to deploy
-
-    Click on "Deploy" and wait for the deployment to finish.
+    Click on `Deploy` and wait for the deployment to finish.
 
     ![Dokploy Deploy](../../../assets/images/dokploy-deploy.png)
+
+6. Set the domain
+
+    Add the domain you want to use, and make sure to check on `HTTPS`.
+
+    ![Dokploy Domain](../../../assets/images/dokploy-domain.png)
 
 7. Done
 

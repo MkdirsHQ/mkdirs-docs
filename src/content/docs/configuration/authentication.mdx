@@ -22,7 +22,7 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
     openssl rand -base64 33
     ```
 
-    Then set it to your `.env` file
+    Then set it to the `.env` file.
 
     ```bash
     # .env
@@ -36,6 +36,8 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
 
     Follow the steps [here](https://authjs.dev/guides/configuring-github) to get the `client_id` and `client_secret` from the [GitHub Developer Settings](https://github.com/settings/developers).
 
+    For the callback URL, it is `https://your-domain.com/api/auth/callback/github` or `http://localhost:3000/api/auth/callback/github` for local development.
+
     ```bash
     # .env
     # [only required if you want to support GitHub authentication]
@@ -43,11 +45,15 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
     AUTH_GITHUB_SECRET = your_secret_client
     ```
 
+    ![GitHub Client](../../../assets/images/github-client.png)
+
 3. [Optional] Get the Google client variables
 
     If you want to use Google as an OAuth provider, you need to update the `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET` variables.
 
     You can get the `client_id` and `client_secret` from the [Google Cloud Console](https://console.cloud.google.com/apis/credentials).
+
+    For the callback URL, it is `https://your-domain.com/api/auth/callback/google` or `http://localhost:3000/api/auth/callback/google` for local development.
 
     ```bash
     # .env
@@ -55,6 +61,8 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
     AUTH_GOOGLE_ID = your_secret_client_id.apps.googleusercontent.com
     AUTH_GOOGLE_SECRET = your_secret_client
     ```
+
+    ![Google Client](../../../assets/images/google-client.png)
 
 </Steps>
 

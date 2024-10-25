@@ -13,14 +13,14 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
 
 1. Create an account on [Stripe](https://stripe.com/)
 
-    If don't have an account on Stripe, follow their steps to signup [here](https://dashboard.stripe.com/register).
+    If don't have an account on Stripe, follow their steps to [signup](https://dashboard.stripe.com/register).
 
 2. Get the Stripe API key
 
     - Go to your Stripe dashboard.
-    - Select "Developers" on the top right navigation bar.
-    - Select "API keys" on the menu under "Developers".
-    - Hit the button "Reveal live key" (or "Reveal test key" if you are in test mode).
+    - Select `Developers` on the top right navigation bar.
+    - Select `API keys` on the menu under `Developers`.
+    - Click on the `Reveal live key` (or `Reveal test key` if you are in test mode).
     - Copy the secret key and set it to the `.env` file.
 
     ```bash
@@ -29,14 +29,16 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
     STRIPE_API_KEY=your_stripe_api_key
     ```
 
+    ![Stripe Key](../../../assets/images/stripe-key.png)
+
 3. Get the product price id
 
     - Go to your Stripe dashboard.
-    - Select "Product Catalog" on the left sidebar.
-    - Hit the button "+ Create Product".
+    - Select `Product Catalog` on the left sidebar.
+    - Click on the `+ Create Product` button.
     - Give your product a clear name and set the one-time fee for user submissions.
-    - Click "Add Product" to create it.
-    - Go to the product detail page, click the button "..." in the pricing section.
+    - Click on the `Add Product` button to create it.
+    - Go to the product detail page, click on the `...` button in the pricing section.
     - Copy the price id and set it to the `.env` file.
 
     ```bash
@@ -45,12 +47,14 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
     NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id
     ```
 
+    ![Stripe Price](../../../assets/images/stripe-price.png)
+
 4. Get the webhook secret
 
     - Go to your Stripe dashboard.
-    - Select "Developers" on the top right navigation bar.
-    - Select "Webhooks" on the menu under "Developers".
-    - Hit the button "Add an endpoint". 
+    - Select `Developers` on the top right navigation bar.
+    - Select `Webhooks` on the menu under `Developers`.
+    - Click on the `Add an endpoint` button.
     - Enter the endpoint URL where Stripe will send events to, for example, `https://your-domain.com/api/webhook`.
     - Choose the events you want to receive notifications for, common events include `checkout.session.completed`.
     - Copy the webhook secret and set it to the `.env` file.
@@ -60,6 +64,8 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
     # [only required if you want to support paid submissions]
     STRIPE_WEBHOOK_SECRET=your_webhook_secret
     ```
+
+    ![Stripe Webhook](../../../assets/images/stripe-webhook.png)
 
 </Steps>
 
