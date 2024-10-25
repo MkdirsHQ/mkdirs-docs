@@ -45,10 +45,15 @@ export default defineConfig({
 						{ label: 'Dokploy', slug: 'deployment/dokploy' },
 					],
 				},
-				// {
-				// 	label: 'Reference',
-				// 	autogenerate: { directory: 'reference' },
-				// },
+				{
+					label: 'Guide',
+					items: [
+						{ label: 'Logo', slug: 'guide/logo' },
+						{ label: 'Font', slug: 'guide/font' },
+						{ label: 'Theme', slug: 'guide/theme' },
+						{ label: 'Email', slug: 'guide/email' },
+					],
+				},
 			],
 		}),
 	],

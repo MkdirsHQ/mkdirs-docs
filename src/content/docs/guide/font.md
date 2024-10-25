@@ -1,0 +1,12 @@
+---
+title: How to customize the font
+description: How to customize the font of the directory website.
+---
+
+The font file is in the `src/assets/fonts` folder, you can add your custom font file to the `fonts` folder, and define the font in `src/assets/fonts/index.ts`.
+
+![Font File](../../../assets/images/guide-font-file.png)
+
+Then you can use the font in the `src/app/(website)/layout.tsx` file.
+
+![Font Definition](../../../assets/images/guide-font-layout.png)
