@@ -10,7 +10,6 @@ Then copy the code and replace the existing code in the `src/styles/globals.css`
 ```css
 /* src/styles/globals.css */
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
