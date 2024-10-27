@@ -52,6 +52,7 @@ export default defineConfig({
 						{ label: 'Font', slug: 'guide/font' },
 						{ label: 'Theme', slug: 'guide/theme' },
 						{ label: 'Email', slug: 'guide/email' },
+						{ label: 'Sanity', slug: 'guide/sanity' },
 					],
 				},
 			],
