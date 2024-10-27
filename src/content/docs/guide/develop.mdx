@@ -56,6 +56,12 @@ Follow the steps below to sync the source code from `@Mkdirs/mkdirs-template` to
     git merge upstream/main --allow-unrelated-histories
     ```
 
+    If you don't want to merge all the changes from the upstream main branch, you can also cherry-pick the specific commits that you want to apply to your local main branch:
+
+    ```bash
+    git cherry-pick <commit-hash>
+    ```
+
 5. Resolve conflicts (if any)
 
     If conflicts occur during the merge (mainly due to you have made some changes to the source code already), you'll need to resolve them manually. 
