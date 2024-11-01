@@ -3,6 +3,7 @@ title: Stripe
 description: How to manage the payment with Stripe.
 ---
 
+import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
@@ -23,6 +24,11 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
     - Click on the `Reveal live key` (or `Reveal test key` if you are in test mode).
     - Copy the secret key and set it to the `.env` file.
 
+    <Aside type="caution">
+        1. Make sure you copy the **secret key** and not the **public key**.
+        2. Make sure you set the different secret keys for live and test modes.
+    </Aside>
+
     ```bash
     # .env
     # [only required if you want to support paid submissions]
@@ -39,7 +45,11 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
     - Give your product a clear name and set the one-time fee for user submissions.
     - Click on the `Add Product` button to create it.
     - Go to the product detail page, click on the `...` button in the pricing section.
-    - Copy the price id and set it to the `.env` file.
+    - Copy the **price id** and set it to the `.env` file.
+
+    <Aside type="caution">
+        Make sure you copy the **price id** and not the **product id**.
+    </Aside>
 
     ```bash
     # .env

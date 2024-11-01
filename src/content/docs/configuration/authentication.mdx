@@ -3,6 +3,7 @@ title: Authentication
 description: How to configure the authentication.
 ---
 
+import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
@@ -36,7 +37,7 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
 
     Follow the steps [here](https://authjs.dev/guides/configuring-github) to get the `client_id` and `client_secret` from the [GitHub Developer Settings](https://github.com/settings/developers).
 
-    For the callback URL, it is `https://your-domain.com/api/auth/callback/github` or `http://localhost:3000/api/auth/callback/github` for local development.
+    For the callback URL, it is **`https://your-domain.com/api/auth/callback/github`** or **`http://localhost:3000/api/auth/callback/github`** for local development.
 
     ```bash
     # .env
@@ -44,6 +45,11 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
     AUTH_GITHUB_ID = your_secret_client_id
     AUTH_GITHUB_SECRET = your_secret_client
     ```
+
+    <Aside type="caution">
+        Please create 2 OAuth applications in the GitHub Developer Settings, one for the production environment and one for the development environment.
+        Don't use the same OAuth application for both environments.
+    </Aside>
 
     ![GitHub Client](../../../assets/images/github-client.png)
 
@@ -53,7 +59,7 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
 
     You can get the `client_id` and `client_secret` from the [Google Cloud Console](https://console.cloud.google.com/apis/credentials).
 
-    For the callback URL, it is `https://your-domain.com/api/auth/callback/google` or `http://localhost:3000/api/auth/callback/google` for local development.
+    For the callback URL, it is **`https://your-domain.com/api/auth/callback/google`** or **`http://localhost:3000/api/auth/callback/google`** for local development.
 
     ```bash
     # .env
@@ -61,6 +67,11 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
     AUTH_GOOGLE_ID = your_secret_client_id.apps.googleusercontent.com
     AUTH_GOOGLE_SECRET = your_secret_client
     ```
+
+    <Aside type="caution">
+        Please create 2 OAuth applications in the Google Cloud Console, one for the production environment and one for the development environment.
+        Don't use the same OAuth application for both environments.
+    </Aside>
 
     ![Google Client](../../../assets/images/google-client.png)
 
@@ -73,4 +84,5 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication.
 - [Auth.js v5 - Environment Variables](https://authjs.dev/guides/environment-variables)
 - [Auth.js v5 - OAuth with GitHub](https://authjs.dev/guides/configuring-github)
 - [Auth.js v5 - Database Adapter](https://authjs.dev/guides/creating-a-database-adapter)
+- [Auth.js v5 - Data Models](https://authjs.dev/concepts/database-models)
 - [YouTube Video - Next Auth V5 - Advanced Guide (2024)](https://www.youtube.com/watch?v=1MTyCvS05V4)
