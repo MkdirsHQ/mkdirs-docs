@@ -32,8 +32,8 @@ export default defineConfig({
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Sanity', slug: 'configuration/sanity' },
 						{ label: 'Email', slug: 'configuration/email' },
-						{ label: 'Authentication', slug: 'configuration/authentication' },
 						{ label: 'Stripe', slug: 'configuration/stripe' },
+						{ label: 'Authentication', slug: 'configuration/authentication' },
 						{ label: 'Analytics', slug: 'configuration/analytics' },
 					],
 				},
