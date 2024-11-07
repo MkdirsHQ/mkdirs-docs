@@ -1,0 +1,142 @@
+---
+title: 安装
+description: 如何使用 Mkdirs 启动您的导航站。
+---
+
+import { Steps } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+
+学习如何使用 Mkdirs 启动您的导航站。
+
+## 安装指南
+
+<Steps>
+
+1. 创建您的仓库
+
+   点击 [Mkdirs 模板](https://github.com/MkdirsHQ/mkdirs-template) 右上角的 `Use this template` 按钮创建您的仓库，设置仓库名称，并确保将其设置为私有。
+
+2. 克隆 Github 仓库
+
+   ```bash
+   git clone https://github.com/your-username/your-repository-name.git
+   ```
+
+3. 安装依赖
+
+   确保安装依赖（推荐使用 PNPM）。
+
+   ```bash
+   cd your-repository-name
+   pnpm install
+   ```
+
+4. 复制 `.env.example` 文件为 `.env`
+
+   ```bash
+   cp .env.example .env
+   ```
+
+5. 配置环境变量
+
+   更新环境变量，了解更多关于配置环境变量的信息，请看 [这里](/zh-cn/configuration/sanity/)。
+
+   ```bash
+   # .env
+
+   # "http://localhost:3000" or "https://mkdirs.com"
+   NEXT_PUBLIC_APP_URL=
+
+   # -----------------------------------------------------------------------------
+   # Dataset & Storage (Sanity)
+   # -----------------------------------------------------------------------------
+   NEXT_PUBLIC_SANITY_DATASET=
+   NEXT_PUBLIC_SANITY_PROJECT_ID=
+   SANITY_API_TOKEN=
+
+   # -----------------------------------------------------------------------------
+   # Email (Resend)
+   # -----------------------------------------------------------------------------
+   RESEND_API_KEY=
+   RESEND_EMAIL_FROM=
+   RESEND_EMAIL_ADMIN=
+   RESEND_AUDIENCE_ID=
+
+   # -----------------------------------------------------------------------------
+   # Analytics (OpenPanel & Google Analytics)
+   # -----------------------------------------------------------------------------
+   NEXT_PUBLIC_OPENPANEL_CLIENT_ID=
+   NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=
+
+   # -----------------------------------------------------------------------------
+   # Payment (Stripe)
+   # -----------------------------------------------------------------------------
+   STRIPE_API_KEY=
+   STRIPE_WEBHOOK_SECRET=
+   NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=
+
+   # -----------------------------------------------------------------------------
+   # Authentication (NextAuth)
+   # -----------------------------------------------------------------------------
+   AUTH_SECRET=
+
+   AUTH_GOOGLE_ID=
+   AUTH_GOOGLE_SECRET=
+
+   AUTH_GITHUB_ID=
+   AUTH_GITHUB_SECRET=
+   ```
+
+6. 启动开发服务器
+
+   启动开发服务器，并打开浏览器访问 http://localhost:3000
+
+   ```bash
+   pnpm dev
+   ```
+
+7. 构建生产环境
+
+   构建应用程序以生成生产环境的代码。
+
+   ```bash
+   pnpm build
+   ```
+
+8. 部署
+
+   按照部署指南将您的应用程序部署到您喜欢的平台。
+   
+   - [Vercel](/zh-cn/deployment/vercel)
+   - [Docker](/zh-cn/deployment/docker)
+   - [Dokploy](/zh-cn/deployment/dokploy)
+
+</Steps>
+
+## 视频教程
+
+{/* ### 中文版 */}
+
+{/* https://www.youtube.com/embed/OzMw3ripzMc?list=PLVBbrIi208W-yprj2E6oXu-yxB3Ou522u */}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    src="https://www.youtube.com/embed/OzMw3ripzMc?list=PLVBbrIi208W-yprj2E6oXu-yxB3Ou522u" 
+    title="【完整版】基于Mkdirs模板部署上线导航站的全流程记录 &amp; 附导航站的完整功能演示" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen
+  ></iframe>
+</div>
+
+## 下一步是什么？
+
+一旦您部署了应用程序，建议设置一个过程来同步 `@Mkdirs/mkdirs-template` 的源代码到您的仓库，当有新功能或错误修复时，您可以同步更新。
+
+了解更多关于如何同步源代码的信息，请看 [开发](/zh-cn/guide/develop) 部分。
+
+
+## 进一步阅读
+
+<LinkCard title="配置" href="/zh-cn/configuration/sanity/" description="学习如何配置环境变量。" />

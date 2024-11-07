@@ -1,17 +1,17 @@
 ---
 title: Analytics
-description: How to configure the analytics.
+description: 如何配置 Analytics 相关环境变量。
 ---
 
 import { Steps } from '@astrojs/starlight/components';
 
-Mkdirs uses [Google Analytics](https://analytics.google.com/) or [OpenPanel](https://openpanel.dev/) as the analytics service, but you can also add other analytics services, and we will support more in the future.
+Mkdirs 使用 [Google Analytics](https://analytics.google.com/) 或 [OpenPanel](https://openpanel.dev/) 作为 Analytics 服务，但您也可以添加其他 Analytics 服务，我们将在未来支持更多服务。
 
 ## Google Analytics
 
-Follow the [official guide](https://support.google.com/analytics/answer/9304153) to set up Google Analytics for a website.
+按照 [官方指南](https://support.google.com/analytics/answer/9304153) 为网站设置 Google Analytics。
 
-Then copy the Google Analytics ID, and set it to the `.env` file.
+然后复制 Google Analytics ID，并将其设置到 `.env` 文件中。
 
 ```bash
 # .env
@@ -19,29 +19,29 @@ Then copy the Google Analytics ID, and set it to the `.env` file.
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
 ```
 
-![Google Analytics](../../../assets/images/analytics-google.png)
+![Google Analytics](../../../../assets/images/analytics-google.png)
 
 ## OpenPanel Analytics
 
 <Steps>
 
-1. Create an account on [OpenPanel](https://openpanel.dev//login)
+1. 在 [OpenPanel](https://openpanel.dev//login) 创建一个账户
 
-   Follow [the steps](https://dashboard.openpanel.dev/login) to create your account.
+   按照 [步骤](https://dashboard.openpanel.dev/login) 创建您的账户。
 
-2. Create a new project
+2. 创建一个新项目
 
-   Click on the `Create Project` button, enter the name of your project to create a new one.
+   点击 `Create Project` 按钮，输入项目名称以创建一个新项目。
 
-3. Create a new client
+3. 创建一个新客户端
 
-   Click on the `...` button next to the project name, and select `Projects`.
+   点击项目名称旁边的 `...` 按钮，并选择 `Projects`。
 
-   Click on the `New Client` button, and enter the domain to create a new client.
+   点击 `New Client` 按钮，并输入域名以创建一个新客户端。
 
-4. Get the OpenPanel Client ID
+4. 获取 OpenPanel 客户端 ID
 
-   Once the client is created, copy the `Client ID` and set it to the `.env` file.
+   一旦客户端创建完成，复制 `Client ID`，并将其设置到 `.env` 文件中。
 
     ```bash
     # .env
@@ -49,11 +49,11 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
     NEXT_PUBLIC_OPENPANEL_CLIENT_ID=your_open_panel_client_id;
     ```
 
-    ![OpenPanel Client](../../../assets/images/openpanel-client.png)
+    ![OpenPanel Client](../../../../assets/images/openpanel-client.png)
 
 </Steps>
 
-## Video tutorial
+## 视频教程
 
 {/* https://www.youtube.com/embed/O3DEgUjJvhs?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM */}
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -70,7 +70,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
   ></iframe>
 </div>
 
-## Further Reading
+## 延伸阅读
 
 - [Google Analytics](https://analytics.google.com/)
 - [OpenPanel](https://openpanel.dev/)

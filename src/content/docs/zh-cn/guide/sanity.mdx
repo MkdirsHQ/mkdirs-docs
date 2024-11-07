@@ -1,0 +1,60 @@
+---
+title: How to work with Sanity CMS
+description: How to customize the Sanity schema and GROQ queries.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+## Update the Sanity schema
+
+The Sanity schema files are in the `src/sanity/schemas/documents` folder, you can change the schema to your own schema, or add new schema, then add the new schema to the `src/sanity/schemas/index.ts` file.
+
+After you update the Sanity schema, you need to run the following command to generate the types:
+
+```bash
+pnpm typegen
+```
+
+<Aside type="note">
+    The `typegen` command will generate the types for the Sanity schema, and the types will be in the `sanity.types.ts` file, so don't edit the `sanity.types.ts` file directly.
+</Aside>
+
+
+## Update the GROQ queries
+
+The GROQ queries are in the `src/sanity/lib/queries.ts` file, you can change the GROQ queries to your own queries, or add new queries to the file.
+
+After you update the GROQ queries, you need to run the following command to generate the types:
+
+```bash
+pnpm typegen
+```
+
+<Aside type="note">
+    The `typegen` command will generate the types for the GROQ queries, and the types will be in the `sanity.types.ts` file, so don't edit the `sanity.types.ts` file directly.
+</Aside>
+
+## Configure the Sanity Studio
+
+The configuration of the Sanity Studio is in the `sanity.config.ts` file, you can customize the Sanity Studio to your own needs.
+
+For example, you can find a new [Sanity Plugin](https://www.sanity.io/plugins) and add it to the Sanity Studio.
+
+You can also change the default layout structure, according to the [Sanity Structure Builder](https://www.sanity.io/docs/structure-builder-introduction).
+
+
+## Further Reading
+
+- [Sanity](https://www.sanity.io/)
+- [Sanity Content Lake](https://www.sanity.io/docs/datastore)
+- [Sanity Studio](https://www.sanity.io/docs/sanity-studio)
+- [Sanity Plugins](https://www.sanity.io/plugins)
+- [Sanity CLI](https://www.sanity.io/docs/cli-reference)
+- [Sanity Structure Builder](https://www.sanity.io/docs/structure-builder-introduction)
+- [Sanity Courses](https://www.sanity.io/learn)
+- [Course: Day one with Sanity](https://www.sanity.io/learn/course/day-one-with-sanity-studio)
+- [Course: Sanity Typed content with Sanity TypeGen](https://www.sanity.io/learn/course/typescripted-content)
+- [Cheatsheet: GROQ](https://www.sanity.io/docs/query-cheat-sheet)
+- [Cheatsheet: Migrating content](https://www.sanity.io/docs/content-migration-cheatsheet)
+- [Sanity docs for Localization](https://www.sanity.io/docs/localization)
+- [Sanity docs for Block Content](https://www.sanity.io/docs/block-content)

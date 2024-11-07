@@ -1,0 +1,87 @@
+---
+title: How to work with source code
+description: How to work with the source code of the directory website.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+## Folder Structure
+
+It's simply a [Next.js](https://nextjs.org/) project using [Typescript](https://www.typescriptlang.org/), so the folder structure of the Mkdirs is as follows:
+
+![File Structure](../../../../assets/images/guide-file-structure.png)
+
+## Git
+
+### How to sync the source code
+
+If you have followed the steps in the [Installation](/docs/installation), and you have a repository named `@your-github-username/your-mkdirs`.
+
+Follow the steps below to sync the source code from `@Mkdirs/mkdirs-template` to your own repository if some updates are available, for example, new features or bug fixes.
+
+<Steps>
+
+1. Add the upstream repository
+
+    First, you need to add the original repository as a remote repository. 
+    
+    You can name it `upstream`, and run the following command in your local repository:
+
+    ```bash
+    git remote add upstream https://github.com/MkdirsHQ/mkdirs-template.git
+    ```
+
+2. Fetch upstream changes
+    
+    Run the following command to fetch all branches and commits from the original repository:
+
+    ```bash
+    git fetch upstream
+    ```
+
+3. Switch to your main branch
+    
+    Make sure you're on your main branch (usually main or master):
+
+    ```bash
+    git checkout main
+    ```
+
+4. Merge upstream changes
+    
+    Now, merge the changes from the upstream main branch into your local main branch:
+
+    ```bash
+    git merge upstream/main --allow-unrelated-histories
+    ```
+
+    If you don't want to merge all the changes from the upstream main branch, you can also cherry-pick the specific commits that you want to apply to your local main branch:
+
+    ```bash
+    git cherry-pick <commit-hash>
+    ```
+
+5. Resolve conflicts (if any)
+
+    If conflicts occur during the merge (mainly due to you have made some changes to the source code already), you'll need to resolve them manually. 
+    
+    After resolving, use `git add` to add the modified files, then use `git commit` to commit the changes.
+
+6. Push to your own repository
+    
+    Finally, push the updated local main branch to your own repository:
+
+    ```bash
+    git push origin main
+    ```
+
+</Steps>
+
+By following these steps, you can keep your fork in sync with the original repository. It's recommended to perform this process regularly to ensure your fork doesn't fall too far behind.
+
+## Further Reading
+
+- [Next.js](https://nextjs.org/)
+- [Course: Learn React Foundation](https://nextjs.org/learn/react-foundations)
+- [Course: Learn Next.js](https://nextjs.org/learn)

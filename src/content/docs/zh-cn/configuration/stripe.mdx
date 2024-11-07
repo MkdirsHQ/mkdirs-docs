@@ -1,0 +1,108 @@
+---
+title: Stripe
+description: 如何配置 Stripe 相关环境变量。
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+Mkdirs 使用 [Stripe](https://stripe.com/) 作为支付服务商，用于收款。
+
+## 配置
+
+<Steps>
+
+1. 创建 Stripe 账户
+
+    如果您没有 Stripe 账户，请按照他们的步骤 [注册](https://dashboard.stripe.com/register)。
+
+2. 获取 Stripe API 密钥
+
+    - 进入 Stripe 仪表盘。
+    - 点击右上角的 `Developers`。
+    - 点击 `Developers` 菜单下的 `API keys`。
+    - 点击 `Reveal live key`（如果您在测试模式下，请点击 `Reveal test key`）。
+    - 复制密钥并将其设置到 `.env` 文件中。
+
+    <Aside type="caution">
+        1. 确保您复制的是 **secret key** 而不是 **public key**。
+        2. 线上和测试模式的密钥不同，请确保您为线上和测试模式分别设置不同的密钥。
+    </Aside>
+
+    ```bash
+    # .env
+    # [only required if you want to support paid submissions]
+    STRIPE_API_KEY=your_stripe_api_key
+    ```
+
+    ![Stripe Key](../../../../assets/images/stripe-key.png)
+
+3. 获取产品价格 ID
+
+    - 进入 Stripe 仪表盘。
+    - 点击左侧栏的 `Product Catalog`。
+    - 点击 `+ Create Product` 按钮。
+    - 给产品一个清晰的名字，并设置用户提交的费用。
+    - 点击 `Add Product` 按钮创建它。
+    - 进入产品详情页面，点击 `...` 按钮在定价部分。
+    - 复制 **price id** 并将其设置到 `.env` 文件中。
+
+    <Aside type="caution">
+        确保您复制的是 **price id** 而不是 **product id**。
+    </Aside>
+
+    ```bash
+    # .env
+    # [only required if you want to support paid submissions]
+    NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id
+    ```
+
+    ![Stripe Price](../../../../assets/images/stripe-price.png)
+
+4. 获取 Webhook 密钥
+
+    - 进入 Stripe 仪表盘。
+    - 点击右上角的 `Developers`。
+    - 点击 `Developers` 菜单下的 `Webhooks`。
+    - 点击 `Add an endpoint` 按钮。
+    - 输入 Stripe 发送事件的端点 URL，例如 `https://your-domain.com/api/webhook`。
+    - 选择您想要接收通知的事件，常见事件包括 `checkout.session.completed`。
+    - 复制 Webhook 密钥并将其设置到 `.env` 文件中。
+
+    <Aside type="caution">
+        在测试模式下，您不能将 Webhook URL 设置为 `http://localhost:3000/api/webhook`，因为您需要使用本地代理来测试它。
+        您可以使用 [ngrok](https://ngrok.com/) 为本地服务器创建一个公共 URL，或者使用 [localtunnel](https://github.com/localtunnel/localtunnel) 为本地服务器创建一个公共 URL。
+    </Aside>
+
+    ```bash
+    # .env
+    # [only required if you want to support paid submissions]
+    STRIPE_WEBHOOK_SECRET=your_webhook_secret
+    ```
+
+    ![Stripe Webhook](../../../../assets/images/stripe-webhook.png)
+
+</Steps>
+
+## 视频教程
+
+{/* https://www.youtube.com/embed/MJoKRMri_8c?list=PLVBbrIi208W-yprj2E6oXu-yxB3Ou522u */}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+    width="1280" 
+    height="720" 
+    src="https://www.youtube.com/embed/MJoKRMri_8c?list=PLVBbrIi208W-yprj2E6oXu-yxB3Ou522u" 
+    title="【4/9】配置 Stripe 相关的环境变量 —— 基于Mkdirs模板部署上线导航站的全流程记录" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen
+  ></iframe>
+</div>
+
+## 延伸阅读
+
+- [Stripe - API Keys](https://stripe.com/docs/keys)
+- [Stripe - Webhooks](https://stripe.com/docs/webhooks)
+- [Stripe - Checkout Sessions](https://docs.stripe.com/api/checkout/sessions/create)
