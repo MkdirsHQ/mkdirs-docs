@@ -1,49 +1,49 @@
 ---
-title: How to work with Sanity CMS
-description: How to customize the Sanity schema and GROQ queries.
+title: 如何使用 Sanity CMS
+description: 如何自定义 Sanity 模式和 GROQ 查询。
 ---
 
 import { Aside } from '@astrojs/starlight/components';
 
-## Update the Sanity schema
+## 更新 Sanity Schema
 
-The Sanity schema files are in the `src/sanity/schemas/documents` folder, you can change the schema to your own schema, or add new schema, then add the new schema to the `src/sanity/schemas/index.ts` file.
+Sanity Schema 文件位于 `src/sanity/schemas/documents` 文件夹中，您可以更改 Schema 为您的 Schema，或添加新 Schema，然后将新 Schema 添加到 `src/sanity/schemas/index.ts` 文件中。
 
-After you update the Sanity schema, you need to run the following command to generate the types:
-
-```bash
-pnpm typegen
-```
-
-<Aside type="note">
-    The `typegen` command will generate the types for the Sanity schema, and the types will be in the `sanity.types.ts` file, so don't edit the `sanity.types.ts` file directly.
-</Aside>
-
-
-## Update the GROQ queries
-
-The GROQ queries are in the `src/sanity/lib/queries.ts` file, you can change the GROQ queries to your own queries, or add new queries to the file.
-
-After you update the GROQ queries, you need to run the following command to generate the types:
+更新 Sanity Schema 后，您需要运行以下命令来生成类型：
 
 ```bash
 pnpm typegen
 ```
 
 <Aside type="note">
-    The `typegen` command will generate the types for the GROQ queries, and the types will be in the `sanity.types.ts` file, so don't edit the `sanity.types.ts` file directly.
+    `typegen` 命令将生成 Sanity Schema 的类型，类型将位于 `sanity.types.ts` 文件中，因此不要直接编辑 `sanity.types.ts` 文件。
 </Aside>
 
-## Configure the Sanity Studio
 
-The configuration of the Sanity Studio is in the `sanity.config.ts` file, you can customize the Sanity Studio to your own needs.
+## 更新 GROQ 查询
 
-For example, you can find a new [Sanity Plugin](https://www.sanity.io/plugins) and add it to the Sanity Studio.
+GROQ 查询语句位于 `src/sanity/lib/queries.ts` 文件中，您可以更改 GROQ 查询语句为您的查询语句，或添加新查询语句到文件中。
 
-You can also change the default layout structure, according to the [Sanity Structure Builder](https://www.sanity.io/docs/structure-builder-introduction).
+更新 GROQ 查询语句后，您需要运行以下命令来生成类型：
+
+```bash
+pnpm typegen
+```
+
+<Aside type="note">
+    `typegen` 命令将生成 GROQ 查询语句的类型，类型将位于 `sanity.types.ts` 文件中，因此不要直接编辑 `sanity.types.ts` 文件。
+</Aside>
+
+## 配置 Sanity Studio
+
+Sanity Studio 的配置位于 `sanity.config.ts` 文件中，您可以自定义 Sanity Studio 以满足您的需求。
+
+例如，您可以找到一个新的 [Sanity 插件](https://www.sanity.io/plugins) 并将其添加到 Sanity Studio 中。
+
+您还可以更改默认布局结构，根据 [Sanity Structure Builder](https://www.sanity.io/docs/structure-builder-introduction)。
 
 
-## Further Reading
+## 延伸阅读
 
 - [Sanity](https://www.sanity.io/)
 - [Sanity Content Lake](https://www.sanity.io/docs/datastore)

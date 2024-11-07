@@ -1,76 +1,76 @@
 ---
-title: How to work with source code
-description: How to work with the source code of the directory website.
+title: 如何使用源码
+description: 如何使用导航站模板的源码。
 ---
 
 import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-## Folder Structure
+## 文件结构
 
-It's simply a [Next.js](https://nextjs.org/) project using [Typescript](https://www.typescriptlang.org/), so the folder structure of the Mkdirs is as follows:
+Mkdirs 是一个使用 [Typescript](https://www.typescriptlang.org/) 语言开发的 [Next.js](https://nextjs.org/) 项目，因此 Mkdirs 的文件结构如下：
 
 ![File Structure](../../../../assets/images/guide-file-structure.png)
 
 ## Git
 
-### How to sync the source code
+### 如何同步源码
 
-If you have followed the steps in the [Installation](/docs/installation), and you have a repository named `@your-github-username/your-mkdirs`.
+如果您按照 [安装](/docs/zh-cn/installation) 中的步骤操作，并且有一个名为 `@your-github-username/your-mkdirs` 的仓库。
 
-Follow the steps below to sync the source code from `@Mkdirs/mkdirs-template` to your own repository if some updates are available, for example, new features or bug fixes.
+按照以下步骤从 `@Mkdirs/mkdirs-template` 同步源码到您的仓库，例如，新功能或错误修复。
 
 <Steps>
 
-1. Add the upstream repository
+1. 添加上游仓库
 
-    First, you need to add the original repository as a remote repository. 
+    首先，您需要将原始仓库添加为远程仓库。
     
-    You can name it `upstream`, and run the following command in your local repository:
+    您可以将其命名为 `upstream`，然后在本地仓库中运行以下命令：
 
     ```bash
     git remote add upstream https://github.com/MkdirsHQ/mkdirs-template.git
     ```
 
-2. Fetch upstream changes
+2. 获取上游仓库的更改
     
-    Run the following command to fetch all branches and commits from the original repository:
+    运行以下命令以获取原始仓库中的所有分支和提交：
 
     ```bash
     git fetch upstream
     ```
 
-3. Switch to your main branch
+3. 切换到您的 `main` 分支
     
-    Make sure you're on your main branch (usually main or master):
+    确保您在 `main` 分支上（通常是 `main` 或 `master`）：
 
     ```bash
     git checkout main
     ```
 
-4. Merge upstream changes
+4. 合并上游更改
     
-    Now, merge the changes from the upstream main branch into your local main branch:
+    现在，将上游 `main` 分支的更改合并到您的本地 `main` 分支：
 
     ```bash
     git merge upstream/main --allow-unrelated-histories
     ```
 
-    If you don't want to merge all the changes from the upstream main branch, you can also cherry-pick the specific commits that you want to apply to your local main branch:
+    如果您不想合并上游 `main` 分支的所有更改，您也可以选择性地挑选您想要应用到本地 `main` 分支的特定提交：
 
     ```bash
     git cherry-pick <commit-hash>
     ```
 
-5. Resolve conflicts (if any)
+5. 解决冲突（如果有）
 
-    If conflicts occur during the merge (mainly due to you have made some changes to the source code already), you'll need to resolve them manually. 
+    如果在合并过程中发生冲突（主要是因为您已经对源码进行了一些更改），您需要手动解决它们。
     
-    After resolving, use `git add` to add the modified files, then use `git commit` to commit the changes.
+    解决冲突后，使用 `git add` 添加修改的文件，然后使用 `git commit` 提交更改。
 
-6. Push to your own repository
+6. 推送到您的仓库
     
-    Finally, push the updated local main branch to your own repository:
+    最后，将更新后的本地 `main` 分支推送到您自己的仓库：
 
     ```bash
     git push origin main
@@ -78,9 +78,9 @@ Follow the steps below to sync the source code from `@Mkdirs/mkdirs-template` to
 
 </Steps>
 
-By following these steps, you can keep your fork in sync with the original repository. It's recommended to perform this process regularly to ensure your fork doesn't fall too far behind.
+按照这些步骤，您可以保持您的分支与原始仓库同步。建议定期执行此过程，以确保您的分支不会落后太多。
 
-## Further Reading
+## 延伸阅读
 
 - [Next.js](https://nextjs.org/)
 - [Course: Learn React Foundation](https://nextjs.org/learn/react-foundations)
