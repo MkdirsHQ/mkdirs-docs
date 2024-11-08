@@ -11,7 +11,8 @@ export default defineConfig({
 			favicon: "./favicon.ico",
 			social: {
 				github: "https://github.com/MkdirsHQ",
-				twitter: "https://x.com/MkdirsHQ",
+				twitter: "https://x.com/javayhu",
+				youtube: "https://www.youtube.com/@MkdirsHQ",
 			},
 			logo: {
 				src: "./src/assets/logo-rounded.png",
