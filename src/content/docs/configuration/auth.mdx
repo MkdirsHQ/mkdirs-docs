@@ -77,6 +77,17 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication, supports email
 
 </Steps>
 
+## Special Note
+
+1. Please note that the environment variables are different in development and production environments, make sure to create **two** different OAuth applications for the production and development environments.
+
+2. If you still have trouble with the authentication, for example, `redirect_uri_mismatch` or other issues, you can try to add the following environment variables to the `.env` file, only in the production environment.
+
+    ```bash
+    # .env
+    AUTH_TRUST_HOST=true
+    AUTH_URL=https://your-domain.com/api/auth
+    ```
 
 ## Video tutorial
 
@@ -93,6 +104,22 @@ Mkdirs uses [Auth.js v5](https://authjs.dev/) for authentication, supports email
     referrerpolicy="strict-origin-when-cross-origin" 
     allowfullscreen
   ></iframe>
+</div>
+
+If you are interested in Next Auth V5, you can refer to the following video tutorial, it is a more advanced guide for Next Auth V5, so much better than the official documentation.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+    width="1280" 
+    height="720" 
+    src="https://www.youtube.com/embed/1MTyCvS05V4" 
+    title="Next Auth V5 - Advanced Guide (2024)" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
 </div>
 
 ## Further Reading
