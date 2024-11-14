@@ -2,10 +2,13 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
 	site: "https://docs.mkdirs.com",
 	integrations: [
+		sitemap(),
 		starlight({
 			title: "Mkdirs",
 			favicon: "./favicon.ico",
