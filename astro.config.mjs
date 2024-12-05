@@ -14,7 +14,7 @@ export default defineConfig({
 			favicon: "./favicon.ico",
 			social: {
 				github: "https://github.com/MkdirsHQ",
-				twitter: "https://x.com/javayhu",
+				// twitter: "https://x.com/javayhu",
 				youtube: "https://www.youtube.com/@MkdirsHQ",
 			},
 			logo: {
@@ -69,6 +69,7 @@ export default defineConfig({
 						{ label: "Logo", slug: "guide/logo" },
 						{ label: "Font", slug: "guide/font" },
 						{ label: "Theme", slug: "guide/theme" },
+						{ label: "Item Card", slug: "guide/item-card" },
 						{ label: "Email", slug: "guide/email" },
 						{ label: "Sanity", slug: "guide/sanity" },
 					],
