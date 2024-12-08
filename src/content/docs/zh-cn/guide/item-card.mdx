@@ -1,0 +1,33 @@
+---
+title: 如何自定义卡片样式
+description: 如何自定义导航站的卡片样式。
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Mkdirs模板支持两种卡片样式：`带封面图样式` (默认) 和 `带图标样式`。
+
+带封面图样式 ([item-card.tsx](https://github.com/MkdirsHQ/mkdirs-template/blob/main/src/components/item/item-card.tsx)):
+
+![Item Card with Image](../../../../assets/images/guide-item-card-image.png)
+
+带图标样式 ([item-card-2.tsx](https://github.com/MkdirsHQ/mkdirs-template/blob/main/src/components/item/item-card-2.tsx)):
+
+![Item Card with Icon](../../../../assets/images/guide-item-card-icon.png)
+
+
+`带封面图样式` 是默认样式，您可以通过设置 `NEXT_PUBLIC_SUPPORT_ITEM_ICON` 为 `true` 来将其更改为 `带图标样式`。
+
+```.env
+# -----------------------------------------------------------------------------
+# Website configuration
+# -----------------------------------------------------------------------------
+# show item icon in item grid, default is false (aka, show item cover image)
+NEXT_PUBLIC_SUPPORT_ITEM_ICON=true
+```
+
+<Aside type="note">
+    - 如果您将样式更改为 `带封面图样式`，您需要为所有项目添加封面图。
+    - 如果您将样式更改为 `带图标样式`，您需要为所有项目添加图标和封面图。
+    - 如果您将样式更改为 `带图标样式`，您也可以使用带封面图样式的组件。
+</Aside>
