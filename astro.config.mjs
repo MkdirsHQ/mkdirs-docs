@@ -40,6 +40,10 @@ export default defineConfig({
 					slug: "index",
 				},
 				{
+					label: "Prerequisites",
+					slug: "prerequisites",
+				},
+				{
 					label: "Installation",
 					slug: "installation",
 				},
