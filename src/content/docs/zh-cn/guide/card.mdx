@@ -16,14 +16,10 @@ Mkdirs模板支持两种卡片样式：`带封面图样式` (默认) 和 `带图
 ![Item Card with Icon](../../../../assets/images/guide-item-card-icon.png)
 
 
-`带封面图样式` 是默认样式，您可以通过设置 `NEXT_PUBLIC_SUPPORT_ITEM_ICON` 为 `true` 来将其更改为 `带图标样式`。
+`带封面图样式` 是默认样式，您可以通过修改 `src/config/site.ts` 文件中的 `SUPPORT_ITEM_ICON` 为 `true` 来将其更改为 `带图标样式`。
 
-```.env
-# -----------------------------------------------------------------------------
-# Website configuration
-# -----------------------------------------------------------------------------
-# show item icon in item grid, default is false (aka, show item cover image)
-NEXT_PUBLIC_SUPPORT_ITEM_ICON=true
+```ts
+export const SUPPORT_ITEM_ICON = true;
 ```
 
 <Aside type="note">

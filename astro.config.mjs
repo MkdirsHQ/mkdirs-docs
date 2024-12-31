@@ -74,7 +74,7 @@ export default defineConfig({
 						{ label: "Logo", slug: "guide/logo" },
 						{ label: "Font", slug: "guide/font" },
 						{ label: "Theme", slug: "guide/theme" },
-						{ label: "Item Card", slug: "guide/item-card" },
+						{ label: "Card", slug: "guide/card" },
 						{ label: "Email", slug: "guide/email" },
 						{ label: "Sanity", slug: "guide/sanity" },
 					],
