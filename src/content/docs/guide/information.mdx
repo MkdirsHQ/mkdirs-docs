@@ -1,0 +1,55 @@
+---
+title: How to customize the information of the website
+description: How to customize the information of the website.
+---
+
+Open the files under `src/config` folder, you can see the `site.ts` file.
+
+You can customize the information of the website here, and you can also customize other information in other files under the `config` folder.
+
+```ts
+export const siteConfig: SiteConfig = {
+  name: "Directory",
+  tagline: "This is a demo site for Mkdirs, the best directory website template",
+  description:
+    "This is a demo site for Mkdirs template. Mkdirs is the ultimate directory website template. With Mkdirs, you can build any trending and profitable directory website in minutes, packed with Listings, Newsletter, Payment, CMS, Blog, Authentication, SEO, Themes and more",
+  keywords: [
+    "Directory",
+    "Template",
+    "Boilerplate",
+  ],
+  author: "Mkdirs",
+  url: SITE_URL,
+  // please increase the version number when you update the image
+  image: `${SITE_URL}/og.png?v=1`,
+  mail: "support@mkdirs.com",
+  utm: {
+    source: "mkdirs.com",
+    medium: "referral",
+    campaign: "navigation",
+  },
+  links: {
+    // leave it blank if you don't want to show the link (don't delete)
+    twitter: "https://x.com/MkdirsHQ",
+    github: "https://github.com/MkdirsHQ",
+    youtube: "https://www.youtube.com/@MkdirsHQ",
+  },
+};
+```
+
+## Video tutorial
+
+{/* https://www.youtube.com/watch?v=GRf3fC4nCXU&list=PLVBbrIi208W-yprj2E6oXu-yxB3Ou522u&index=9 */}
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+    width="1280" 
+    height="720" 
+    src="https://www.youtube.com/embed/GRf3fC4nCXU?list=PLVBbrIi208W-yprj2E6oXu-yxB3Ou522u" 
+    title="【8/9】自定义文案 + LOGO + 主题 —— 基于Mkdirs模板部署上线导航站的全流程记录" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen
+  ></iframe>
+</div>

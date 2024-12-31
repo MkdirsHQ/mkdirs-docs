@@ -70,6 +70,7 @@ export default defineConfig({
 					label: "Guide",
 					items: [
 						{ label: "Develop", slug: "guide/develop" },
+						{ label: "Information", slug: "guide/information" },
 						{ label: "Logo", slug: "guide/logo" },
 						{ label: "Font", slug: "guide/font" },
 						{ label: "Theme", slug: "guide/theme" },
