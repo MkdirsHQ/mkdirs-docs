@@ -67,16 +67,21 @@ export default defineConfig({
 					],
 				},
 				{
+					label: "Customization",
+					items: [
+						{ label: "Information", slug: "customization/information" },
+						{ label: "Logo", slug: "customization/logo" },
+						{ label: "Font", slug: "customization/font" },
+						{ label: "Theme", slug: "customization/theme" },
+						{ label: "Card", slug: "customization/card" },
+					],
+				},
+				{
 					label: "Guide",
 					items: [
 						{ label: "Develop", slug: "guide/develop" },
-						{ label: "Information", slug: "guide/information" },
-						{ label: "Logo", slug: "guide/logo" },
-						{ label: "Font", slug: "guide/font" },
-						{ label: "Theme", slug: "guide/theme" },
-						{ label: "Card", slug: "guide/card" },
-						{ label: "Email", slug: "guide/email" },
 						{ label: "Sanity", slug: "guide/sanity" },
+						{ label: "Email", slug: "guide/email" },
 					],
 				},
 			],
