@@ -82,6 +82,7 @@ export default defineConfig({
 						{ label: "Develop", slug: "guide/develop" },
 						{ label: "Sanity", slug: "guide/sanity" },
 						{ label: "Email", slug: "guide/email" },
+						{ label: "Custom Page", slug: "guide/custom-page" },
 					],
 				},
 			],
