@@ -12,9 +12,23 @@ Mkdirs 是一个使用 [Typescript](https://www.typescriptlang.org/) 语言开�
 
 ![File Structure](../../../../assets/images/guide-file-structure.png)
 
-## Git
+## 应用架构
 
-### 如何同步源码
+![Application Architecture](../../../../assets/images/guide-dev-architecture.png)
+
+## 如何格式化代码
+
+我们使用 [Biome](https://biomejs.dev/) 来格式化代码，并且已经在项目中配置好了。
+
+您可以在 vscode 中安装 [Biome 扩展](https://marketplace.visualstudio.com/items?itemName=biomejs.biome) 来自动格式化代码。
+
+或者您可以运行以下命令来格式化代码：
+
+```bash
+biome format
+```
+
+## 如何同步源码
 
 如果您按照 [安装](/zh-cn/installation) 中的步骤操作，并且有一个名为 `@your-github-username/your-mkdirs` 的仓库。
 
