@@ -5,7 +5,7 @@ description: How to customize the Item Card of the directory website.
 
 import { Aside } from '@astrojs/starlight/components';
 
-Mkdirs support two kinds of Item Card: `Card with Image` (default) and `Card with Icon`.
+Mkdirs support two kinds of Item Card: `Card with Image` and `Card with Icon` (default).
 
 Item Card with Image ([item-card.tsx](https://github.com/MkdirsHQ/mkdirs-template/blob/main/src/components/item/item-card.tsx)):
 
@@ -16,10 +16,10 @@ Item Card with Icon ([item-card-2.tsx](https://github.com/MkdirsHQ/mkdirs-templa
 ![Item Card with Icon](../../../assets/images/guide-item-card-icon.png)
 
 
-`Card with Image` is the default style, and you can change it to `Card with Icon` by setting the `SUPPORT_ITEM_ICON` to `true` in the `src/config/site.ts` file.
+`Card with Icon` is the default style, and you can change it to `Card with Image` by setting the `SUPPORT_ITEM_ICON` to `false` in the `src/config/site.ts` file.
 
 ```ts
-export const SUPPORT_ITEM_ICON = true;
+export const SUPPORT_ITEM_ICON = false;
 ```
 
 <Aside type="note">

@@ -5,7 +5,7 @@ description: 如何自定义导航站的卡片样式。
 
 import { Aside } from '@astrojs/starlight/components';
 
-Mkdirs模板支持两种卡片样式：`带封面图样式` (默认) 和 `带图标样式`。
+Mkdirs模板支持两种卡片样式：`带封面图样式` 和 `带图标样式` (默认)。
 
 带封面图样式 ([item-card.tsx](https://github.com/MkdirsHQ/mkdirs-template/blob/main/src/components/item/item-card.tsx)):
 
@@ -16,10 +16,10 @@ Mkdirs模板支持两种卡片样式：`带封面图样式` (默认) 和 `带图
 ![Item Card with Icon](../../../../assets/images/guide-item-card-icon.png)
 
 
-`带封面图样式` 是默认样式，您可以通过修改 `src/config/site.ts` 文件中的 `SUPPORT_ITEM_ICON` 为 `true` 来将其更改为 `带图标样式`。
+`带图标样式` 是默认样式，您可以通过修改 `src/config/site.ts` 文件中的 `SUPPORT_ITEM_ICON` 为 `false` 来将其更改为 `带封面图样式`。
 
 ```ts
-export const SUPPORT_ITEM_ICON = true;
+export const SUPPORT_ITEM_ICON = false;
 ```
 
 <Aside type="note">
