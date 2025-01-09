@@ -19,6 +19,9 @@ Mkdirs模板支持两种卡片样式：`带封面图样式` 和 `带图标样式
 `带图标样式` 是默认样式，您可以通过修改 `src/config/site.ts` 文件中的 `SUPPORT_ITEM_ICON` 为 `false` 来将其更改为 `带封面图样式`。
 
 ```ts
+// support item icon, default is true (aka, show item icon)
+// NOTE: if you set true, you should make sure the item icon is available
+// if you set false, the item card will show image instead of icon
 export const SUPPORT_ITEM_ICON = false;
 ```
 
