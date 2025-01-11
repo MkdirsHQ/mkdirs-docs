@@ -42,6 +42,13 @@ export default defineConfig({
 					slug: "index",
 				},
 				{
+					label: "FAQ",
+					translations: {
+						"zh-CN": "常见问题"
+					},
+					slug: "faq",
+				},
+				{
 					label: "Prerequisites",
 					translations: {
 						"zh-CN": "前提条件"
