@@ -5,11 +5,11 @@ description: 如何配置 Analytics 相关环境变量。
 
 import { Steps } from '@astrojs/starlight/components';
 
-Mkdirs 使用 [Google Analytics](https://analytics.google.com/) 或 [OpenPanel](https://openpanel.dev/) 作为 Analytics 服务，但您也可以添加其他 Analytics 服务，我们将在未来支持更多服务。
+Mkdirs 使用 [Google Analytics](https://analytics.google.com/) 或 [OpenPanel](https://openpanel.dev/) 作为 Analytics 服务，但您也可以添加其他 Analytics 服务，我们将在未来支持更多 Analytics 服务。
 
 ## Google Analytics
 
-按照 [官方指南](https://support.google.com/analytics/answer/9304153) 为网站设置 Google Analytics。
+按照 [Google Analytics 官方教程](https://support.google.com/analytics/answer/9304153) 为网站设置 Google Analytics。
 
 然后复制 Google Analytics ID，并将其设置到 `.env` 文件中。
 
@@ -27,7 +27,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
 
 1. 在 [OpenPanel](https://openpanel.dev//login) 创建一个账户
 
-   按照 [步骤](https://dashboard.openpanel.dev/login) 创建您的账户。
+   如果您没有账户，请按照他们的 [步骤](https://dashboard.openpanel.dev/login) 创建您的账户。
 
 2. 创建一个新项目
 
@@ -45,7 +45,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
 
     ```bash
     # .env
-    # [only required if you are using OpenPanel]
+    # [only required if you are using OpenPanel Analytics]
     NEXT_PUBLIC_OPENPANEL_CLIENT_ID=your_open_panel_client_id;
     ```
 
@@ -90,4 +90,4 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
 ## 延伸阅读
 
 - [Google Analytics](https://analytics.google.com/)
-- [OpenPanel](https://openpanel.dev/)
+- [OpenPanel Analytics](https://openpanel.dev/)
