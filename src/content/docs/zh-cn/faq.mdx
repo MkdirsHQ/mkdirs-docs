@@ -5,103 +5,86 @@ description: 关于 Mkdirs 模板的常见问题。
 
 import { LinkCard } from '@astrojs/starlight/components';
 
-## General
+## 通用
 
-### How to set up the directory website with Mkdirs?
+### 如何部署导航站？
 
-You can checkout the [documentation](https://docs.mkdirs.com) and the [video tutorials](https://youtube.com/@MkdirsHQ) for the detailed instructions.
-I can launch a directory website within 30 minutes, you can too if you follow the instructions.
-Feel free to reach out to us via email at [support@mkdirs.com](mailto:support@mkdirs.com) if you have any questions.
+你可以查看 [文档](https://docs.mkdirs.com) 和 [视频教程](https://youtube.com/@MkdirsHQ) 获取详细说明。
+我可以在 30 分钟内启动一个导航站，如果你按照说明操作，那么你也可以。
 
-### How many directory websites can I build with Mkdirs?
+### 我可以使用 Mkdirs 创建多少个导航站？
 
-You can build unlimited directory websites with Mkdirs.
+你可以使用 Mkdirs 创建无限数量的导航站。
 
-### Why should I buy Mkdirs instead of other directory boilerplates?
+### 我可以做什么？
 
-Mkdirs is the best directory boilerplate if compared with other directory boilerplates.
+你可以使用 Mkdirs 创建无限数量的导航站（商业项目也可以）。
 
-It streamlines your development process by integrating Sanity CMS, eliminating the need to set up another database, storage, or CMS. Everything you need is pre-configured and ready to use.
+你不能：
+- 发布代码或部分代码作为模板或模板
+- 将模板代码作为服务提供给他人，例如，你不能帮助他人使用 Mkdirs 搭建导航站
 
-Mkdirs also comes with support for Listing, Newsletter, Payment, Blog, Authentication, SEO, Themes and more.
+### 如何获取技术支持？
 
-### What am I allowed to do with the boilerplate?
+你可以通过电子邮件 [support@mkdirs.com](mailto:support@mkdirs.com) 联系我们。
 
-You are allowed to build and ship unlimited projects with Mkdirs (commercial projects too).
+## 技术
 
-You are not allowed to:
-- Publish the code or parts of it as a template or boilerplate
-- Provide the boilerplate code as a service to others, for example, you can't help others launch directory websites with Mkdirs as a service
+### 我可以保存多少个项目到 Sanity 的免费计划中？
 
-### How to get technical support?
+根据 [Sanity 定价](https://www.sanity.io/pricing)，你可以在免费计划中保存最多 10,000 个项目。
 
-You can reach out to us via email at [support@mkdirs.com](mailto:support@mkdirs.com).
+### 如何同步源代码与仓库？
 
-## Technical
+你可以查看 [指南](https://docs.mkdirs.com/guide/develop/#how-to-sync-the-code) 获取详细说明。
 
-### TypeScript or JavaScript?
+### 如何自定义字体、Logo或主题？
 
-Mkdirs is written in TypeScript, but you can easily change it to JavaScript.
+你可以查看 [文档](https://docs.mkdirs.com/zh-cn) 和 [视频教程](https://youtube.com/@MkdirsHQ) 获取详细说明。
 
-### Nextjs 14 or Nextjs 15? App router or Pages router?
+- 自定义字体: [https://docs.mkdirs.com/zh-cn/customization/font/](https://docs.mkdirs.com/zh-cn/customization/font/)
+- 自定义Logo: [https://docs.mkdirs.com/zh-cn/customization/logo/](https://docs.mkdirs.com/zh-cn/customization/logo/)
+- 自定义主题: [https://docs.mkdirs.com/zh-cn/customization/theme/](https://docs.mkdirs.com/zh-cn/customization/theme/)
 
-Mkdirs uses [Nextjs 14 App router](https://nextjs.org/docs/14/getting-started), and currently does not have plans to upgrade to Nextjs 15.
+### 如何从其他导航站导入数据？
 
-### What is Sanity CMS and why choose it?
+你可以编写一个脚本从其他导航站导出数据，然后导入到 Mkdirs。
 
-[Sanity CMS](https://www.sanity.io/) is a powerful, flexible headless CMS that simplifies structured content management. It offers an intuitive interface and robust API, perfect for building directory websites.
+例如，你可以使用 [Sanity CLI](https://www.sanity.io/docs/cli-reference) 或 [Sanity Client API](https://www.sanity.io/docs/js-client) 将数据导入到 Mkdirs。
 
-Mkdirs streamlines your development process by integrating Sanity CMS, eliminating the need to set up another database, storage, or CMS. Everything you need is pre-configured and ready to use.
+### 如何了解更多关于 Sanity CMS 的信息？
 
-Notably, [Sanity achieved the highest user satisfaction score](https://www.netlify.com/blog/unveiling-the-state-of-web-development-and-predictions-for-2024-and-beyond/) among all CMS platforms in 2023.
+你可以查看 [指南](https://docs.mkdirs.com/guide/sanity/) 获取详细说明。
 
-### How many items can I save to Sanity in Free Plan?
+你将学习如何更新 Sanity 模式，以及如何配置 Sanity Studio 等。
 
-According to the [Sanity pricing](https://www.sanity.io/pricing), you can save up to 10,000 items in the Free Plan.
+我们还提供了一个关于 Sanity CMS 的[教程和文档列表](https://docs.mkdirs.com/guide/sanity/#further-reading) ，你可以参考它们获取更多信息。
 
-### How to sync the source code with the Mkdirs repository?
+### 是否支持国际化？
 
-You can checkout this [guide](https://docs.mkdirs.com/guide/develop/#how-to-sync-the-code) for the detailed instructions.
+Mkdirs 不支持国际化，未来也不会支持，因为这会使模板过于复杂。
 
-### How to customize the font or the logo or the theme of the directory website?
+我开源了另一个 [导航站模板](https://github.com/javayhu/free-directory-boilerplate)，支持国际化，你可以参考它来实现国际化。
 
-You can checkout the [documentation](https://docs.mkdirs.com) and the [video tutorials](https://youtube.com/@MkdirsHQ) for the detailed instructions.
-
-- Customize the font: [https://docs.mkdirs.com/customization/font/](https://docs.mkdirs.com/customization/font/)
-- Customize the logo: [https://docs.mkdirs.com/customization/logo/](https://docs.mkdirs.com/customization/logo/)
-- Customize the theme: [https://docs.mkdirs.com/customization/theme/](https://docs.mkdirs.com/customization/theme/)
-
-### How to import the data from other directory websites to Mkdirs?
-
-You can write a script to export the data from other directory websites, and then import the data to Mkdirs.
-
-For example, you can use the [Sanity CLI](https://www.sanity.io/docs/cli-reference) feature or [Sanity Client API](https://www.sanity.io/docs/js-client) to import the data to Mkdirs.
-
-### How to learn more about Sanity CMS?
-
-You can checkout this [guide](https://docs.mkdirs.com/guide/sanity/) for the detailed instructions.
-
-You will learn how to update the Sanity schemas, and how to configure the Sanity Studio, etc.
-
-We also provide a [list of tutorials and documents](https://docs.mkdirs.com/guide/sanity/#further-reading) about Sanity CMS, you can refer to them for more information.
-
-### Does Mkdirs support internationalization?
-
-No, Mkdirs does not support internationalization, and will not support it in the future, because it will make the boilerplate too heavy. But you can easily add more languages, because Mkdirs is built with Next.js and Sanity CMS, both of which support internationalization.
+由于 Mkdirs 是使用 Next.js 和 Sanity CMS 构建的，两者都支持国际化，所以实现起来不会太难。
 
 - Next.js: [https://nextjs.org/docs/app/building-your-application/routing/internationalization](https://nextjs.org/docs/app/building-your-application/routing/internationalization)
 - Sanity: [https://www.sanity.io/docs/localization](https://www.sanity.io/docs/localization)
 
-## Payment
+## 支付
 
-### Does Mkdirs support Lemonsqueezy or other payment services?
+### 是否支持 Lemonsqueezy 或其他支付服务？
 
-No, Mkdirs does not support Lemonsqueezy or other payment services, only Stripe is supported.
+不支持，Mkdirs 只支持 Stripe，其他支付服务暂时不支持。
 
-### How much does it cost to run a directory website?
+如果要支持 Lemon Squeezy，可以参考这个开源项目。
 
-With Mkdirs, you can easily launch a directory website for almost zero cost.
+[https://github.com/lmsqueezy/nextjs-billing](https://github.com/lmsqueezy/nextjs-billing)
 
-You only pay for your domain, and start with the free plan of [Sanity](https://www.sanity.io/pricing) and [Resend](https://resend.com/pricing) and [Vercel](https://vercel.com/pricing).
+### 运行一个导航站需要多少费用？
 
-When the traffic of your directory website grows, you can choose to upgrade your plans later.
+使用 Mkdirs 模板，你可以轻轻松松启动一个几乎零成本的导航站。
+
+你只需支付域名费用，并使用 [Sanity](https://www.sanity.io/pricing)、[Resend](https://resend.com/pricing) 和 [Vercel](https://vercel.com/pricing) 的免费计划。
+
+当你的导航站流量增长时，你可以选择稍后升级你的计划。
