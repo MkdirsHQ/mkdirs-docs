@@ -48,13 +48,18 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
     - Copy the **price id** and set it to the `.env` file.
 
     <Aside type="caution">
-        Make sure you copy the **price id** and not the **product id**.
+        1. Make sure you copy the **price id** and not the **product id**.
+        2. Make sure you set the different price ids for live and test modes.
+        3. Make sure you set the price id for the paid submissions and sponsor ads.
+        `NEXT_PUBLIC_STRIPE_PRO_PRICE_ID` is for paid submissions.
+        `NEXT_PUBLIC_STRIPE_SPONSOR_PRICE_ID` is for sponsor ads.
     </Aside>
 
     ```bash
     # .env
-    # [only required if you want to support paid submissions]
+    # [only required if you want to support paid submissions and sponsor ads]
     NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id
+    NEXT_PUBLIC_STRIPE_SPONSOR_PRICE_ID=your_price_id
     ```
 
     ![Stripe Price](../../../assets/images/stripe-price.png)
@@ -71,12 +76,12 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
 
     <Aside type="caution">
         You can't set the webhook url to be like `http://localhost:3000/api/webhook` in test mode, and you need to use a local proxy to test it.
-        You may use [ngrok](https://ngrok.com/) to create a public URL for your local server, or use [localtunnel](https://github.com/localtunnel/localtunnel) to create a public URL for your local server.
+        You may use [ngrok](https://ngrok.com/) or [localtunnel](https://github.com/localtunnel/localtunnel) to create a public URL for your local server, for example, `https://mkdirs.loca.lt/api/webhook`.
     </Aside>
 
     ```bash
     # .env
-    # [only required if you want to support paid submissions]
+    # [only required if you want to support paid submissions and sponsor ads]
     STRIPE_WEBHOOK_SECRET=your_webhook_secret
     ```
 

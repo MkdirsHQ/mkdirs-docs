@@ -48,13 +48,18 @@ Mkdirs 使用 [Stripe](https://stripe.com/) 作为支付服务商，用于收款
     - 复制 **price id** 并将其设置到 `.env` 文件中。
 
     <Aside type="caution">
-        确保您复制的是 **price id** 而不是 **product id**。
+        1. 确保您复制的是 **price id** 而不是 **product id**。
+        2. 确保您为线上和测试模式分别设置不同的 price id。
+        3. 确保您为付费提交和赞助广告分别设置不同的 price id。
+        `NEXT_PUBLIC_STRIPE_PRO_PRICE_ID` 是付费提交的 price id。
+        `NEXT_PUBLIC_STRIPE_SPONSOR_PRICE_ID` 是赞助广告的 price id。
     </Aside>
 
     ```bash
     # .env
-    # [only required if you want to support paid submissions]
+    # [only required if you want to support paid submissions and sponsor ads]
     NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id
+    NEXT_PUBLIC_STRIPE_SPONSOR_PRICE_ID=your_sponsor_price_id
     ```
 
     ![Stripe Price](../../../../assets/images/stripe-price.png)
@@ -71,12 +76,12 @@ Mkdirs 使用 [Stripe](https://stripe.com/) 作为支付服务商，用于收款
 
     <Aside type="caution">
         在测试模式下，您不能将 Webhook URL 设置为 `http://localhost:3000/api/webhook`，因为您需要使用本地代理来测试它。
-        您可以使用 [ngrok](https://ngrok.com/) 为本地服务器创建一个公共 URL，或者使用 [localtunnel](https://github.com/localtunnel/localtunnel) 为本地服务器创建一个公共 URL。
+        您可以使用 [ngrok](https://ngrok.com/) 或者 [localtunnel](https://github.com/localtunnel/localtunnel) 为本地服务器创建一个可公开访问的 URL，例如 `https://mkdirs.loca.lt/api/webhook`。
     </Aside>
 
     ```bash
     # .env
-    # [only required if you want to support paid submissions]
+    # [only required if you want to support paid submissions and sponsor ads]
     STRIPE_WEBHOOK_SECRET=your_webhook_secret
     ```
 
