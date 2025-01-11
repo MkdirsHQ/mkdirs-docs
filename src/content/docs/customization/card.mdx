@@ -19,6 +19,9 @@ Item Card with Icon ([item-card-2.tsx](https://github.com/MkdirsHQ/mkdirs-templa
 `Card with Icon` is the default style, and you can change it to `Card with Image` by setting the `SUPPORT_ITEM_ICON` to `false` in the `src/config/site.ts` file.
 
 ```ts
+// support item icon, default is true (aka, show item icon)
+// NOTE: if you set true, you should make sure the item icon is available
+// if you set false, the item card will show image instead of icon
 export const SUPPORT_ITEM_ICON = false;
 ```
 
