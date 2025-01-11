@@ -14,7 +14,7 @@ Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS, so you can manag
 
 1. Create an account on [Sanity](https://www.sanity.io/)
 
-    If don't have an account on Sanity, follow their steps to [signup](https://www.sanity.io/login/sign-up).
+    If you don't have an account on Sanity, follow their steps to [signup](https://www.sanity.io/login/sign-up).
 
 2. Create a new project
 
@@ -34,6 +34,10 @@ Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS, so you can manag
 
     The default dataset is `production`, and you can use the default dataset or create a new one.
 
+    <Aside type="tip">
+        If you want to separate the production and development environments, you can create a new dataset for the development environment, and set different datasets for the production and development environments.
+    </Aside>
+
     ```bash
     # .env
     # [required]
@@ -52,12 +56,12 @@ Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS, so you can manag
 
 6. Configure the CORS origins
 
-    Go to the project API settings, click on the `Add CORS origin` button, add the origin of your domain (e.g. **`https://your-domain.com`**) or **`http://localhost:3000`** for local development.
+    Go to the project API settings, click on the `Add CORS origin` button, add the origin of your domain, for example, **`https://your-domain.com`** for production or **`http://localhost:3000`** for local development.
 
     It's used to allow you to access the Sanity Studio under the `/studio` path, for example, `https://your-domain.com/studio` or `http://localhost:3000/studio`.
 
     <Aside type="caution">
-        Make sure you add the origin of your domain to the CORS origins, otherwise you will not be able to access the Sanity Studio.
+        Make sure you add the origin of your domain to the CORS origins, otherwise you will not be able to access the Sanity Studio (aka, the CMS or the backend of the website).
     </Aside>
 
     ![Sanity CORS](../../../assets/images/sanity-cors.png)
