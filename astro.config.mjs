@@ -218,6 +218,13 @@ export default defineConfig({
 							},
 							slug: "guide/sanity"
 						},
+						{
+							label: "Submission",
+							translations: {
+								"zh-CN": "提交数据"
+							},
+							slug: "guide/submission"
+						},
 					],
 				},
 			]
