@@ -1,0 +1,101 @@
+---
+title: AI Models
+description: How to configure AI models.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+Mkdirs uses AI models to analyze the content of the website and automatically fill in the submission form, which improves the efficiency of the submission process.
+
+Mkdirs uses [Vercel AI SDK](https://sdk.vercel.ai/) to wrap AI models and supports [OpenAI ChatGPT](https://openai.com/), [Google Gemini](https://gemini.google.com/), and [DeepSeek](https://www.deepseek.com/) models by default, which can be selected according to the needs of the directory.
+
+## Configuration
+
+<Steps>
+
+1. Determine the AI model to use
+
+   You can choose to use `google`, `deepseek`, or `openai` as the AI model, and set the `DEFAULT_AI_PROVIDER` variable in the `.env` file.
+
+   <Aside type="tip">
+      1、DEFAULT_AI_PROVIDER is not configured with any AI model, so the AI autofill feature is not enabled by default.  
+      2、If you want to use other AI models, please refer to the documentation of [Vercel AI SDK](https://sdk.vercel.ai/), add the dependency library of other AI models, and then configure it in Mkdirs.
+   </Aside>
+
+   ```bash
+   # .env
+   # [only required if you are using AI models to auto fill the submission form]
+   # default ai provider: ``, `google`, `deepseek`, `openai`
+   # -----------------------------------------------------------------------------
+   DEFAULT_AI_PROVIDER=
+   ```
+
+2. Get the API Key of the corresponding AI model
+
+   2.1 Get Google Gemini API Key
+
+   Link to get the API Key: [Google Gemini API Key](https://aistudio.google.com/apikey)
+
+   ```bash
+   # .env
+   # [only required if you are using Google Gemini]
+   # NOTE: if you set `DEFAULT_AI_PROVIDER=google`, you should set this API_KEY
+   # -----------------------------------------------------------------------------
+   GOOGLE_GENERATIVE_AI_API_KEY=
+   ```
+
+   2.2 Get DeepSeek API Key
+
+   Link to get the API Key: [DeepSeek API Key](https://platform.deepseek.com/api_keys)
+
+   ```bash
+   # .env
+   # [only required if you are using DeepSeek]
+   # NOTE: if you set `DEFAULT_AI_PROVIDER=deepseek`, you should set this API_KEY
+   # -----------------------------------------------------------------------------
+   DEEPSEEK_API_KEY=
+   ```
+
+   2.3 Get OpenAI ChatGPT API Key
+
+   Link to get the API Key: [OpenAI ChatGPT API Key](https://platform.openai.com/settings/organization/api-keys)
+
+   ```bash
+   # .env
+   # [only required if you are using OpenAI]
+   # NOTE: if you set `DEFAULT_AI_PROVIDER=openai`, you should set this API_KEY
+   # -----------------------------------------------------------------------------
+   OPENAI_API_KEY=
+   ```
+
+3. Set the AI autofill feature
+
+   If you need to enable the AI model to implement the autofill feature, please set `SUPPORT_AI_SUBMIT` to `true`.
+
+   <Aside type="tip">
+      1、If you encounter any issues after enabling the AI autofill feature, you can set `SUPPORT_AI_SUBMIT` to `false` to disable the AI autofill feature, and then enable it after the problem is fixed.  
+      2、The AI autofill feature is disabled by default, so the AI autofill feature is not enabled. The reason why a separate `SUPPORT_AI_SUBMIT` variable is used to control it is that the AI model may be used for other functions in the future, so each function needs a separate variable to control it.
+   </Aside>
+
+   ```bash
+   # src/lib/constants.ts
+   # support AI submit, default is false
+   # NOTE: if you set true, you should make sure the AI provider
+   # and the API_KEY is set in the env variables.
+   # if something is wrong in AI submit, you can set false to disable it.
+   export const SUPPORT_AI_SUBMIT = true;
+   ```
+
+</Steps>
+
+After configuration of AI models, the "AI Autofill" button will appear in the submission form if the AI autofill feature is enabled, and click the button will trigger the AI model to automatically parse the webpage content and fill in the form.
+
+![AI Auto Fill](../../../assets/images/guide-submission-autofill.png)
+
+## Further reading
+
+- [Vercel AI SDK](https://sdk.vercel.ai/)
+- [DeepSeek API Key](https://platform.deepseek.com/api_keys)
+- [Google Gemini API Key](https://aistudio.google.com/apikey)
+- [OpenAI ChatGPT API Key](https://platform.openai.com/settings/organization/api-keys)

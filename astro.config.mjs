@@ -103,6 +103,13 @@ export default defineConfig({
 							},
 							slug: "configuration/analytics"
 						},
+						{
+							label: "AI",
+							translations: {
+								"zh-CN": "AI 模型 - AI"
+							},
+							slug: "configuration/ai"
+						},
 					],
 				},
 				{
