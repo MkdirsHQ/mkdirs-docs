@@ -6,6 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+	// site: "http://localhost:4321",
 	site: "https://docs.mkdirs.com",
 	integrations: [
 		sitemap(),
@@ -32,6 +33,9 @@ export default defineConfig({
 					label: "简体中文",
 					lang: "zh-CN",
 				},
+			},
+			components: {
+				Head: './src/components/Head.astro',
 			},
 			sidebar: [
 				{
