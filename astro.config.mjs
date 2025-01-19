@@ -219,18 +219,25 @@ export default defineConfig({
 							slug: "guide/develop"
 						},
 						{
-							label: "Sanity",
-							translations: {
-								"zh-CN": "Sanity 相关"
-							},
-							slug: "guide/sanity"
-						},
-						{
 							label: "Submission",
 							translations: {
 								"zh-CN": "提交数据"
 							},
 							slug: "guide/submission"
+						},
+						{
+							label: "Sponsor Ads",
+							translations: {
+								"zh-CN": "赞助广告"
+							},
+							slug: "guide/sponsor-ads"
+						},
+						{
+							label: "Sanity",
+							translations: {
+								"zh-CN": "Sanity 相关"
+							},
+							slug: "guide/sanity"
 						},
 					],
 				},
