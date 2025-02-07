@@ -30,6 +30,48 @@ If you are using Vercel to deploy your website, you can find the logs in the `Lo
 
 ![Vercel Logs](../../../assets/images/guide-dev-logs-vercel.png)
 
+## How to batch import data
+
+Mkdirs uses [Sanity](https://www.sanity.io/) as the content management system, so if you want to batch import data, you need to import the data into Sanity, and it's recommended to read the [Sanity documentation](/guide/sanity) before importing the data.
+
+If you are familiar with Sanity, you can refer to the scripts in the `scripts` directory in the root of the project to implement batch import of categories, tags, and items.
+
+By default, there are four scripts in the `scripts` directory in the root of the project: `batch-group.ts`, `batch-category.ts`, `batch-tag.ts`, and `batch-item.ts`, which are used to import category groups, categories, tags, and items, respectively.
+
+You can test importing data by running the command `pnpm batch` after creating a new project, and you can also refer to the other scripts in the directory too, the corresponding commands can be found in the [`package.json` file](https://github.com/MkdirsHQ/mkdirs-template/blob/main/package.json#L27).
+
+```json
+"scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typegen": "sanity schema extract && sanity typegen generate",
+    "email": "email dev --dir emails --port 3333",
+    "export-user-emails": "tsx scripts/export-user-emails.ts",
+    "microlink:fetch": "tsx scripts/explore-microlink.ts fetch",
+    "microlink:insights": "tsx scripts/explore-microlink.ts insights",
+    "microlink:screenshot": "tsx scripts/explore-microlink.ts screenshot",
+    "microlink:fullpage": "tsx scripts/explore-microlink.ts fullpage",
+    "aisdk:fetch": "tsx scripts/explore-aisdk.ts fetch",
+    "aisdk:structure": "tsx scripts/explore-aisdk.ts structure",
+    "item:remove": "tsx scripts/batch-item.ts remove",
+    "item:import": "tsx scripts/batch-item.ts import",
+    "item:update": "tsx scripts/batch-item.ts update",
+    "item:fetch": "tsx scripts/batch-item.ts fetch",
+    "batch": "tsx scripts/batch-all.ts",
+    "batch:remove": "tsx scripts/batch-all.ts remove",
+    "batch:import": "tsx scripts/batch-all.ts import",
+    "batch:update": "tsx scripts/batch-all.ts update"
+},
+```
+
+<Aside type="caution">
+    1、By default, these scripts cannot fully meet your needs, they only provide a basic implementation, you need to adjust them according to your actual needs.  
+    2、There are some scripts in the directory that are used to test the interfaces of [Vercel AI SDK](https://sdk.vercel.ai/) and [Microlink](https://microlink.io/), you can also refer to them to implement your custom features.
+</Aside>
+
+
 ## How to format the code
 
 We use [Biome](https://biomejs.dev/) to format the code, and it's already configured in the project.
