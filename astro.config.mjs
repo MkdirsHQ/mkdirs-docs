@@ -53,6 +53,13 @@ export default defineConfig({
 					slug: "faq",
 				},
 				{
+					label: "Roadmap",
+					translations: {
+						"zh-CN": "路线图"
+					},
+					link: "https://github.com/MkdirsHQ/mkdirs-template/issues/10",
+				},
+				{
 					label: "Prerequisites",
 					translations: {
 						"zh-CN": "前提条件"

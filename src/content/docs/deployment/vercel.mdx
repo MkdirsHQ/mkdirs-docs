@@ -3,6 +3,7 @@ title: Vercel
 description: How to deploy Mkdirs on Vercel.
 ---
 
+import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 You can easily deploy Mkdirs on [Vercel](https://vercel.com/).
@@ -33,7 +34,9 @@ You can easily deploy Mkdirs on [Vercel](https://vercel.com/).
 
 5. Set the Function Max Duration (Optional)
 
-    If you enabled the AI autofill feature, please set the `Function Max Duration` to `60` seconds in the `Settings/Functions` section.
+    <Aside type="tip">
+        If you enabled the AI autofill feature, please set the `Function Max Duration` to `60` seconds in the `Settings/Functions` section.
+    </Aside>
 
     ![Config AI Function](../../../assets/images/config-ai-function.png)
 

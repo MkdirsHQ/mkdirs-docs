@@ -17,7 +17,10 @@ import { Steps } from '@astrojs/starlight/components';
     Users click the "Submit" button on the directory page, and fill in the form with the required information, then submit to review.
 
     <Aside type="tip">
-        The submission form supports AI Autofill, users can click the "AI Autofill" button to let the AI fill in the form, or they can fill in the form manually.
+        1. The submission form supports AI Autofill, users can click the "AI Autofill" button to let the AI fill in the form, or they can fill in the form manually.
+        2. We recommend using Google Gemini model, because it has a larger context window, the success rate is higher, and it is free to use.
+        3. The AI Autofill feature is disabled by default, if you want to enable it, please set the `SUPPORT_AI_SUBMIT` environment variable to `true` in the `.env` file.
+        4. Please note that the AI Autofill feature is not 100% accurate, and it may fail to fill in the form if the page content is not relevant or the SEO information is not accurate.
     </Aside>
 
     ![Submit](../../../assets/images/guide-submission-user.png)
@@ -48,11 +51,9 @@ Admins can submit new item to the directory by clicking the "Submit" button on t
 
 ![Studio](../../../assets/images/guide-submission-admin.png)
 
-Please make sure to set the `Publish Date` field, and the `Free Plan Status` field to `approved` before publishing.
+Please make sure to set the `Publish Date` field, and the `Free Plan Status` field to `approved` before publishing. After publishing, the item will be displayed in the directory. Because Sanity has cache for API requests, it may take a few minutes to see the content on the directory page.
 
 ![Approved](../../../assets/images/guide-submission-approved.png)
-
-After publishing, the item will be displayed in the directory.
 
 
 ## Paid Submission

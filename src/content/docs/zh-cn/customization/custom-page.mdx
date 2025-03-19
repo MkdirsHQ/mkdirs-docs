@@ -22,3 +22,13 @@ import { Aside } from '@astrojs/starlight/components';
 <Aside type="caution">
     请确保 slug 是唯一的，并且它被列在 `src/routes.ts` 文件中的 `publicRoutes` 数组中，否则页面将被重定向到登录页面。
 </Aside>
+
+## 修改首页
+
+Mkdirs 模板有3种首页布局，您可以通过以下步骤修改默认首页布局。
+
+1. 删除 `src/app/(website)/(public)/(home)` 文件夹中的3个文件。
+
+2. 将 `src/app/(website)/(test)/(home2)` 或 `src/app/(website)/(test)/(home3)` 文件夹中的文件复制到 `src/app/(website)/(public)/(home)` 文件夹中。
+
+![Custom Home Page](../../../../assets/images/guide-custom-homepage.png)

@@ -6,7 +6,7 @@ description: 如何配置AI模型相关的环境变量。
 import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-Mkdirs 在提交界面使用 AI 模型来分析网站的内容，并将分析结果自动填充到提交表单中，从而提高提交流程的效率。
+Mkdirs 在提交界面使用 AI 模型来分析网站的内容，并将分析结果自动填充到提交表单中，从而大幅度提高导航站提交和数据录入流程的效率。
 
 Mkdirs 使用 [Vercel AI SDK](https://sdk.vercel.ai/) 作为 AI 模型的封装，并默认支持 [OpenAI ChatGPT](https://openai.com/)、[Google Gemini](https://gemini.google.com/) 和 [DeepSeek](https://www.deepseek.com/) 3个模型，可以根据导航站的需求选择使用。
 
@@ -19,8 +19,9 @@ Mkdirs 使用 [Vercel AI SDK](https://sdk.vercel.ai/) 作为 AI 模型的封装�
    您可以选择使用 `google`、`deepseek` 或 `openai` 作为 AI 模型，并在 `.env` 文件中设置 `DEFAULT_AI_PROVIDER` 变量。
 
    <Aside type="tip">
-      1、默认是没有配置 AI 模型，所以不会启用 AI 自动填表功能。  
-      2、如果您想使用其他 AI 模型，请参考 [Vercel AI SDK](https://sdk.vercel.ai/) 文档，添加其他 AI 模型的依赖库，然后配置到 Mkdirs 中即可。
+      1、默认没有配置 AI 模型，所以不会启用 AI 自动填表功能。  
+      2、虽然默认支持3个模型，但不同模型差异较大，推荐使用 Google Gemini 模型，因为它上下文窗口更大，效果更好，而且支持免费使用。  
+      3、如果您想使用其他 AI 模型，请参考 [Vercel AI SDK](https://sdk.vercel.ai/) 文档，添加其他 AI 模型的依赖库，然后配置到 Mkdirs 中即可。
    </Aside>
 
    ```bash
@@ -75,7 +76,8 @@ Mkdirs 使用 [Vercel AI SDK](https://sdk.vercel.ai/) 作为 AI 模型的封装�
 
    <Aside type="tip">
       1、如果启用 AI 自动填表功能后遇到什么问题，可将 `SUPPORT_AI_SUBMIT` 设置为 `false`来禁用 AI 自动填表功能，待问题修复后再启用。  
-      2、AI 自动填表功能默认是关闭的，所以不会启用 AI 自动填表功能。之所以使用单独的 `SUPPORT_AI_SUBMIT` 变量来控制，是因为 AI 模型将来可能用于其他功能，所以每个功能都需要单独的变量来控制。
+      2、AI 自动填表功能默认是关闭的，之所以使用单独的 `SUPPORT_AI_SUBMIT` 变量来控制，是因为 AI 模型将来可能用于其他功能，所以每个功能都需要单独的变量来控制。  
+      3、请注意，AI 自动填表功能成功率不是 100%，如果抓取网页内容失败或者 SEO 信息不准确，都可能导致 AI 模型无法正确解析网页内容，最终导致 AI 自动填表失败。
    </Aside>
 
    ```bash

@@ -17,7 +17,10 @@ import { Steps } from '@astrojs/starlight/components';
     用户点击导航站的 "提交" 按钮，并填写表单，然后提交审核。
 
     <Aside type="tip">
-        提交表单支持 AI 自动填充，用户可以点击 "AI 自动填充" 按钮，让 AI 填充表单，或者手动填写表单。
+        1、提交表单支持 AI 自动填表，用户可以点击 "AI 自动填表" 按钮，让 AI 填充表单，或者手动填写表单。  
+        2、请注意，优先选择 Google Gemini 模型，因为它上下文窗口更大，解析效果不错，成功率高，并且可以免费使用。  
+        3、AI 自动填表功能默认是关闭的，如果需要开启，请在 `.env` 文件中设置 `SUPPORT_AI_SUBMIT` 为 `true`。  
+        4、AI 自动填表功能成功率不是 100%，如果抓取网页内容失败或者 SEO 信息不准确，都可能导致 AI 模型无法正确解析网页内容，最终导致 AI 自动填表失败。
     </Aside>
 
     ![Submit](../../../../assets/images/guide-submission-user.png)
@@ -36,7 +39,7 @@ import { Steps } from '@astrojs/starlight/components';
 
 3. 用户发布提交
 
-    在提交被批准后，用户可以点击 "发布" 按钮，将提交发布到导航站，发布后，内容将显示在导航站中。
+    在提交被批准后，用户可以点击 "发布" 按钮，将提交发布到导航站。发布后，内容将显示在导航站中，因为 Sanity 有缓存，所以可能需要等待几分钟才能看到内容。
 
     ![Publish](../../../../assets/images/guide-submission-publish.png)
 
@@ -48,11 +51,9 @@ import { Steps } from '@astrojs/starlight/components';
 
 ![Studio](../../../../assets/images/guide-submission-admin.png)
 
-请确保设置 `发布日期` (Publish Date) 和 `免费计划状态` (Free Plan Status) 字段为 `已批准` (Approved) ，然后发布。
+请确保设置 `发布日期` (Publish Date) 和 `免费计划状态` (Free Plan Status) 字段为 `已批准` (Approved) ，然后发布。用户确认发布后，内容将显示在导航站中，因为 Sanity 有缓存，所以可能需要等待几分钟才能看到内容。
 
 ![Approved](../../../../assets/images/guide-submission-approved.png)
-
-发布后，内容将显示在导航站中。
 
 ## 付费提交流程
 

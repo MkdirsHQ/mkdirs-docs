@@ -24,16 +24,16 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
     - Click on the `Reveal live key` (or `Reveal test key` if you are in test mode).
     - Copy the secret key and set it to the `.env` file.
 
-    <Aside type="caution">
-        1. Make sure you copy the **secret key** and not the **public key**.
-        2. Make sure you set the different secret keys for live and test modes.
-    </Aside>
-
     ```bash
     # .env
     # [only required if you want to support paid submissions]
     STRIPE_API_KEY=your_stripe_api_key
     ```
+
+    <Aside type="caution">
+        1. Make sure you copy the **secret key** and not the **public key**.
+        2. Make sure you set the different secret keys for live and test modes.
+    </Aside>
 
     ![Stripe Key](../../../assets/images/stripe-key.png)
 
@@ -47,6 +47,13 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
     - Go to the product detail page, click on the `...` button in the pricing section.
     - Copy the **price id** and set it to the `.env` file.
 
+    ```bash
+    # .env
+    # [only required if you want to support paid submissions and sponsor ads]
+    NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id
+    NEXT_PUBLIC_STRIPE_SPONSOR_PRICE_ID=your_price_id
+    ```
+
     <Aside type="caution">
         1. Make sure you copy the **price id** and not the **product id**.
         2. Make sure you set the different price ids for live and test modes.
@@ -54,13 +61,6 @@ Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
         `NEXT_PUBLIC_STRIPE_PRO_PRICE_ID` is for paid submissions.
         `NEXT_PUBLIC_STRIPE_SPONSOR_PRICE_ID` is for sponsor ads.
     </Aside>
-
-    ```bash
-    # .env
-    # [only required if you want to support paid submissions and sponsor ads]
-    NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id
-    NEXT_PUBLIC_STRIPE_SPONSOR_PRICE_ID=your_price_id
-    ```
 
     ![Stripe Price](../../../assets/images/stripe-price.png)
 

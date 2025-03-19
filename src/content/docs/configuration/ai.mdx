@@ -18,11 +18,6 @@ Mkdirs uses [Vercel AI SDK](https://sdk.vercel.ai/) to wrap AI models and suppor
 
    You can choose to use `google`, `deepseek`, or `openai` as the AI model, and set the `DEFAULT_AI_PROVIDER` variable in the `.env` file.
 
-   <Aside type="tip">
-      1、DEFAULT_AI_PROVIDER is not configured with any AI model, so the AI autofill feature is not enabled by default.  
-      2、If you want to use other AI models, please refer to the documentation of [Vercel AI SDK](https://sdk.vercel.ai/), add the dependency library of other AI models, and then configure it in Mkdirs.
-   </Aside>
-
    ```bash
    # .env
    # [only required if you are using AI models to auto fill the submission form]
@@ -30,6 +25,12 @@ Mkdirs uses [Vercel AI SDK](https://sdk.vercel.ai/) to wrap AI models and suppor
    # -----------------------------------------------------------------------------
    DEFAULT_AI_PROVIDER=
    ```
+
+   <Aside type="tip">
+      1、DEFAULT_AI_PROVIDER is not configured with any AI model, so the AI autofill feature is not enabled by default.  
+      2、Although Mkdirs supports 3 models by default, different models have different effects, so it is recommended to use the `Google Gemini` model, which has a larger context window, better effect, and is free.  
+      3、If you want to use other AI models, please refer to the documentation of [Vercel AI SDK](https://sdk.vercel.ai/), add the dependency library of other AI models, and then configure it in Mkdirs.
+   </Aside>
 
 2. Get the API Key of the corresponding AI model
 
@@ -73,11 +74,6 @@ Mkdirs uses [Vercel AI SDK](https://sdk.vercel.ai/) to wrap AI models and suppor
 
    If you need to enable the AI model to implement the autofill feature, please set `SUPPORT_AI_SUBMIT` to `true`.
 
-   <Aside type="tip">
-      1、If you encounter any issues after enabling the AI autofill feature, you can set `SUPPORT_AI_SUBMIT` to `false` to disable the AI autofill feature, and then enable it after the problem is fixed.  
-      2、The AI autofill feature is disabled by default, so the AI autofill feature is not enabled. The reason why a separate `SUPPORT_AI_SUBMIT` variable is used to control it is that the AI model may be used for other functions in the future, so each function needs a separate variable to control it.
-   </Aside>
-
    ```bash
    # src/lib/constants.ts
    # support AI submit, default is false
@@ -86,6 +82,12 @@ Mkdirs uses [Vercel AI SDK](https://sdk.vercel.ai/) to wrap AI models and suppor
    # if something is wrong in AI submit, you can set false to disable it.
    export const SUPPORT_AI_SUBMIT = true;
    ```
+
+   <Aside type="tip">
+      1、If you encounter any issues after enabling the AI autofill feature, you can set `SUPPORT_AI_SUBMIT` to `false` to disable the AI autofill feature, and then enable it after the problem is fixed.  
+      2、The AI autofill feature is disabled by default, so the AI autofill feature is not enabled. The reason why a separate `SUPPORT_AI_SUBMIT` variable is used to control it is that the AI model may be used for other functions in the future, so each function needs a separate variable to control it.  
+      3、Please note that the success rate of the AI autofill feature is not 100%, if the webpage content is not captured or the SEO information is not accurate, it may lead to the AI model unable to correctly parse the webpage content, and finally lead to the AI autofill feature failure.
+   </Aside>
 
 </Steps>
 

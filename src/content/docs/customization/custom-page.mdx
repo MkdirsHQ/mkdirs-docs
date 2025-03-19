@@ -22,3 +22,14 @@ You can add About page, Contact page, Privacy page, Terms page, etc, in the Sani
 <Aside type="caution">
     Please make sure the slug is unique, and it is listed in the `publicRoutes` array in the `src/routes.ts` file, otherwise the page will be redirected to the login page.
 </Aside>
+
+
+## Change Home Page
+
+There are 3 home page layouts in Mkdirs template, you can change the default home page layout by the following steps.
+
+1. Remove the 3 files in the `src/app/(website)/(public)/(home)` folder.
+
+2. Copy the files in `src/app/(website)/(test)/(home2)` or `src/app/(website)/(test)/(home3)` folder to the `src/app/(website)/(public)/(home)` folder.
+
+![Custom Home Page](../../../assets/images/guide-custom-homepage.png)
