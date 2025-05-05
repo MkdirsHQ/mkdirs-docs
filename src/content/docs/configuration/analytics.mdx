@@ -53,6 +53,56 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
 
 </Steps>
 
+## Umami Analytics
+
+<Steps>
+
+1. Create an account on [Umami](https://umami.is)
+
+   If you don't have an account, follow the steps to create your account.
+
+2. Create a new website
+
+   After logging in, click on the `Add Website` button and enter your website details.
+
+3. Get the Website ID
+
+   Once the website is created, you'll find the Website ID in the website settings. Copy it and set it along with the script URL in your `.env` file.
+
+   ```bash
+   # .env
+   # [only required if you are using Umami Analytics]
+   NEXT_PUBLIC_UMAMI_WEBSITE_ID=your_website_id
+   NEXT_PUBLIC_UMAMI_SCRIPT=https://cloud.umami.is/script.js
+   ```
+
+</Steps>
+
+## Plausible Analytics
+
+<Steps>
+
+1. Create an account on [Plausible](https://plausible.io)
+
+   If you don't have an account, follow the steps to create your account.
+
+2. Add a new site
+
+   After logging in, click on the `Add a site` button and enter your domain name.
+
+3. Configure the domain
+
+   Once the site is added, copy your domain name and set it along with the script URL in your `.env` file.
+
+   ```bash
+   # .env
+   # [only required if you are using Plausible Analytics]
+   NEXT_PUBLIC_PLAUSIBLE_DOMAIN=your_domain
+   NEXT_PUBLIC_PLAUSIBLE_SCRIPT=https://plausible.io/js/script.js
+   ```
+
+</Steps>
+
 ## Video tutorial
 
 {/* https://www.youtube.com/embed/O3DEgUjJvhs?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM */}

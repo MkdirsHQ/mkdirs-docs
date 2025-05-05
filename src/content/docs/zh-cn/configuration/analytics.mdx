@@ -53,6 +53,56 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
 
 </Steps>
 
+## Umami Analytics
+
+<Steps>
+
+1. 在 [Umami](https://umami.is) 创建一个账户
+
+   如果您没有账户，请按照步骤创建您的账户。
+
+2. 创建一个新网站
+
+   登录后，点击 `Add Website` 按钮并输入您的网站详情。
+
+3. 获取网站 ID
+
+   网站创建完成后，您可以在网站设置中找到网站 ID。复制它并将其与脚本 URL 一起设置到 `.env` 文件中。
+
+   ```bash
+   # .env
+   # [only required if you are using Umami Analytics]
+   NEXT_PUBLIC_UMAMI_WEBSITE_ID=your_website_id
+   NEXT_PUBLIC_UMAMI_SCRIPT=https://cloud.umami.is/script.js
+   ```
+
+</Steps>
+
+## Plausible Analytics
+
+<Steps>
+
+1. 在 [Plausible](https://plausible.io) 创建一个账户
+
+   如果您没有账户，请按照步骤创建您的账户。
+
+2. 添加新站点
+
+   登录后，点击 `Add a site` 按钮并输入您的域名。
+
+3. 配置域名
+
+   站点添加完成后，复制您的域名并将其与脚本 URL 一起设置到 `.env` 文件中。
+
+   ```bash
+   # .env
+   # [only required if you are using Plausible Analytics]
+   NEXT_PUBLIC_PLAUSIBLE_DOMAIN=your_domain
+   NEXT_PUBLIC_PLAUSIBLE_SCRIPT=https://plausible.io/js/script.js
+   ```
+
+</Steps>
+
 ## 视频教程
 
 视频教程有2个版本，一个是开发者教程，一个是初学者教程，请根据自己的实际情况选择观看。
