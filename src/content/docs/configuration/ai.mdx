@@ -8,7 +8,7 @@ import { Steps } from '@astrojs/starlight/components';
 
 Mkdirs uses AI models to analyze the content of the website and automatically fill in the submission form, which improves the efficiency of the submission process.
 
-Mkdirs uses [Vercel AI SDK](https://sdk.vercel.ai/) to wrap AI models and supports [OpenAI ChatGPT](https://openai.com/), [Google Gemini](https://gemini.google.com/), and [DeepSeek](https://www.deepseek.com/) models by default, which can be selected according to the needs of the directory.
+Mkdirs uses [Vercel AI SDK](https://sdk.vercel.ai/) to wrap AI models and supports [OpenAI ChatGPT](https://openai.com/), [Google Gemini](https://gemini.google.com/), [DeepSeek](https://www.deepseek.com/), [XAI](https://x.ai/) and [OpenRouter](https://openrouter.ai/) models by default, which can be selected according to the needs of the directory.
 
 ## Configuration
 
@@ -16,19 +16,19 @@ Mkdirs uses [Vercel AI SDK](https://sdk.vercel.ai/) to wrap AI models and suppor
 
 1. Determine the AI model to use
 
-   You can choose to use `google`, `deepseek`, or `openai` as the AI model, and set the `DEFAULT_AI_PROVIDER` variable in the `.env` file.
+   You can choose to use `google`, `deepseek`, `openai`, `xai` or `openrouter` as the AI model, and set the `DEFAULT_AI_PROVIDER` variable in the `.env` file.
 
    ```bash
    # .env
    # [only required if you are using AI models to auto fill the submission form]
-   # default ai provider: ``, `google`, `deepseek`, `openai`
+   # default ai provider: ``, `google`, `deepseek`, `openai`, `xai`, `openrouter`
    # -----------------------------------------------------------------------------
    DEFAULT_AI_PROVIDER=
    ```
 
    <Aside type="tip">
       1、DEFAULT_AI_PROVIDER is not configured with any AI model, so the AI autofill feature is not enabled by default.  
-      2、Although Mkdirs supports 3 models by default, different models have different effects, so it is recommended to use the `Google Gemini` model, which has a larger context window, better effect, and is free.  
+      2、Different models have different effects, we recommend using the `Google Gemini` model, which has a larger context window, better effect, and is free.  
       3、If you want to use other AI models, please refer to the documentation of [Vercel AI SDK](https://sdk.vercel.ai/), add the dependency library of other AI models, and then configure it in Mkdirs.
    </Aside>
 
@@ -70,7 +70,32 @@ Mkdirs uses [Vercel AI SDK](https://sdk.vercel.ai/) to wrap AI models and suppor
    OPENAI_API_KEY=
    ```
 
-3. Set the AI autofill feature
+   2.4 Get XAI API Key
+
+   Link to get the API Key: [XAI API Key](https://console.x.ai/)
+
+   ```bash
+   # .env
+   # [only required if you are using XAI]
+   # NOTE: if you set `DEFAULT_AI_PROVIDER=xai`, you should set this API_KEY
+   # -----------------------------------------------------------------------------
+   XAI_API_KEY=
+   ```
+
+   2.5 Get OpenRouter API Key
+
+   Link to get the API Key: [OpenRouter API Key](https://openrouter.ai/settings/keys)
+
+   ```bash
+   # .env
+   # [only required if you are using OpenRouter]
+   # NOTE: if you set `DEFAULT_AI_PROVIDER=openrouter`, you should set this API_KEY
+   # -----------------------------------------------------------------------------
+   OPENROUTER_API_KEY=
+   OPENROUTER_MODEL=
+   ```
+
+3. Enable the AI autofill feature
 
    If you need to enable the AI model to implement the autofill feature, please set `SUPPORT_AI_SUBMIT` to `true`.
 
@@ -119,3 +144,5 @@ This video demonstrates how to use the AI model to automatically fill in the sub
 - [DeepSeek API Key](https://platform.deepseek.com/api_keys)
 - [Google Gemini API Key](https://aistudio.google.com/apikey)
 - [OpenAI ChatGPT API Key](https://platform.openai.com/settings/organization/api-keys)
+- [XAI API Key](https://console.x.ai/)
+- [OpenRouter API Key](https://openrouter.ai/settings/keys)

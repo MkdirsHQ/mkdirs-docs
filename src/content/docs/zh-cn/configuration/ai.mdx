@@ -8,7 +8,7 @@ import { Steps } from '@astrojs/starlight/components';
 
 Mkdirs 在提交界面使用 AI 模型来分析网站的内容，并将分析结果自动填充到提交表单中，从而大幅度提高导航站提交和数据录入流程的效率。
 
-Mkdirs 使用 [Vercel AI SDK](https://sdk.vercel.ai/) 作为 AI 模型的封装，并默认支持 [OpenAI ChatGPT](https://openai.com/)、[Google Gemini](https://gemini.google.com/) 和 [DeepSeek](https://www.deepseek.com/) 3个模型，可以根据导航站的需求选择使用。
+Mkdirs 使用 [Vercel AI SDK](https://sdk.vercel.ai/) 作为 AI 模型的封装，并默认支持 [OpenAI ChatGPT](https://openai.com/)、[Google Gemini](https://gemini.google.com/)、[DeepSeek](https://www.deepseek.com/)、[XAI](https://x.ai/) 和 [OpenRouter](https://openrouter.ai/) 5个模型，可以根据导航站的需求选择使用。
 
 ## 配置
 
@@ -16,7 +16,7 @@ Mkdirs 使用 [Vercel AI SDK](https://sdk.vercel.ai/) 作为 AI 模型的封装�
 
 1. 确定要使用的 AI 模型
 
-   您可以选择使用 `google`、`deepseek` 或 `openai` 作为 AI 模型，并在 `.env` 文件中设置 `DEFAULT_AI_PROVIDER` 变量。
+   您可以选择使用 `google`、`deepseek`、`openai`、`xai` 或 `openrouter` 作为 AI 模型，并在 `.env` 文件中设置 `DEFAULT_AI_PROVIDER` 变量。
 
    <Aside type="tip">
       1、默认没有配置 AI 模型，所以不会启用 AI 自动填表功能。  
@@ -27,7 +27,7 @@ Mkdirs 使用 [Vercel AI SDK](https://sdk.vercel.ai/) 作为 AI 模型的封装�
    ```bash
    # .env
    # [only required if you are using AI models to auto fill the submission form]
-   # default ai provider: ``, `google`, `deepseek`, `openai`
+   # default ai provider: ``, `google`, `deepseek`, `openai`, `xai`, `openrouter`
    # -----------------------------------------------------------------------------
    DEFAULT_AI_PROVIDER=
    ```
@@ -70,7 +70,32 @@ Mkdirs 使用 [Vercel AI SDK](https://sdk.vercel.ai/) 作为 AI 模型的封装�
    OPENAI_API_KEY=
    ```
 
-3. 设置启用 AI 自动填表的功能
+   2.4 获取 XAI API Key
+
+   获取 API Key 的链接：[XAI API Key](https://console.x.ai/)
+
+   ```bash
+   # .env
+   # [only required if you are using XAI]
+   # NOTE: if you set `DEFAULT_AI_PROVIDER=xai`, you should set this API_KEY
+   # -----------------------------------------------------------------------------
+   XAI_API_KEY=
+   ```
+
+   2.5 获取 OpenRouter API Key
+
+   获取 API Key 的链接：[OpenRouter API Key](https://openrouter.ai/settings/keys)
+
+   ```bash
+   # .env
+   # [only required if you are using OpenRouter]
+   # NOTE: if you set `DEFAULT_AI_PROVIDER=openrouter`, you should set this API_KEY
+   # -----------------------------------------------------------------------------
+   OPENROUTER_API_KEY=
+   OPENROUTER_MODEL=
+   ```
+
+3. 启用 AI 自动填表的功能
 
    如果需要启用 AI 模型实现自动填表的功能，请将 `SUPPORT_AI_SUBMIT` 设置为 `true`。
 
@@ -119,3 +144,5 @@ Mkdirs 使用 [Vercel AI SDK](https://sdk.vercel.ai/) 作为 AI 模型的封装�
 - [DeepSeek API Key](https://platform.deepseek.com/api_keys)
 - [Google Gemini API Key](https://aistudio.google.com/apikey)
 - [OpenAI ChatGPT API Key](https://platform.openai.com/settings/organization/api-keys)
+- [XAI API Key](https://console.x.ai/)
+- [OpenRouter API Key](https://openrouter.ai/settings/keys)
