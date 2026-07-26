@@ -6,5 +6,8 @@ import mdx from "fumadocs-mdx/vite";
 export default defineConfig({
   vite: {
     plugins: [press(), mdx(), tailwindcss()],
+    resolve: {
+      external: ["@takumi-rs/core"],
+    },
   },
 });
