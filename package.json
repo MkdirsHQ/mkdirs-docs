@@ -1,15 +1,15 @@
 {
-  "name": "docs-template",
+  "name": "mkdocs",
   "description": "A fast documentation template powered by FumaPress and deployed on Cloudflare Workers.",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/open-fox/docs-template.git"
+    "url": "https://github.com/open-fox/mkdocs.git"
   },
   "homepage": "https://docs.mksaas.link",
   "bugs": {
-    "url": "https://github.com/open-fox/docs-template/issues"
+    "url": "https://github.com/open-fox/mkdocs/issues"
   },
   "type": "module",
   "sideEffects": false,

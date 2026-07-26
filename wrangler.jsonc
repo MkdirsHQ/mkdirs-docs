@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "docs-template",
+  "name": "mkdocs",
   "compatibility_date": "2026-07-26",
   "workers_dev": false,
   "routes": [

@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'Docs',
+  name: 'MkDocs',
   description:
     'A fast documentation template powered by FumaPress and deployed on Cloudflare Workers.',
   url:
@@ -8,11 +8,11 @@ export const siteConfig = {
   logo: '/logo.svg',
   favicon: '/favicon.svg',
   homeLabel: 'Website',
-  homeUrl: 'https://github.com/open-fox/docs-template',
-  githubUrl: 'https://github.com/open-fox/docs-template',
+  homeUrl: 'https://github.com/open-fox/mkdocs',
+  githubUrl: 'https://github.com/open-fox/mkdocs',
   git: {
     user: 'open-fox',
-    repo: 'docs-template',
+    repo: 'mkdocs',
     branch: 'main',
   },
 } as const;

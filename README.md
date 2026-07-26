@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="./public/logo.svg" alt="Docs Template" width="72" height="72" />
+  <img src="./public/logo.svg" alt="MkDocs" width="72" height="72" />
 </p>
 
-<h1 align="center">Docs Template</h1>
+<h1 align="center">MkDocs</h1>
 
 <p align="center">
   A fast documentation template powered by <a href="https://press.fumadocs.dev">FumaPress</a> and deployed on Cloudflare Workers.
 </p>
 
 <p align="center">
-  <a href="./LICENSE"><img src="https://img.shields.io/github/license/open-fox/docs-template" alt="License" /></a>
-  <a href="https://github.com/open-fox/docs-template/stargazers"><img src="https://img.shields.io/github/stars/open-fox/docs-template" alt="GitHub stars" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/github/license/open-fox/mkdocs" alt="License" /></a>
+  <a href="https://github.com/open-fox/mkdocs/stargazers"><img src="https://img.shields.io/github/stars/open-fox/mkdocs" alt="GitHub stars" /></a>
   <a href="https://press.fumadocs.dev"><img src="https://img.shields.io/badge/FumaPress-powered-18181b" alt="FumaPress" /></a>
   <a href="https://workers.cloudflare.com"><img src="https://img.shields.io/badge/Cloudflare-Workers-F38020?logo=cloudflare&amp;logoColor=white" alt="Cloudflare Workers" /></a>
   <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript&amp;logoColor=white" alt="TypeScript" /></a>
@@ -19,10 +19,10 @@
 <p align="center">
   <a href="https://docs.mksaas.link">Live Demo</a> ·
   <a href="https://docs.mksaas.link">Documentation</a> ·
-  <a href="https://github.com/open-fox/docs-template/issues">Report a Bug</a>
+  <a href="https://github.com/open-fox/mkdocs/issues">Report a Bug</a>
 </p>
 
-![Docs Template screenshot](./public/screenshot.png)
+![MkDocs screenshot](./public/screenshot.png)
 
 ## Features
 
@@ -52,42 +52,15 @@
 ### Installation
 
 ```bash
-git clone https://github.com/open-fox/docs-template.git
-cd docs-template
+git clone https://github.com/open-fox/mkdocs.git
+cd mkdocs
 pnpm install
 pnpm dev
 ```
 
 Open the local URL printed in the terminal.
 
-## Create your documentation site
-
-Most sites only need to update these files:
-
-| Path | Purpose |
-| --- | --- |
-| `content/` | Documentation pages and navigation metadata |
-| `public/` | Logo, favicon, screenshots, and static assets |
-| `src/site.config.ts` | Site name, description, URL, and repository links |
-| `wrangler.jsonc` | Worker name, deployment settings, and custom domain |
-| `press.config.tsx` | FumaPress plugins, layouts, and shared MDX components |
-
-The main content structure is intentionally small:
-
-```text
-content/
-├── index.mdx
-├── getting-started.mdx
-└── guides/
-    ├── meta.json
-    ├── authoring.mdx
-    ├── components.mdx
-    └── deployment.mdx
-```
-
-Add locale-specific files and metadata using the locale suffixes configured in `press.config.tsx`.
-
-## Available scripts
+### Commands
 
 | Command | Description |
 | --- | --- |
@@ -124,7 +97,29 @@ Contributions are welcome.
 3. Run `pnpm check` before committing.
 4. Open a pull request with a clear description of the change.
 
-For bugs and feature requests, please [open an issue](https://github.com/open-fox/docs-template/issues).
+For bugs and feature requests, please [open an issue](https://github.com/open-fox/mkdocs/issues).
+
+## About OpenFox
+
+[OpenFox](https://github.com/open-fox) is an independent developer building practical products and developer tools that help makers launch software faster.
+
+### [MkSaaS](https://mksaas.com)
+
+A complete Next.js boilerplate for building production SaaS products with authentication, payments, AI, content, and more.
+
+[Visit MkSaaS →](https://mksaas.com)
+
+### [TanStarter](https://tanstarter.dev)
+
+A production-ready TanStack Start boilerplate for building and deploying SaaS products on Cloudflare Workers.
+
+[Visit TanStarter →](https://tanstarter.dev)
+
+### [MkImage](https://mkimage.ai)
+
+An AI image platform for generating, editing, transforming, and exploring images with modern AI models.
+
+[Visit MkImage →](https://mkimage.ai)
 
 ## License
 
