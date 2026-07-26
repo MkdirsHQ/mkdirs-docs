@@ -25,6 +25,7 @@ import { siteConfig } from './src/site.config';
 const i18n = defineI18n({
   languages: ['en', 'zh'],
   defaultLanguage: 'en',
+  hideLocale: 'default-locale',
 });
 
 const translations = i18n

@@ -6,13 +6,13 @@ Live example: [docs.mksaas.link](https://docs.mksaas.link)
 
 ## Included
 
-- English and Simplified Chinese content
+- English content at root paths and Simplified Chinese content under `/zh`
 - Static FlexSearch and keyboard search
 - Responsive docs navigation, table of contents, bilingual language menu, and light/dark/system theme menu
 - Cards, callouts, steps, tabs, accordions, file trees, type tables, Lucide icons, and YouTube embeds
 - Markdown/LLM exports, generated Open Graph images, and sitemap
 - Wrangler configuration for Cloudflare Workers
-- A tiny redirect Worker for `/` and legacy `/{locale}/docs/...` links; documentation assets are still served directly from Cloudflare's static asset layer
+- A small compatibility Worker that serves default-English pages without `/en`, redirects legacy `/en/...` and `/{locale}/docs/...` links, and delegates asset delivery to Cloudflare Static Assets
 
 ## Development
 

@@ -49,7 +49,7 @@ Pair the default English file with a `.zh` translation. Folder metadata follows 
 
 ## Links and assets
 
-- Use locale-aware absolute links such as `/en/guides/authoring` when a destination language is intentional.
+- Default-English pages use root paths such as `/guides/authoring`; translated pages keep their locale prefix, for example `/zh/guides/authoring`.
 - Use relative Markdown links when the reader should stay on the same locale.
 - Put downloadable or static files in `public/` and reference them from `/`.
 - Add site-wide React components in `press.config.tsx`; avoid per-page imports for common UI.

@@ -14,15 +14,7 @@
   "assets": {
     "directory": "./dist/public",
     "binding": "ASSETS",
-    "run_worker_first": [
-      "/",
-      "/docs",
-      "/docs/*",
-      "/en/docs",
-      "/en/docs/*",
-      "/zh/docs",
-      "/zh/docs/*"
-    ],
+    "run_worker_first": true,
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   },

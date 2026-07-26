@@ -5,7 +5,7 @@
   "sideEffects": false,
   "scripts": {
     "dev": "waku dev",
-    "build": "waku build",
+    "build": "waku build && node scripts/normalize-static-output.mjs",
     "start": "waku start",
     "types:check": "fumadocs-mdx && tsc --noEmit",
     "check": "pnpm types:check && pnpm build && pnpm deploy:dry-run",
