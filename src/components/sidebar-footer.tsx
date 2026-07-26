@@ -44,7 +44,7 @@ export function SidebarFooter({
             rel="noreferrer"
             aria-label="X (Twitter)"
             title="X (Twitter)"
-            className="inline-flex size-8 items-center justify-center rounded-full transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
+            className="inline-flex size-8 items-center justify-center rounded-full border border-fd-border bg-transparent transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
           >
             <XIcon className="size-4" />
           </a>
@@ -56,7 +56,7 @@ export function SidebarFooter({
             rel="noreferrer"
             aria-label="GitHub"
             title="GitHub"
-            className="inline-flex size-8 items-center justify-center rounded-full transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
+            className="inline-flex size-8 items-center justify-center rounded-full border border-fd-border bg-transparent transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
           >
             <Github className="size-4" />
           </a>
@@ -68,7 +68,7 @@ export function SidebarFooter({
             rel="noreferrer"
             aria-label="YouTube"
             title="YouTube"
-            className="inline-flex size-8 items-center justify-center rounded-full transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
+            className="inline-flex size-8 items-center justify-center rounded-full border border-fd-border bg-transparent transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
           >
             <Youtube className="size-4" />
           </a>
@@ -80,7 +80,7 @@ export function SidebarFooter({
           <PopoverTrigger
             aria-label={languageLabel}
             title={languageLabel}
-            className="inline-flex size-8 cursor-pointer items-center justify-center rounded-full transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
+            className="inline-flex size-8 cursor-pointer items-center justify-center rounded-full border border-fd-border bg-transparent transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
           >
             <Languages aria-hidden="true" className="size-4" />
           </PopoverTrigger>
