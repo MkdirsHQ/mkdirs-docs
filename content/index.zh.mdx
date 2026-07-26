@@ -13,10 +13,10 @@ icon: BookOpen
   <Card title="文档组件" href="/zh/guides/components" icon={<Blocks />}>
     使用提示框、步骤、标签页、卡片、文件树和视频嵌入。
   </Card>
-  <Card title="编写易维护的文档" href="/zh/guides/authoring" icon={<FileText />}>
+  <Card title="编写文档" href="/zh/guides/authoring" icon={<FileText />}>
     组织页面、翻译、导航、元数据和链接。
   </Card>
-  <Card title="部署到 Workers" href="/zh/guides/deployment" icon={<Cloud />}>
+  <Card title="部署文档" href="/zh/guides/deployment" icon={<Cloud />}>
     使用 Wrangler 验证并发布静态网站。
   </Card>
 </Cards>
@@ -28,7 +28,6 @@ icon: BookOpen
 - 代码高亮与常用 Fumadocs MDX 组件
 - 单页 Markdown、`llms.txt`、Open Graph 图片和 sitemap
 - 通过 Wrangler 静态部署到 Cloudflare Workers
-- 兼容旧版 `/{locale}/docs/...` 链接的重定向
 
 <Callout title="模板边界">
   通用能力应放在模板中。基于模板开发新的文档站时，主要替换 `content/`、`public/`，以及 `src/site.config.ts` 和 `wrangler.jsonc` 中的站点信息。

@@ -4,7 +4,7 @@ description: 使用模板内置的 Wrangler 配置完成验证、部署和自定
 icon: Cloud
 ---
 
-模板会构建静态 FumaPress 网站，并通过 Cloudflare Workers Static Assets 提供服务。只有根路径和旧版文档链接会优先执行这个很小的 Worker 脚本。
+模板会构建静态 FumaPress 网站，并通过 Cloudflare Workers Static Assets 直接发布生成文件，不包含 Worker 入口、运行时代码或 Assets binding。
 
 <Steps>
   <Step>
@@ -53,7 +53,3 @@ icon: Cloud
 <Callout type="warn" title="检查现有 DNS">
   自定义域名不能覆盖已有冲突 CNAME 的主机名，部署路由前需要先确认 DNS 记录。
 </Callout>
-
-## 旧链接兼容
-
-模板内置的 Worker 会将旧版 `/{locale}/docs/...` 永久重定向到 `/{locale}/...`，同时保留查询参数。基于模板创建新站时，应保留 `assets.run_worker_first` 中的这些重定向匹配规则。

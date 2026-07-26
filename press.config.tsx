@@ -17,7 +17,7 @@ import * as LucideIcons from 'lucide-react';
 import type { MDXComponents } from 'mdx/types';
 import { docs } from './.source/server';
 import { Github } from './src/components/github-icon';
-import { ModeSwitcher } from './src/components/mode-switcher';
+import { SidebarFooter } from './src/components/sidebar-footer';
 import { Youtube } from './src/components/youtube-icon';
 import { YoutubeVideo } from './src/components/youtube-video';
 import { siteConfig } from './src/site.config';
@@ -106,7 +106,7 @@ export default defineConfig({
   .layouts({
     async defaultProps() {
       return {
-        githubUrl: siteConfig.githubUrl,
+        githubUrl: '',
         nav: {
           title: (
             <>
@@ -128,11 +128,12 @@ export default defineConfig({
             external: siteConfig.homeUrl.startsWith('http'),
           },
         ],
+        i18n: false,
         themeSwitch: {
-          enabled: true,
+          enabled: false,
         },
-        slots: {
-          themeSwitch: ModeSwitcher,
+        sidebar: {
+          footer: <SidebarFooter githubUrl={siteConfig.githubUrl} />,
         },
       };
     },

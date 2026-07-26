@@ -4,7 +4,7 @@ description: Validate, deploy, and connect a custom domain using the included Wr
 icon: Cloud
 ---
 
-The template builds a static FumaPress site and serves it with Cloudflare Workers Static Assets. Only root and legacy documentation URLs execute the small Worker script first.
+The template builds a static FumaPress site and publishes the generated files directly with Cloudflare Workers Static Assets. It has no Worker entry point, runtime code, or Assets binding.
 
 <Steps>
   <Step>
@@ -53,7 +53,3 @@ Add a Worker Custom Domain when Cloudflare is authoritative for the zone:
 <Callout type="warn" title="Check existing DNS">
   A custom domain cannot replace a hostname that already has a conflicting CNAME record. Confirm the hostname before deploying the route.
 </Callout>
-
-## Legacy links
-
-The included Worker permanently redirects old `/{locale}/docs/...` links to `/{locale}/...` and preserves query parameters. Keep these redirect patterns in `assets.run_worker_first` when deriving a new site from the template.
