@@ -70,21 +70,34 @@ export default defineConfig({
       );
     },
     page(page) {
-      if (page.slugs.length > 0) return null;
-
-      const ogImageUrl = new URL(siteConfig.ogImage, siteConfig.url).href;
+      const isHomepage = page.slugs.length === 0;
+      const pageUrl = new URL(page.url, siteConfig.url).href;
+      const description = page.data.description ?? siteConfig.description;
+      const imageUrl = new URL(
+        isHomepage ? siteConfig.ogImage : `${page.url.replace(/\/$/, '')}.webp`,
+        siteConfig.url,
+      ).href;
 
       return (
         <>
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={pageUrl} />
           <meta
-            property="og:image"
-            content={ogImageUrl}
+            property="og:image:type"
+            content={isHomepage ? 'image/png' : 'image/webp'}
           />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          <meta property="og:image:type" content="image/png" />
+          {isHomepage ? (
+            <>
+              <meta property="og:image" content={imageUrl} />
+              <meta property="og:image:width" content="1200" />
+              <meta property="og:image:height" content="630" />
+            </>
+          ) : null}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content={ogImageUrl} />
+          <meta name="twitter:site" content={siteConfig.twitterHandle} />
+          <meta name="twitter:title" content={page.data.title} />
+          <meta name="twitter:description" content={description} />
+          <meta name="twitter:image" content={imageUrl} />
         </>
       );
     },

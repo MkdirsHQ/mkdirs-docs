@@ -8,6 +8,7 @@ export const siteConfig = {
   logo: '/logo.svg',
   favicon: '/favicon.svg',
   ogImage: '/og.png',
+  twitterHandle: '@tanstarter',
   homeLabel: 'Website',
   homeUrl: 'https://github.com/open-fox/mkdocs',
   githubUrl: 'https://github.com/open-fox/mkdocs',
