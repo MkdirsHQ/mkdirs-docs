@@ -1,0 +1,48 @@
+---
+title: Getting started
+description: Install, run, customize, and deploy a site built from this template.
+icon: Rocket
+---
+
+<Steps>
+  <Step>
+    ### Install dependencies
+
+    ```bash
+    pnpm install
+    ```
+  </Step>
+  <Step>
+    ### Start the local site
+
+    ```bash
+    pnpm dev
+    ```
+  </Step>
+  <Step>
+    ### Update site identity
+
+    Edit `src/site.config.ts`, `wrangler.jsonc`, and the files in `public/`.
+  </Step>
+  <Step>
+    ### Validate and deploy
+
+    ```bash
+    pnpm check
+    pnpm deploy
+    ```
+  </Step>
+</Steps>
+
+## Content conventions
+
+English is the default language. Add `.zh` before the extension for Simplified Chinese translations:
+
+<Files>
+  <Folder name="content" defaultOpen>
+    <File name="index.mdx" />
+    <File name="index.zh.mdx" />
+    <File name="getting-started.mdx" />
+    <File name="getting-started.zh.mdx" />
+  </Folder>
+</Files>

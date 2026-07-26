@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+@import "fumapress/css/preset.css";
+
+@theme {
+  --font-mono: "JetBrains Mono", monospace;
+  --default-font-family: "Geist", sans-serif;
+  --color-fd-primary: oklch(0.62 0.2 259);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-fd-primary) 28%, transparent);
+}

@@ -1,0 +1,34 @@
+---
+title: Authoring components
+description: Reusable components available in every Markdown document.
+icon: Blocks
+---
+
+## Callouts
+
+<Callout type="warn" title="Keep it useful">
+  Use a callout for information readers may otherwise miss.
+</Callout>
+
+## Tabs
+
+<Tabs items={['pnpm', 'npm']}>
+  <Tab value="pnpm">`pnpm install`</Tab>
+  <Tab value="npm">`npm install`</Tab>
+</Tabs>
+
+## Accordions
+
+<Accordions>
+  <Accordion title="Where should reusable behavior live?">
+    Put it in the template, then keep derived sites focused on content.
+  </Accordion>
+</Accordions>
+
+## Video
+
+Use the global `YoutubeVideo` component without importing it inside MDX:
+
+```mdx
+<YoutubeVideo url="https://www.youtube.com/embed/VIDEO_ID" />
+```

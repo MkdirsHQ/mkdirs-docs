@@ -1,0 +1,28 @@
+---
+title: Documentation template
+description: A production-ready FumaPress starter for fast, bilingual documentation sites on Cloudflare Workers.
+icon: BookOpen
+---
+
+This template keeps the application layer intentionally small so most new sites only need to change Markdown and site configuration.
+
+<Cards>
+  <Card title="Start writing" href="/en/getting-started" icon={<Rocket />}>
+    Learn the project structure and publish your first page.
+  </Card>
+  <Card title="Authoring components" href="/en/guides/components" icon={<Blocks />}>
+    Use callouts, steps, tabs, cards, file trees, and video embeds.
+  </Card>
+</Cards>
+
+## Included by default
+
+- English and Simplified Chinese content with a language switcher
+- Static FlexSearch, keyboard search, dark mode, and responsive navigation
+- Syntax highlighting and reusable Fumadocs MDX components
+- Per-page Markdown, `llms.txt`, generated Open Graph images, and sitemap
+- Static Cloudflare Workers deployment through Wrangler
+
+<Callout title="Template boundary">
+  Keep reusable behavior in this repository. A derived documentation site should mainly replace files under `content/`, assets under `public/`, and values in `src/site.config.ts` and `wrangler.jsonc`.
+</Callout>

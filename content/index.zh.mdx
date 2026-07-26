@@ -1,0 +1,28 @@
+---
+title: 文档模板
+description: 基于 FumaPress、可直接部署到 Cloudflare Workers 的中英文文档模板。
+icon: BookOpen
+---
+
+这个模板刻意保持很小。创建新的文档网站时，通常只需要修改 Markdown 内容和站点配置。
+
+<Cards>
+  <Card title="开始写作" href="/zh/getting-started" icon={<Rocket />}>
+    了解项目结构并发布第一篇文档。
+  </Card>
+  <Card title="文档组件" href="/zh/guides/components" icon={<Blocks />}>
+    使用提示框、步骤、标签页、卡片、文件树和视频嵌入。
+  </Card>
+</Cards>
+
+## 开箱即用
+
+- 中英文内容与语言切换
+- 静态全文搜索、快捷键搜索、深色模式和响应式导航
+- 代码高亮与常用 Fumadocs MDX 组件
+- 单页 Markdown、`llms.txt`、Open Graph 图片和 sitemap
+- 通过 Wrangler 静态部署到 Cloudflare Workers
+
+<Callout title="模板边界">
+  通用能力应放在模板中。基于模板开发新的文档站时，主要替换 `content/`、`public/`，以及 `src/site.config.ts` 和 `wrangler.jsonc` 中的站点信息。
+</Callout>

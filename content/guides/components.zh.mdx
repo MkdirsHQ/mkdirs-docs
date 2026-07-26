@@ -1,0 +1,34 @@
+---
+title: 文档组件
+description: 所有 Markdown 文档中都可以直接使用的组件。
+icon: Blocks
+---
+
+## 提示框
+
+<Callout type="warn" title="保持实用">
+  只在读者容易忽略重要信息时使用提示框。
+</Callout>
+
+## 标签页
+
+<Tabs items={['pnpm', 'npm']}>
+  <Tab value="pnpm">`pnpm install`</Tab>
+  <Tab value="npm">`npm install`</Tab>
+</Tabs>
+
+## 折叠面板
+
+<Accordions>
+  <Accordion title="通用能力应该放在哪里？">
+    放在模板中，让派生的文档站专注于内容。
+  </Accordion>
+</Accordions>
+
+## 视频
+
+`YoutubeVideo` 已经全局注册，无需在 MDX 中导入：
+
+```mdx
+<YoutubeVideo url="https://www.youtube.com/embed/VIDEO_ID" />
+```
