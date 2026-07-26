@@ -101,11 +101,13 @@ For bugs and feature requests, please [open an issue](https://github.com/open-fo
 
 ## Author
 
-[OpenFox](https://github.com/open-fox) is an independent developer building products and developer tools for makers. Its projects include:
+[OpenFox](https://mksaas.link/fox-x) is an independent developer building products and developer tools. His products include:
 
-- [MkSaaS](https://mksaas.com) — Make Your AI SaaS Product in a Weekend.
 - [TanStarter](https://tanstarter.dev) — Ship Faster with TanStack, Cost Less with Cloudflare.
+- [MkSaaS](https://mksaas.com) — Make Your AI SaaS Product in a Weekend.
 - [MkImage](https://mkimage.ai) — Make Any Images Possible.
+- [MkDirs](https://mkdirs.com) — Launch AI-powered directory in 30 minutes.
+- [MkDollar](https://mkdollar.com) — The all-in-one platform to help you make first dollar online.
 
 ## License
 
