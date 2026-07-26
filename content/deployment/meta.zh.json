@@ -1,0 +1,6 @@
+{
+  "title": "部署上线",
+  "description": "将 Mkdirs 部署到托管或自托管平台",
+  "icon": "Cloud",
+  "pages": ["vercel", "docker", "dokploy"]
+}

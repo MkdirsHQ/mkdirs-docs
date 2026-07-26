@@ -1,0 +1,83 @@
+---
+title: Dokploy
+description: How to deploy Mkdirs on Dokploy.
+---
+
+
+
+I personally recommend using [Dokploy](https://dokploy.com/) to deploy Mkdirs, because it's much easier to setup the whole thing and you get the automatic CI/CD pipeline like Vercel out of the box.
+
+## Deploy on Dokploy
+
+<Steps>
+  <Step>
+    ### Create a new project on Dokploy
+
+Click on the `Create project` button and set the project name and description.
+  </Step>
+  <Step>
+    ### Create an application in the project
+
+Click on the `Create services` button and select `Application`, then set the application name and description.
+  </Step>
+  <Step>
+    ### Set the source code and build type
+
+Set the source code to the repository, and set the build type to Dockerfile.
+
+ ![Dokploy Settings](/images/dokploy-settings.png)
+
+ ![Dokploy Build Type](/images/dokploy-buildtype.png)
+  </Step>
+  <Step>
+    ### Set the environment variables
+
+Copy the content from the `.env` file and paste them in environment settings.
+
+ <Callout type="warn">
+     1. Environment variables are different in development and production environments.
+     2. Add `AUTH_TRUST_HOST=true` to the environment variables.
+     3. Add `AUTH_URL=https://your-domain.com/api/auth` to the environment variables.
+ </Callout>
+
+ ![Dokploy Environment Variables](/images/dokploy-env.png)
+  </Step>
+  <Step>
+    ### Start to deploy
+
+Click on `Deploy` and wait for the deployment to finish.
+
+ ![Dokploy Deploy](/images/dokploy-deploy.png)
+  </Step>
+  <Step>
+    ### Set the domain
+
+Add the domain you want to use, and make sure to check on `HTTPS`.
+
+ ![Dokploy Domain](/images/dokploy-domain.png)
+  </Step>
+  <Step>
+    ### Done
+
+Check the application by visiting the domain you set once the deployment is finished.
+  </Step>
+</Steps>
+
+
+## Video tutorial
+
+There is no video tutorial for the deployment on Dokploy for now, but you can refer to the following video for the introduction of Dokploy Cloud, and learn how to deploy a Next.js application on Dokploy Cloud.
+
+After that, you will know how to deploy your directory on Dokploy by following the steps above.
+
+{/* https://youtu.be/x2s_Y5ON-ms */}
+<YoutubeVideo
+  url="https://www.youtube.com/embed/x2s_Y5ON-ms"
+  title="Dokploy Cloud - Introduction"
+/>
+
+## Further reading
+
+- [Dokploy](https://dokploy.com/)
+- [How to install Dokploy on your own server](https://mksaas.me/blog/dokploy)
+- [How to install Dokploy on Aliyun ECS server](https://coreychiu.com/blogs/how-to-install-dokploy-on-aliyun-ecs-server)

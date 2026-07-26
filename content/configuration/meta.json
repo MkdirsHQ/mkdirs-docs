@@ -1,0 +1,6 @@
+{
+  "title": "Configuration",
+  "description": "Configure services and integrations used by Mkdirs",
+  "icon": "Settings",
+  "pages": ["sanity", "resend", "stripe", "auth", "analytics", "ai"]
+}

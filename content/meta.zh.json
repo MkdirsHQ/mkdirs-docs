@@ -1,0 +1,16 @@
+{
+  "title": "Mkdirs 文档",
+  "description": "Mkdirs 导航站模板文档",
+  "icon": "LayoutGrid",
+  "root": true,
+  "pages": [
+    "index",
+    "faq",
+    "prerequisites",
+    "installation",
+    "configuration",
+    "deployment",
+    "customization",
+    "guide"
+  ]
+}

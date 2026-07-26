@@ -1,0 +1,15 @@
+{
+  "title": "自定义",
+  "description": "自定义 Mkdirs 网站和导航站体验",
+  "icon": "Paintbrush",
+  "pages": [
+    "information",
+    "logo",
+    "font",
+    "theme",
+    "card",
+    "category",
+    "email",
+    "custom-page"
+  ]
+}

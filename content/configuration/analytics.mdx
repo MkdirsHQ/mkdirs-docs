@@ -1,0 +1,123 @@
+---
+title: Analytics
+description: How to configure the analytics.
+---
+
+
+Mkdirs uses [Google Analytics](https://analytics.google.com/) or [OpenPanel](https://openpanel.dev/) as the analytics service, but you can also add other analytics services, and we will support more in the future.
+
+## Google Analytics
+
+Follow the [Google Analytics official guide](https://support.google.com/analytics/answer/9304153) to set up Google Analytics for a website.
+
+Then copy the Google Analytics ID, and set it to the `.env` file.
+
+```bash
+# .env
+# [only required if you are using Google Analytics]
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your_google_analytics_id;
+```
+
+![Google Analytics](/images/analytics-google.png)
+
+## OpenPanel Analytics
+
+<Steps>
+  <Step>
+    ### Create an account on [OpenPanel](https://openpanel.dev//login)
+
+If you don't have an account, follow [the steps](https://dashboard.openpanel.dev/login) to create your account.
+  </Step>
+  <Step>
+    ### Create a new project
+
+Click on the `Create Project` button, enter the name of your project to create a new one.
+  </Step>
+  <Step>
+    ### Create a new client
+
+Click on the `...` button next to the project name, and select `Projects`.
+
+Click on the `New Client` button, and enter the domain to create a new client.
+  </Step>
+  <Step>
+    ### Get the OpenPanel Client ID
+
+Once the client is created, copy the `Client ID` and set it to the `.env` file.
+
+ ```bash
+ # .env
+ # [only required if you are using OpenPanel Analytics]
+ NEXT_PUBLIC_OPENPANEL_CLIENT_ID=your_open_panel_client_id;
+ ```
+
+ ![OpenPanel Client](/images/openpanel-client.png)
+  </Step>
+</Steps>
+
+## Umami Analytics
+
+<Steps>
+  <Step>
+    ### Create an account on [Umami](https://umami.is)
+
+If you don't have an account, follow the steps to create your account.
+  </Step>
+  <Step>
+    ### Create a new website
+
+After logging in, click on the `Add Website` button and enter your website details.
+  </Step>
+  <Step>
+    ### Get the Website ID
+
+Once the website is created, you'll find the Website ID in the website settings. Copy it and set it along with the script URL in your `.env` file.
+
+```bash
+# .env
+# [only required if you are using Umami Analytics]
+NEXT_PUBLIC_UMAMI_WEBSITE_ID=your_website_id
+NEXT_PUBLIC_UMAMI_SCRIPT=https://cloud.umami.is/script.js
+```
+  </Step>
+</Steps>
+
+## Plausible Analytics
+
+<Steps>
+  <Step>
+    ### Create an account on [Plausible](https://plausible.io)
+
+If you don't have an account, follow the steps to create your account.
+  </Step>
+  <Step>
+    ### Add a new site
+
+After logging in, click on the `Add a site` button and enter your domain name.
+  </Step>
+  <Step>
+    ### Configure the domain
+
+Once the site is added, copy your domain name and set it along with the script URL in your `.env` file.
+
+```bash
+# .env
+# [only required if you are using Plausible Analytics]
+NEXT_PUBLIC_PLAUSIBLE_DOMAIN=your_domain
+NEXT_PUBLIC_PLAUSIBLE_SCRIPT=https://plausible.io/js/script.js
+```
+  </Step>
+</Steps>
+
+## Video tutorial
+
+{/* https://www.youtube.com/embed/O3DEgUjJvhs?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM */}
+<YoutubeVideo
+  url="https://www.youtube.com/embed/O3DEgUjJvhs?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM"
+  title="【Deploy】【6/8】Environment variables for Analytics —— Launch a directory with Mkdirs template"
+/>
+
+## Further Reading
+
+- [Google Analytics](https://analytics.google.com/)
+- [OpenPanel Analytics](https://openpanel.dev/)

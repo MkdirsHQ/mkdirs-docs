@@ -1,0 +1,106 @@
+---
+title: Stripe
+description: How to manage the payment with Stripe.
+---
+
+
+
+Mkdirs uses [Stripe](https://stripe.com/) as a payment processor.
+
+## Configuration
+
+<Steps>
+  <Step>
+    ### Create an account on [Stripe](https://stripe.com/)
+
+If you don't have an account on Stripe, follow their steps to [signup](https://dashboard.stripe.com/register).
+  </Step>
+  <Step>
+    ### Get the Stripe API key
+
+- Go to your Stripe dashboard.
+ - Select `Developers` on the top right navigation bar.
+ - Select `API keys` on the menu under `Developers`.
+ - Click on the `Reveal live key` (or `Reveal test key` if you are in test mode).
+ - Copy the secret key and set it to the `.env` file.
+
+ ```bash
+ # .env
+ # [only required if you want to support paid submissions]
+ STRIPE_API_KEY=your_stripe_api_key
+ ```
+
+ <Callout type="warn">
+     1. Make sure you copy the **secret key** and not the **public key**.
+     2. Make sure you set the different secret keys for live and test modes.
+ </Callout>
+
+ ![Stripe Key](/images/stripe-key.png)
+  </Step>
+  <Step>
+    ### Get the product price id
+
+- Go to your Stripe dashboard.
+ - Select `Product Catalog` on the left sidebar.
+ - Click on the `+ Create Product` button.
+ - Give your product a clear name and set the one-time fee for user submissions.
+ - Click on the `Add Product` button to create it.
+ - Go to the product detail page, click on the `...` button in the pricing section.
+ - Copy the **price id** and set it to the `.env` file.
+
+ ```bash
+ # .env
+ # [only required if you want to support paid submissions and sponsor ads]
+ NEXT_PUBLIC_STRIPE_PRO_PRICE_ID=your_price_id
+ NEXT_PUBLIC_STRIPE_SPONSOR_PRICE_ID=your_price_id
+ ```
+
+ <Callout type="warn">
+     1. Make sure you copy the **price id** and not the **product id**.
+     2. Make sure you set the different price ids for live and test modes.
+     3. Make sure you set the price id for the paid submissions and sponsor ads.
+     `NEXT_PUBLIC_STRIPE_PRO_PRICE_ID` is for paid submissions.
+     `NEXT_PUBLIC_STRIPE_SPONSOR_PRICE_ID` is for sponsor ads.
+ </Callout>
+
+ ![Stripe Price](/images/stripe-price.png)
+  </Step>
+  <Step>
+    ### Get the webhook secret
+
+- Go to your Stripe dashboard.
+ - Select `Developers` on the top right navigation bar.
+ - Select `Webhooks` on the menu under `Developers`.
+ - Click on the `Add an endpoint` button.
+ - Enter the endpoint URL where Stripe will send events to, for example, `https://your-domain.com/api/webhook`.
+ - Choose the events you want to receive notifications for, common events include `checkout.session.completed`.
+ - Copy the webhook secret and set it to the `.env` file.
+
+ <Callout type="warn">
+     You can't set the webhook url to be like `http://localhost:3000/api/webhook` in test mode, and you need to use a local proxy to test it.
+     You may use [ngrok](https://ngrok.com/) or [localtunnel](https://github.com/localtunnel/localtunnel) to create a public URL for your local server, for example, `https://mkdirs.loca.lt/api/webhook`.
+ </Callout>
+
+ ```bash
+ # .env
+ # [only required if you want to support paid submissions and sponsor ads]
+ STRIPE_WEBHOOK_SECRET=your_webhook_secret
+ ```
+
+ ![Stripe Webhook](/images/stripe-webhook.png)
+  </Step>
+</Steps>
+
+## Video tutorial
+
+{/* https://www.youtube.com/embed/xNtFPjhaVKM?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM */}
+<YoutubeVideo
+  url="https://www.youtube.com/embed/xNtFPjhaVKM?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM"
+  title="【Deploy】【4/8】Environment variables for Stripe —— Launch a directory with Mkdirs template"
+/>
+
+## Further Reading
+
+- [Stripe - API Keys](https://stripe.com/docs/keys)
+- [Stripe - Webhooks](https://stripe.com/docs/webhooks)
+- [Stripe - Checkout Sessions](https://docs.stripe.com/api/checkout/sessions/create)

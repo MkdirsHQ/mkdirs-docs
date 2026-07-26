@@ -1,0 +1,6 @@
+{
+  "title": "Guide",
+  "description": "Development and operating guides for Mkdirs",
+  "icon": "BookOpen",
+  "pages": ["develop", "submission", "sponsor-ads", "sanity"]
+}

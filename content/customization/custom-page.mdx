@@ -1,0 +1,34 @@
+---
+title: How to custom website pages
+description: How to change or add the website pages.
+---
+
+
+## Add custom pages
+
+Go to the Sanity Studio, click the `Pages` button, and then click the `Create` button.
+
+Input the page title, and generate the slug, then click the `Publish` button.
+
+After the page is published, you can see the page in the website via the URL `/[slug]`.
+
+For example, if the slug is `about`, you can see the page in the website via the URL `/about`.
+
+You can add About page, Contact page, Privacy page, Terms page, etc, in the Sanity Studio.
+
+![Custom Page](/images/guide-custom-page.png)
+
+<Callout type="warn">
+    Please make sure the slug is unique, and it is listed in the `publicRoutes` array in the `src/routes.ts` file, otherwise the page will be redirected to the login page.
+</Callout>
+
+
+## Change Home Page
+
+There are 3 home page layouts in Mkdirs template, you can change the default home page layout by the following steps.
+
+1. Remove the 3 files in the `src/app/(website)/(public)/(home)` folder.
+
+2. Copy the files in `src/app/(website)/(test)/(home2)` or `src/app/(website)/(test)/(home3)` folder to the `src/app/(website)/(public)/(home)` folder.
+
+![Custom Home Page](/images/guide-custom-homepage.png)

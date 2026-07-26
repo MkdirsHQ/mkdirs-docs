@@ -1,0 +1,15 @@
+{
+  "title": "Customization",
+  "description": "Customize the Mkdirs website and directory experience",
+  "icon": "Paintbrush",
+  "pages": [
+    "information",
+    "logo",
+    "font",
+    "theme",
+    "card",
+    "category",
+    "email",
+    "custom-page"
+  ]
+}

@@ -1,0 +1,112 @@
+---
+title: Sanity
+description: 如何配置 Sanity 相关环境变量.
+---
+
+
+
+Mkdirs 使用 [Sanity](https://www.sanity.io/) 作为 CMS，您可以通过 Sanity Studio 管理网站所有内容（包括用户数据、导航数据、文章数据、图片等），您不再需要配置其他数据库或存储。
+
+## 配置
+
+<Steps>
+  <Step>
+    ### 在 [Sanity](https://www.sanity.io/) 创建一个账户
+
+如果您没有 Sanity 账户，请按照他们提供的步骤进行 [注册](https://www.sanity.io/login/sign-up)。
+  </Step>
+  <Step>
+    ### 创建一个新项目
+
+登录 Sanity 后，您可以在 [这里](https://www.sanity.io/manage?new-project) 创建新项目。
+  </Step>
+  <Step>
+    ### 获取项目 ID
+
+创建项目后，您可以在项目名称下看到项目 ID。
+
+ ```bash
+ # .env
+ # [required] sanity project id
+ NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+ ```
+  </Step>
+  <Step>
+    ### 获取数据集
+
+默认数据集是 `production`，您可以使用默认数据集或创建一个新数据集。
+
+ <Callout type="warn">
+     如果您想分离生产环境和开发环境，您可以为开发环境创建一个新数据集，并为生产环境和开发环境设置不同的数据集名称。
+ </Callout>
+
+ ```bash
+ # .env
+ # [required] production by default, you can set your own dataset name
+ NEXT_PUBLIC_SANITY_DATASET=your_dataset
+ ```
+  </Step>
+  <Step>
+    ### 获取 API 令牌
+
+进入项目 API 设置，点击 `Add API token` 按钮，创建一个新令牌，权限是 `Editor`，并将其设置到 `.env` 文件中。
+
+ ```bash
+ # .env
+ # [required] sanity api token
+ SANITY_API_TOKEN=your_api_token
+ ```
+  </Step>
+  <Step>
+    ### 配置 CORS 来源
+
+进入项目 API 设置，点击 `Add CORS origin` 按钮，添加您的域名，例如线上环境的 **`https://your-domain.com`** 或本地开发的 **`http://localhost:3000`**。
+
+ 它将用于允许您通过 `/studio` 路径访问 Sanity Studio，例如 `https://your-domain.com/studio` 或 `http://localhost:3000/studio`。
+
+ <Callout type="warn">
+     确保您将域名的来源添加到 CORS 来源中，否则您将无法访问 Sanity Studio (也就是，网站的管理后台)，建议将 `http://localhost:3000` 和 `https://your-domain.com` 都添加到 CORS 来源中。
+ </Callout>
+
+ ![Sanity CORS](/images/sanity-cors.png)
+  </Step>
+</Steps>
+
+<Callout type="idea">
+
+1. 如果本地开发时，经常出现 Sanity 的请求出现问题，请确保 VPN 代理已开启，并且开启 Tune 模式。如果还不行，建议尝试更换到其他更好的 VPN 工具。
+
+</Callout>
+
+## 视频教程
+
+视频教程有2个版本，一个是开发者教程，一个是初学者教程，请根据自己的实际情况选择观看。
+
+### 配置 Sanity 环境变量 - 开发者教程
+
+<YoutubeVideo
+  url="https://www.youtube.com/embed/HaoYpSv5R1o?list=PLVBbrIi208W-yprj2E6oXu-yxB3Ou522u"
+  title="【2/9】配置 Sanity 相关的环境变量 —— 基于Mkdirs模板部署上线导航站的全流程记录"
+/>
+
+### 配置 Sanity 环境变量 - 初学者教程
+
+<YoutubeVideo
+  url="https://www.youtube.com/embed/zfpK_lpbito?list=PLVBbrIi208W9pRjN9dVE8f9pzd6KJrTaw"
+  title="5、配置Sanity环境变量"
+/>
+
+## 延伸阅读
+
+- [Sanity](https://www.sanity.io/)
+- [Sanity Content Lake](https://www.sanity.io/docs/datastore)
+- [Sanity Studio](https://www.sanity.io/docs/sanity-studio)
+- [Sanity Plugins](https://www.sanity.io/plugins)
+- [Sanity CLI](https://www.sanity.io/docs/cli-reference)
+- [Sanity Courses](https://www.sanity.io/learn)
+- [Course: Day one with Sanity](https://www.sanity.io/learn/course/day-one-with-sanity-studio)
+- [Course: Sanity Typed content with Sanity TypeGen](https://www.sanity.io/learn/course/typescripted-content)
+- [Cheatsheet: GROQ](https://www.sanity.io/docs/query-cheat-sheet)
+- [Cheatsheet: Migrating content](https://www.sanity.io/docs/content-migration-cheatsheet)
+- [Sanity docs for Localization](https://www.sanity.io/docs/localization)
+- [Sanity docs for Block Content](https://www.sanity.io/docs/block-content)

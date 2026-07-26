@@ -1,0 +1,68 @@
+---
+title: Vercel
+description: How to deploy Mkdirs on Vercel.
+---
+
+
+
+You can easily deploy Mkdirs on [Vercel](https://vercel.com/).
+
+## Deploy on Vercel
+
+<Steps>
+  <Step>
+    ### Create an account on [Vercel](https://vercel.com/)
+
+If you don't have an account on Vercel, follow their steps to [signup](https://vercel.com/signup).
+  </Step>
+  <Step>
+    ### Create a new project
+
+Click on the `Add New Project` button, and select the GitHub repository you just created, then click on the `Import` button.
+  </Step>
+  <Step>
+    ### Set the environment variables
+
+Copy and paste the environment variables from the `.env` file to the `Environment Variables` section, then click on the `Deploy` button.
+
+ ![Vercel Project](/images/vercel-project.png)
+  </Step>
+  <Step>
+    ### Set the domain
+
+Add the domain you want to use in the `Domains` section, and add the DNS records to your domain provider, then wait for the DNS records to take effect.
+
+ ![Vercel Domain](/images/vercel-domain.png)
+  </Step>
+  <Step>
+    ### Set the Function Max Duration (Optional)
+
+<Callout type="idea">
+     If you enabled the AI autofill feature, please set the `Function Max Duration` to `60` seconds in the `Settings/Functions` section.
+ </Callout>
+
+ ![Config AI Function](/images/config-ai-function.png)
+  </Step>
+  <Step>
+    ### Done
+
+Wait for the deployment to finish, and your directory website should be live on the web.
+  </Step>
+</Steps>
+
+## FAQ
+
+- **Q: How to use Cloudflare as a reverse proxy?**
+
+  A: Follow the steps [here](https://vercel.com/docs/integrations/external-platforms/cloudflare#set-cloudflare-ssl/tls-encryption-mode) to use Cloudflare as a reverse proxy.
+
+  **If you met with `Error: Too many redirects`, you can try to set SSL mode to `Full`.**
+
+  ![Cloudflare SSL](/images/vercel-cloudflare-ssl.png)
+
+## Video tutorial
+
+<YoutubeVideo
+  url="https://www.youtube.com/embed/IPlpkb6Vpdc?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM"
+  title="【Deploy】【8/8】Deploy to Vercel —— Launch a directory with Mkdirs template"
+/>

@@ -1,0 +1,16 @@
+{
+  "title": "Mkdirs Docs",
+  "description": "Documentation for the Mkdirs directory website template",
+  "icon": "LayoutGrid",
+  "root": true,
+  "pages": [
+    "index",
+    "faq",
+    "prerequisites",
+    "installation",
+    "configuration",
+    "deployment",
+    "customization",
+    "guide"
+  ]
+}

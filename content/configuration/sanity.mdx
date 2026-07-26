@@ -1,0 +1,96 @@
+---
+title: Sanity
+description: How to configure the Sanity.
+---
+
+
+
+Mkdirs uses [Sanity](https://www.sanity.io/) as a headless CMS, so you can manage the content of the website (including user data, items data, blog posts data, images, etc.) through Sanity Studio, and you don't need to configure the database or the storage anymore.
+
+## Configuration
+
+<Steps>
+  <Step>
+    ### Create an account on [Sanity](https://www.sanity.io/)
+
+If you don't have an account on Sanity, follow their steps to [signup](https://www.sanity.io/login/sign-up).
+  </Step>
+  <Step>
+    ### Create a new project
+
+After signin on Sanity, you can create your project [here](https://www.sanity.io/manage?new-project).
+  </Step>
+  <Step>
+    ### Get the project id
+
+After creating the project, you will see the project id under the project name.
+
+ ```bash
+ # .env
+ # [required]
+ NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+ ```
+  </Step>
+  <Step>
+    ### Get the dataset
+
+The default dataset is `production`, and you can use the default dataset or create a new one.
+
+ ```bash
+ # .env
+ # [required]
+ NEXT_PUBLIC_SANITY_DATASET=your_dataset
+ ```
+
+ <Callout type="warn">
+     If you want to separate the production and development environments, you can create a new dataset for the development environment, and set different datasets for the production and development environments.
+ </Callout>
+  </Step>
+  <Step>
+    ### Get the API token
+
+Go to the project API settings, click on the `Add API token` button, create a new token with **the permissions of `Editor`**, and set it to the `.env` file.
+
+ ```bash
+ # .env
+ # [required]
+ SANITY_API_TOKEN=your_api_token
+ ```
+  </Step>
+  <Step>
+    ### Configure the CORS origins
+
+Go to the project API settings, click on the `Add CORS origin` button, add the origin of your domain, for example, **`https://your-domain.com`** for production or **`http://localhost:3000`** for local development.
+
+ It's used to allow you to access the Sanity Studio under the `/studio` path, for example, `https://your-domain.com/studio` or `http://localhost:3000/studio`.
+
+ <Callout type="warn">
+     Make sure you add the origin of your domain to the CORS origins, otherwise you will not be able to access the Sanity Studio (aka, the CMS or the backend of the website).
+ </Callout>
+
+ ![Sanity CORS](/images/sanity-cors.png)
+  </Step>
+</Steps>
+
+## Video tutorial
+
+{/* https://www.youtube.com/embed/8THGP7Wpkic?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM */}
+<YoutubeVideo
+  url="https://www.youtube.com/embed/8THGP7Wpkic?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM"
+  title="【Deploy】【2/8】Environment variables for Sanity —— Launch a directory with Mkdirs template"
+/>
+
+## Further Reading
+
+- [Sanity](https://www.sanity.io/)
+- [Sanity Content Lake](https://www.sanity.io/docs/datastore)
+- [Sanity Studio](https://www.sanity.io/docs/sanity-studio)
+- [Sanity Plugins](https://www.sanity.io/plugins)
+- [Sanity CLI](https://www.sanity.io/docs/cli-reference)
+- [Sanity Courses](https://www.sanity.io/learn)
+- [Course: Day one with Sanity](https://www.sanity.io/learn/course/day-one-with-sanity-studio)
+- [Course: Sanity Typed content with Sanity TypeGen](https://www.sanity.io/learn/course/typescripted-content)
+- [Cheatsheet: GROQ](https://www.sanity.io/docs/query-cheat-sheet)
+- [Cheatsheet: Migrating content](https://www.sanity.io/docs/content-migration-cheatsheet)
+- [Sanity docs for Localization](https://www.sanity.io/docs/localization)
+- [Sanity docs for Block Content](https://www.sanity.io/docs/block-content)

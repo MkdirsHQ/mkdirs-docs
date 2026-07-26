@@ -1,0 +1,88 @@
+---
+title: Resend
+description: How to configure the email.
+---
+
+
+Mkdirs uses [Resend](https://resend.com/) as the email service, supports sending emails, receiving notification emails, and supports subscription functionality.
+
+## Configuration
+
+<Steps>
+  <Step>
+    ### Create an account on [Resend](https://resend.com/)
+
+If you don't have an account on Resend, follow their steps to [signup](https://resend.com/signup).
+
+ After signin on Resend, following their steps to [add your domain to Resend](https://resend.com/docs/dashboard/domains/cloudflare).
+  </Step>
+  <Step>
+    ### Get the Resend API key
+
+Click on `API Keys` on the left navigation bar, then click on the `Create API key` button, and set it to the `.env` file.
+
+ Please make sure the API key has the `Full Access` permission.
+
+ ```bash
+ # .env
+ # [only required if you want to authenticate users by email/password]
+ RESEND_API_KEY=your_api_key
+ ```
+
+ ![Resend Keys](/images/resend-keys.png)
+  </Step>
+  <Step>
+    ### Set the email address to send the emails from
+
+When sending an email, for example, signup emails, the email will be sent from the following email address:
+
+ ```bash
+ # .env
+ # [only required if you want to authenticate users by email/password]
+ RESEND_EMAIL_FROM=support@example.com
+ ```
+  </Step>
+  <Step>
+    ### [Optional] Set the email address to receive the notification emails
+
+When there is a new submission from a customer, a notification email will be sent to the following email address:
+
+ ```bash
+ # .env
+ # [only required if you want to receive notification emails]
+ RESEND_EMAIL_ADMIN=admin@example.com
+ ```
+  </Step>
+  <Step>
+    ### [Optional] Get the audience id for newsletter
+
+Create a new audience in Resend and copy the audience id, then set it to the `.env` file.
+
+ This variable is used to support newsletter subscription on the website, if you don't need it, you can skip this step.
+
+ ```bash
+ # .env
+ # [only required if you want to support newsletter]
+ RESEND_AUDIENCE_ID=your_audience_id
+ ```
+
+ ![Resend Audience](/images/resend-audience.png)
+  </Step>
+</Steps>
+
+## Video tutorial
+
+{/* https://www.youtube.com/embed/W1BsVEwvFsM?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM */}
+<YoutubeVideo
+  url="https://www.youtube.com/embed/W1BsVEwvFsM?list=PLVBbrIi208W_qLhMoEV8-XQi7lrTyPlOM"
+  title="【Deploy】【3/8】Environment variables for Resend —— Launch a directory with Mkdirs template"
+/>
+
+## Further Reading
+
+- [Resend](https://resend.com/)
+- [Resend - Domains](https://resend.com/docs/dashboard/domains/cloudflare)
+- [Resend - Email API](https://resend.com/docs/api-reference/emails)
+- [Resend - Audiences](https://resend.com/docs/dashboard/audiences/introduction)
+- [Resend - Broadcasts](https://resend.com/docs/dashboard/broadcasts/introduction)
+- [React Email](https://react.email/docs/introduction)

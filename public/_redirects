@@ -1,0 +1,4 @@
+/en / 308
+/zh-cn /zh 308
+/en/* /:splat 308
+/zh-cn/* /zh/:splat 308

@@ -1,0 +1,6 @@
+{
+  "title": "配置环境",
+  "description": "配置 Mkdirs 使用的服务和集成",
+  "icon": "Settings",
+  "pages": ["sanity", "resend", "stripe", "auth", "analytics", "ai"]
+}

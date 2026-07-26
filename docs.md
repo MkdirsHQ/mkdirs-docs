@@ -34,32 +34,32 @@ Base URL: `https://docs.mkdirs.com`
 
 ## 中文文档
 
-Base URL: `https://docs.mkdirs.com/zh-cn`
+Base URL: `https://docs.mkdirs.com/zh`
 
 | 文件 | 标题 | 描述 | 网址 |
 |------|------|------|------|
-| zh-cn/index.mdx | 介绍 Mkdirs | 了解导航站模板 Mkdirs 及其工作原理。 | https://docs.mkdirs.com/zh-cn |
-| zh-cn/faq.mdx | 常见问题 | 关于 Mkdirs 模板的常见问题。 | https://docs.mkdirs.com/zh-cn/faq |
-| zh-cn/prerequisites.mdx | 前提条件 | 开始使用 Mkdirs 的前提条件。 | https://docs.mkdirs.com/zh-cn/prerequisites |
-| zh-cn/installation.mdx | 安装 | 如何使用 Mkdirs 启动您的导航站。 | https://docs.mkdirs.com/zh-cn/installation |
-| zh-cn/configuration/sanity.mdx | Sanity | 如何配置 Sanity 相关环境变量. | https://docs.mkdirs.com/zh-cn/configuration/sanity |
-| zh-cn/configuration/resend.mdx | Resend | 如何配置 Resend 相关环境变量。 | https://docs.mkdirs.com/zh-cn/configuration/resend |
-| zh-cn/configuration/stripe.mdx | Stripe | 如何配置 Stripe 相关环境变量。 | https://docs.mkdirs.com/zh-cn/configuration/stripe |
-| zh-cn/configuration/auth.mdx | Auth | 如何配置 Authjs 相关环境变量。 | https://docs.mkdirs.com/zh-cn/configuration/auth |
-| zh-cn/configuration/analytics.mdx | Analytics | 如何配置 Analytics 相关环境变量。 | https://docs.mkdirs.com/zh-cn/configuration/analytics |
-| zh-cn/configuration/ai.mdx | AI模型 | 如何配置AI模型相关的环境变量。 | https://docs.mkdirs.com/zh-cn/configuration/ai |
-| zh-cn/deployment/vercel.mdx | Vercel | 如何将 Mkdirs 部署到 Vercel。 | https://docs.mkdirs.com/zh-cn/deployment/vercel |
-| zh-cn/deployment/docker.mdx | Docker | 如何使用 Docker 部署 Mkdirs。 | https://docs.mkdirs.com/zh-cn/deployment/docker |
-| zh-cn/deployment/dokploy.mdx | Dokploy | How to deploy Mkdirs on Dokploy. | https://docs.mkdirs.com/zh-cn/deployment/dokploy |
-| zh-cn/customization/information.mdx | 如何自定义导航站信息 | 如何自定义导航站的信息。 | https://docs.mkdirs.com/zh-cn/customization/information |
-| zh-cn/customization/logo.mdx | 如何自定义 Logo 和 Favicon | 如何自定义 Logo 和 Favicon。 | https://docs.mkdirs.com/zh-cn/customization/logo |
-| zh-cn/customization/font.mdx | 如何自定义字体 | 如何自定义导航站的字体。 | https://docs.mkdirs.com/zh-cn/customization/font |
-| zh-cn/customization/theme.mdx | 如何自定义主题 | 如何自定义主题。 | https://docs.mkdirs.com/zh-cn/customization/theme |
-| zh-cn/customization/card.mdx | 如何自定义卡片样式 | 如何自定义导航站的卡片样式。 | https://docs.mkdirs.com/zh-cn/customization/card |
-| zh-cn/customization/category.mdx | 如何添加分类和分类组 | 如何添加分类和分类组到导航站。 | https://docs.mkdirs.com/zh-cn/customization/category |
-| zh-cn/customization/email.mdx | 如何更改或添加邮件模板 | 如何更改或添加邮件模板。 | https://docs.mkdirs.com/zh-cn/customization/email |
-| zh-cn/customization/custom-page.mdx | 如何添加自定义页面 | 如何添加自定义页面到网站。 | https://docs.mkdirs.com/zh-cn/customization/custom-page |
-| zh-cn/guide/develop.mdx | 如何使用源码 | 如何使用导航站模板的源码。 | https://docs.mkdirs.com/zh-cn/guide/develop |
-| zh-cn/guide/submission.mdx | 如何提交新内容 | 如何提交新内容到导航站。 | https://docs.mkdirs.com/zh-cn/guide/submission |
-| zh-cn/guide/sponsor-ads.mdx | 赞助广告 | 如何实现导航站的赞助广告功能。 | https://docs.mkdirs.com/zh-cn/guide/sponsor-ads |
-| zh-cn/guide/sanity.mdx | 如何使用 Sanity CMS | 如何自定义 Sanity 模式和 GROQ 查询。 | https://docs.mkdirs.com/zh-cn/guide/sanity |
+| zh/index.mdx | 介绍 Mkdirs | 了解导航站模板 Mkdirs 及其工作原理。 | https://docs.mkdirs.com/zh |
+| zh/faq.mdx | 常见问题 | 关于 Mkdirs 模板的常见问题。 | https://docs.mkdirs.com/zh/faq |
+| zh/prerequisites.mdx | 前提条件 | 开始使用 Mkdirs 的前提条件。 | https://docs.mkdirs.com/zh/prerequisites |
+| zh/installation.mdx | 安装 | 如何使用 Mkdirs 启动您的导航站。 | https://docs.mkdirs.com/zh/installation |
+| zh/configuration/sanity.mdx | Sanity | 如何配置 Sanity 相关环境变量. | https://docs.mkdirs.com/zh/configuration/sanity |
+| zh/configuration/resend.mdx | Resend | 如何配置 Resend 相关环境变量。 | https://docs.mkdirs.com/zh/configuration/resend |
+| zh/configuration/stripe.mdx | Stripe | 如何配置 Stripe 相关环境变量。 | https://docs.mkdirs.com/zh/configuration/stripe |
+| zh/configuration/auth.mdx | Auth | 如何配置 Authjs 相关环境变量。 | https://docs.mkdirs.com/zh/configuration/auth |
+| zh/configuration/analytics.mdx | Analytics | 如何配置 Analytics 相关环境变量。 | https://docs.mkdirs.com/zh/configuration/analytics |
+| zh/configuration/ai.mdx | AI模型 | 如何配置AI模型相关的环境变量。 | https://docs.mkdirs.com/zh/configuration/ai |
+| zh/deployment/vercel.mdx | Vercel | 如何将 Mkdirs 部署到 Vercel。 | https://docs.mkdirs.com/zh/deployment/vercel |
+| zh/deployment/docker.mdx | Docker | 如何使用 Docker 部署 Mkdirs。 | https://docs.mkdirs.com/zh/deployment/docker |
+| zh/deployment/dokploy.mdx | Dokploy | How to deploy Mkdirs on Dokploy. | https://docs.mkdirs.com/zh/deployment/dokploy |
+| zh/customization/information.mdx | 如何自定义导航站信息 | 如何自定义导航站的信息。 | https://docs.mkdirs.com/zh/customization/information |
+| zh/customization/logo.mdx | 如何自定义 Logo 和 Favicon | 如何自定义 Logo 和 Favicon。 | https://docs.mkdirs.com/zh/customization/logo |
+| zh/customization/font.mdx | 如何自定义字体 | 如何自定义导航站的字体。 | https://docs.mkdirs.com/zh/customization/font |
+| zh/customization/theme.mdx | 如何自定义主题 | 如何自定义主题。 | https://docs.mkdirs.com/zh/customization/theme |
+| zh/customization/card.mdx | 如何自定义卡片样式 | 如何自定义导航站的卡片样式。 | https://docs.mkdirs.com/zh/customization/card |
+| zh/customization/category.mdx | 如何添加分类和分类组 | 如何添加分类和分类组到导航站。 | https://docs.mkdirs.com/zh/customization/category |
+| zh/customization/email.mdx | 如何更改或添加邮件模板 | 如何更改或添加邮件模板。 | https://docs.mkdirs.com/zh/customization/email |
+| zh/customization/custom-page.mdx | 如何添加自定义页面 | 如何添加自定义页面到网站。 | https://docs.mkdirs.com/zh/customization/custom-page |
+| zh/guide/develop.mdx | 如何使用源码 | 如何使用导航站模板的源码。 | https://docs.mkdirs.com/zh/guide/develop |
+| zh/guide/submission.mdx | 如何提交新内容 | 如何提交新内容到导航站。 | https://docs.mkdirs.com/zh/guide/submission |
+| zh/guide/sponsor-ads.mdx | 赞助广告 | 如何实现导航站的赞助广告功能。 | https://docs.mkdirs.com/zh/guide/sponsor-ads |
+| zh/guide/sanity.mdx | 如何使用 Sanity CMS | 如何自定义 Sanity 模式和 GROQ 查询。 | https://docs.mkdirs.com/zh/guide/sanity |

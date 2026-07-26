@@ -1,0 +1,47 @@
+---
+title: How to add categories and category groups
+description: How to add categories and category groups to the directory website.
+---
+
+
+## Add categories
+
+Go to the Sanity Studio, click the `Category Management` button, and then click the `+` button.
+
+Input the category name, and generate the slug, set the description and priority, then click the `Publish` button.
+
+![Add Categories](/images/guide-category.png)
+
+<Callout type="info">
+    If you want to group categories, you should add the group first, then you can assign the categories to the group.
+</Callout>
+
+After the category is published, you can see the category list in the website like this.
+
+![Category List](/images/guide-category-list.png)
+
+## Add category groups
+
+Go to the Sanity Studio, click the `Group Management` button, and then click the `+` button.
+
+Input the group name, and generate the slug, set the description and priority, then click the `Publish` button.
+
+![Add Category Groups](/images/guide-group.png)
+
+<Callout type="info">
+    Please make sure you have assigned the categories to the group, you can do this by editing the category information.
+</Callout>
+
+After the group is published, you can see the group list in the website like this.
+
+![Group List](/images/guide-group-list.png)
+
+
+The category group is supported by default, if you do not want to show the group, you can disable it by setting the `SUPPORT_CATEGORY_GROUP` to `false` in the `src/lib/constants.ts` file.
+
+```ts
+// support category group, default is true (aka, show category group)
+// NOTE: if you set true, you should make sure each category belongs to a group
+// if you set false, the category will be shown in the root level
+export const SUPPORT_CATEGORY_GROUP = false;
+```

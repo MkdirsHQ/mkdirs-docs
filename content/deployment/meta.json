@@ -1,0 +1,6 @@
+{
+  "title": "Deployment",
+  "description": "Deploy Mkdirs to managed or self-hosted platforms",
+  "icon": "Cloud",
+  "pages": ["vercel", "docker", "dokploy"]
+}

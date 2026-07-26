@@ -1,15 +1,28 @@
 # Mkdirs Documentation
 
-The best directory website template.
+The bilingual documentation website for [Mkdirs](https://mkdirs.com), rebuilt on [FumaPress](https://press.fumadocs.dev) and deployed with Cloudflare Workers Static Assets.
 
-Website: [mkdirs.com](https://mkdirs.com)
+## Included
 
-Explore the [live demo](https://demo.mkdirs.com)
+- English and Simplified Chinese documentation migrated from the original Astro Starlight site
+- Static search, responsive navigation, per-page table of contents, and light/dark/system themes
+- Cards, callouts, guided steps, screenshots, and responsive YouTube embeds
+- English pages at root paths, Chinese pages under `/zh`, plus redirects from the original `/zh-cn/...` routes
+- Markdown/LLM exports, generated Open Graph images, and sitemap
+- Pure static deployment without a Worker entry point or Assets binding
 
-Read the [documentation](https://docs.mkdirs.com)
+## Development
 
-Watch the [video tutorial](https://www.youtube.com/@MkdirsHQ)
+```bash
+pnpm install
+pnpm dev
+```
 
-> If you find any issues, please [submit an issue](https://github.com/MkdirsHQ/mkdirs-template/issues/new) or contact me at [support@mkdirs.com](mailto:support@mkdirs.com).
+## Validation and deployment
 
-> If you have any feature requests or questions or ideas to share, please [submit it in the discussions](https://github.com/MkdirsHQ/mkdirs-template/discussions).
+```bash
+pnpm check
+pnpm deploy
+```
+
+The production Worker name is `mkdirs-docs`.
