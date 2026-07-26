@@ -5,8 +5,8 @@
   "workers_dev": false,
   "routes": [
     {
-      "pattern": "docs.mkdirs.com",
-      "custom_domain": true
+      "pattern": "docs.mkdirs.com/*",
+      "zone_name": "mkdirs.com"
     }
   ],
   "assets": {
