@@ -7,6 +7,7 @@ export const siteConfig = {
     'https://docs.mksaas.link',
   logo: '/logo.svg',
   favicon: '/favicon.svg',
+  ogImage: '/og.png',
   homeLabel: 'Website',
   homeUrl: 'https://github.com/open-fox/mkdocs',
   githubUrl: 'https://github.com/open-fox/mkdocs',
