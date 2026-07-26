@@ -1,10 +1,10 @@
 ---
 title: Deploy to Workers
-description: Validate, deploy, and connect a custom domain using the included Wrangler configuration.
+description: Build and deploy the documentation site with Wrangler.
 icon: Cloud
 ---
 
-The template builds a static FumaPress site and publishes the generated files directly with Cloudflare Workers Static Assets. It has no Worker entry point, runtime code, or Assets binding.
+The template builds a static FumaPress site and publishes it with Cloudflare Workers Static Assets.
 
 <Steps>
   <Step>
@@ -24,7 +24,7 @@ The template builds a static FumaPress site and publishes the generated files di
     pnpm check
     ```
 
-    This runs generated source checks, TypeScript, the production build, and a Wrangler dry run.
+    This checks generated sources, TypeScript, the production build, and a Wrangler dry run.
   </Step>
   <Step>
     ### Deploy
@@ -37,7 +37,7 @@ The template builds a static FumaPress site and publishes the generated files di
 
 ## Custom domain
 
-Add a Worker Custom Domain when Cloudflare is authoritative for the zone:
+Add a Worker Custom Domain when the zone is managed by Cloudflare:
 
 ```json
 {
@@ -51,5 +51,5 @@ Add a Worker Custom Domain when Cloudflare is authoritative for the zone:
 ```
 
 <Callout type="warn" title="Check existing DNS">
-  A custom domain cannot replace a hostname that already has a conflicting CNAME record. Confirm the hostname before deploying the route.
+  Check for a conflicting CNAME before deploying the route.
 </Callout>

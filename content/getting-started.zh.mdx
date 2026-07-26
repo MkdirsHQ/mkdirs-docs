@@ -1,6 +1,6 @@
 ---
-title: 开始写作
-description: 安装、运行、自定义并部署基于这个模板的文档网站。
+title: 开始使用
+description: 运行模板、更新站点并完成部署。
 icon: Rocket
 ---
 
@@ -22,7 +22,7 @@ icon: Rocket
   <Step>
     ### 修改站点信息
 
-    编辑 `src/site.config.ts`、`wrangler.jsonc` 和 `public/` 中的资源。
+    更新 `src/site.config.ts`、`wrangler.jsonc` 和 `public/` 中的资源。
   </Step>
   <Step>
     ### 验证并部署
@@ -36,13 +36,12 @@ icon: Rocket
 
 ## 内容约定
 
-英文是默认语言。简体中文翻译在扩展名前添加 `.zh`：
+在 `content/` 中添加页面，并通过 `meta.json` 控制导航：
 
 <Files>
   <Folder name="content" defaultOpen>
     <File name="index.mdx" />
-    <File name="index.zh.mdx" />
     <File name="getting-started.mdx" />
-    <File name="getting-started.zh.mdx" />
+    <File name="meta.json" />
   </Folder>
 </Files>

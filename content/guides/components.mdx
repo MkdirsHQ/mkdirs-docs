@@ -1,26 +1,26 @@
 ---
-title: Authoring components
-description: A practical gallery of the reusable components available in every MDX document.
+title: Docs components
+description: Reusable components available in every MDX page.
 icon: Blocks
 ---
 
-Every component on this page is registered globally in `press.config.tsx`, so an MDX page can use it without imports.
+These components are registered in `press.config.tsx` and are available without imports.
 
 ## Cards
 
 <Cards>
   <Card title="Internal link" href="/getting-started" icon={<Rocket />}>
-    Cards can guide readers to another documentation page.
+    Link to another documentation page.
   </Card>
   <Card title="External link" href="https://developers.cloudflare.com/workers/" icon={<ExternalLink />}>
-    They can also open a related external resource.
+    Link to an external resource.
   </Card>
 </Cards>
 
 ## Callouts
 
 <Callout type="info" title="Information">
-  Give readers useful context without interrupting the main flow.
+  Add useful context without interrupting the main flow.
 </Callout>
 
 <Callout type="warn" title="Keep it useful">
@@ -28,7 +28,7 @@ Every component on this page is registered globally in `press.config.tsx`, so an
 </Callout>
 
 <Callout type="success" title="Ready to ship">
-  The same component supports success, error, warning, idea, and custom icon variants.
+  Callouts support success, error, warning, idea, and custom icons.
 </Callout>
 
 ## Guided steps
@@ -40,14 +40,9 @@ Every component on this page is registered globally in `press.config.tsx`, so an
     Add an `.mdx` file under `content/`.
   </Step>
   <Step>
-    ### Add its translation
-
-    Create a matching `.zh.mdx` file when the page is bilingual.
-  </Step>
-  <Step>
     ### Add navigation metadata
 
-    Put the page slug in the nearest `meta.json` and `meta.zh.json` files.
+    Add the page slug to the nearest `meta.json` file.
   </Step>
 </Steps>
 
@@ -77,8 +72,8 @@ Every component on this page is registered globally in `press.config.tsx`, so an
   <Accordion title="Can a page use React components?">
     Yes. Register a component in `getMdxComponents()` and it becomes available to every MDX page.
   </Accordion>
-  <Accordion title="Do translated pages need imports?">
-    No. English and Chinese pages receive the same global component set.
+  <Accordion title="Do pages need component imports?">
+    No. Registered components are available to every MDX page.
   </Accordion>
 </Accordions>
 
@@ -87,12 +82,9 @@ Every component on this page is registered globally in `press.config.tsx`, so an
 <Files>
   <Folder name="content" defaultOpen>
     <File name="index.mdx" />
-    <File name="index.zh.mdx" />
     <Folder name="guides" defaultOpen>
       <File name="components.mdx" />
-      <File name="components.zh.mdx" />
       <File name="meta.json" />
-      <File name="meta.zh.json" />
     </Folder>
   </Folder>
 </Files>
@@ -116,7 +108,7 @@ Every component on this page is registered globally in `press.config.tsx`, so an
 
 ## Video
 
-Use the global `YoutubeVideo` component without importing it inside MDX. It is responsive and includes sensible iframe permissions by default:
+Use `YoutubeVideo` without importing it inside MDX:
 
 ```mdx
 <YoutubeVideo url="https://www.youtube.com/embed/VIDEO_ID" />

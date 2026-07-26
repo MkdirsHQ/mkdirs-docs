@@ -1,6 +1,6 @@
 ---
 title: 编写文档
-description: 用少量约定组织页面、导航、翻译、链接和元数据。
+description: 组织页面、导航、元数据、链接和资源。
 icon: FileText
 ---
 
@@ -20,7 +20,7 @@ icon: CreditCard
 在这里编写页面内容。
 ```
 
-`title` 和 `description` 会用于导航、元数据、搜索和自动生成的社交分享图。`icon` 可以填写任意 Lucide 图标名称。
+`title` 和 `description` 用于导航、搜索、元数据和社交分享图。`icon` 可以填写 Lucide 图标名称。
 
 ## 导航顺序
 
@@ -34,26 +34,12 @@ icon: CreditCard
 }
 ```
 
-## 双语页面
-
-默认英文文件与 `.zh` 翻译文件成对存在，目录元数据也使用相同约定：
-
-| 英文 | 简体中文 |
-| --- | --- |
-| `billing.mdx` | `billing.zh.mdx` |
-| `meta.json` | `meta.zh.json` |
-
-<Callout type="idea" title="保持 slug 稳定">
-  翻译页面标题和正文，但对应页面应使用相同 slug。这样语言切换器才能可靠地跳到另一语言的同一页面。
-</Callout>
-
 ## 链接和资源
 
-- 明确指定目标语言时，使用 `/zh/guides/authoring` 这类带 locale 的绝对链接。
-- 希望读者留在当前语言时，使用 Markdown 相对链接。
+- 相邻文档页面优先使用相对链接。
 - 可下载文件或静态资源放在 `public/`，并从根路径引用。
-- 全站通用 React 组件在 `press.config.tsx` 中注册，避免每个页面重复导入。
+- 全站通用 React 组件在 `press.config.tsx` 中注册。
 
 ## 内置输出
 
-每次构建还会生成全文搜索索引、单页 Markdown、`llms.txt`、`sitemap.xml` 和 Open Graph 图片。发布前应更新 `src/site.config.ts`，确保所有生成链接都使用正式域名。
+每次构建会生成搜索索引、单页 Markdown、`llms.txt`、`sitemap.xml` 和 Open Graph 图片。发布前更新 `src/site.config.ts`。

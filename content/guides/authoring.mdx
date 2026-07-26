@@ -1,6 +1,6 @@
 ---
 title: Write docs
-description: Structure pages, navigation, translations, links, and metadata with a small set of conventions.
+description: Organize pages, navigation, metadata, links, and assets.
 icon: FileText
 ---
 
@@ -20,7 +20,7 @@ icon: CreditCard
 Write the page content here.
 ```
 
-The `title` and `description` feed navigation, metadata, search, and generated social cards. Any Lucide icon name can be used as `icon`.
+The `title` and `description` are used by navigation, search, metadata, and social cards. `icon` accepts a Lucide icon name.
 
 ## Navigation order
 
@@ -34,26 +34,12 @@ Use `meta.json` in a folder to name the group and control page order:
 }
 ```
 
-## Bilingual pages
-
-Pair the default English file with a `.zh` translation. Folder metadata follows the same convention:
-
-| English | Simplified Chinese |
-| --- | --- |
-| `billing.mdx` | `billing.zh.mdx` |
-| `meta.json` | `meta.zh.json` |
-
-<Callout type="idea" title="Keep slugs stable">
-  Translate page titles and body copy, but keep matching files on the same slug. The language switcher can then move between equivalent pages reliably.
-</Callout>
-
 ## Links and assets
 
-- Default-English pages use root paths such as `/guides/authoring`; translated pages keep their locale prefix, for example `/zh/guides/authoring`.
-- Use relative Markdown links when the reader should stay on the same locale.
+- Use relative links for nearby documentation pages.
 - Put downloadable or static files in `public/` and reference them from `/`.
-- Add site-wide React components in `press.config.tsx`; avoid per-page imports for common UI.
+- Register shared React components in `press.config.tsx`.
 
 ## Built-in outputs
 
-Each build also creates searchable indexes, per-page Markdown, `llms.txt`, `sitemap.xml`, and generated Open Graph images. Update `src/site.config.ts` before publishing so every generated URL uses the production domain.
+Each build creates the search index, per-page Markdown, `llms.txt`, `sitemap.xml`, and Open Graph images. Update `src/site.config.ts` before publishing.

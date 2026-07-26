@@ -1,6 +1,6 @@
 ---
-title: Start writing
-description: Install, run, customize, and deploy a site built from this template.
+title: Getting Started
+description: Run the template, update the site, and deploy it.
 icon: Rocket
 ---
 
@@ -22,7 +22,7 @@ icon: Rocket
   <Step>
     ### Update site identity
 
-    Edit `src/site.config.ts`, `wrangler.jsonc`, and the files in `public/`.
+    Update `src/site.config.ts`, `wrangler.jsonc`, and assets in `public/`.
   </Step>
   <Step>
     ### Validate and deploy
@@ -36,13 +36,12 @@ icon: Rocket
 
 ## Content conventions
 
-English is the default language. Add `.zh` before the extension for Simplified Chinese translations:
+Add pages under `content/` and use `meta.json` to control navigation:
 
 <Files>
   <Folder name="content" defaultOpen>
     <File name="index.mdx" />
-    <File name="index.zh.mdx" />
     <File name="getting-started.mdx" />
-    <File name="getting-started.zh.mdx" />
+    <File name="meta.json" />
   </Folder>
 </Files>

@@ -1,10 +1,10 @@
 ---
 title: 部署文档
-description: 使用模板内置的 Wrangler 配置完成验证、部署和自定义域名绑定。
+description: 使用 Wrangler 构建并部署文档网站。
 icon: Cloud
 ---
 
-模板会构建静态 FumaPress 网站，并通过 Cloudflare Workers Static Assets 直接发布生成文件，不包含 Worker 入口、运行时代码或 Assets binding。
+模板会构建静态 FumaPress 网站，并通过 Cloudflare Workers Static Assets 发布。
 
 <Steps>
   <Step>
@@ -24,7 +24,7 @@ icon: Cloud
     pnpm check
     ```
 
-    这个命令会依次检查生成的内容源、TypeScript、生产构建和 Wrangler dry run。
+    这个命令会检查内容源、TypeScript、生产构建和 Wrangler dry run。
   </Step>
   <Step>
     ### 部署
@@ -37,7 +37,7 @@ icon: Cloud
 
 ## 自定义域名
 
-当域名已经托管在当前 Cloudflare 账号时，可以添加 Worker Custom Domain：
+域名由 Cloudflare 管理时，可以添加 Worker Custom Domain：
 
 ```json
 {
@@ -51,5 +51,5 @@ icon: Cloud
 ```
 
 <Callout type="warn" title="检查现有 DNS">
-  自定义域名不能覆盖已有冲突 CNAME 的主机名，部署路由前需要先确认 DNS 记录。
+  部署路由前检查是否存在冲突的 CNAME。
 </Callout>
