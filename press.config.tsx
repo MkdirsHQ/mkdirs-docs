@@ -57,7 +57,7 @@ export default defineConfig({
       return (
         <>
           <meta name="description" content={siteConfig.description} />
-          <meta name="theme-color" content="#0b0d12" />
+          <meta name="theme-color" content="#121212" />
           <meta property="og:site_name" content={siteConfig.name} />
           <link rel="icon" href={siteConfig.favicon} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,6 +69,44 @@ export default defineConfig({
         </>
       );
     },
+    page(page) {
+      const isHomepage = page.slugs.length === 0;
+      const pageUrl = new URL(page.url, siteConfig.url).href;
+      const description = page.data.description ?? siteConfig.description;
+      const imageUrl = new URL(
+        isHomepage ? siteConfig.ogImage : `${page.url.replace(/\/$/, '')}.webp`,
+        siteConfig.url,
+      ).href;
+
+      return (
+        <>
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={pageUrl} />
+          <meta
+            property="og:image:type"
+            content={isHomepage ? 'image/png' : 'image/webp'}
+          />
+          {isHomepage ? (
+            <>
+              <meta property="og:image" content={imageUrl} />
+              <meta
+                property="og:image:width"
+                content={String(siteConfig.ogImageWidth)}
+              />
+              <meta
+                property="og:image:height"
+                content={String(siteConfig.ogImageHeight)}
+              />
+            </>
+          ) : null}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content={siteConfig.twitterHandle} />
+          <meta name="twitter:title" content={page.data.title} />
+          <meta name="twitter:description" content={description} />
+          <meta name="twitter:image" content={imageUrl} />
+        </>
+      );
+    },
   },
 })
   .plugins(
@@ -76,6 +114,18 @@ export default defineConfig({
     llmsPlugin(),
     sitemapPlugin(),
     takumiPlugin(),
+    {
+      name: 'homepage-og-image',
+      init() {
+        const hooks = this.data['core:page-meta'];
+        const renderTakumiMeta = hooks?.at(-1);
+
+        if (!hooks || !renderTakumiMeta) return;
+
+        hooks[hooks.length - 1] = (page) =>
+          page.slugs.length === 0 ? null : renderTakumiMeta(page);
+      },
+    },
   )
   .adapters(
     fumadocsMdx({

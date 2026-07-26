@@ -31,7 +31,7 @@
 - Responsive navigation, table of contents, and light/dark/system themes
 - Locale-aware routing with a customizable language switcher
 - Reusable cards, callouts, steps, tabs, accordions, file trees, type tables, Lucide icons, and video embeds
-- Per-page Markdown, `llms.txt`, Open Graph images, and sitemap generation
+- Per-page Markdown, `llms.txt`, a homepage Open Graph image, generated per-page Open Graph images, and sitemap generation
 - Static deployment to Cloudflare Workers with Wrangler
 - No Worker runtime code or application bindings required
 
