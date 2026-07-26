@@ -99,27 +99,13 @@ Contributions are welcome.
 
 For bugs and feature requests, please [open an issue](https://github.com/open-fox/mkdocs/issues).
 
-## About OpenFox
+## Author
 
-[OpenFox](https://github.com/open-fox) is an independent developer building practical products and developer tools that help makers launch software faster.
+[OpenFox](https://github.com/open-fox) is an independent developer building products and developer tools for makers. Its projects include:
 
-### [MkSaaS](https://mksaas.com)
-
-A complete Next.js boilerplate for building production SaaS products with authentication, payments, AI, content, and more.
-
-[Visit MkSaaS →](https://mksaas.com)
-
-### [TanStarter](https://tanstarter.dev)
-
-A production-ready TanStack Start boilerplate for building and deploying SaaS products on Cloudflare Workers.
-
-[Visit TanStarter →](https://tanstarter.dev)
-
-### [MkImage](https://mkimage.ai)
-
-An AI image platform for generating, editing, transforming, and exploring images with modern AI models.
-
-[Visit MkImage →](https://mkimage.ai)
+- [MkSaaS](https://mksaas.com) — Make Your AI SaaS Product in a Weekend.
+- [TanStarter](https://tanstarter.dev) — Ship Faster with TanStack, Cost Less with Cloudflare.
+- [MkImage](https://mkimage.ai) — Make Any Images Possible.
 
 ## License
 
