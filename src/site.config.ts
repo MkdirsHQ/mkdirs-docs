@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: 'Docs Template',
+  name: 'Docs',
   description:
-    'A fast, bilingual documentation template powered by FumaPress and deployed on Cloudflare Workers.',
+    'A fast documentation template powered by FumaPress and deployed on Cloudflare Workers.',
   url:
     import.meta.env.PUBLIC_SITE_URL ??
     'https://docs.mksaas.link',
-  logo: '/docs-logo.svg',
-  favicon: '/docs-favicon.svg',
+  logo: '/logo.png',
+  favicon: '/favicon.ico',
   homeLabel: 'Website',
   homeUrl: 'https://github.com/open-fox/docs-template',
   githubUrl: 'https://github.com/open-fox/docs-template',
