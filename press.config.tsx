@@ -57,7 +57,7 @@ export default defineConfig({
       return (
         <>
           <meta name="description" content={siteConfig.description} />
-          <meta name="theme-color" content="#0b0d12" />
+          <meta name="theme-color" content="#121212" />
           <meta property="og:site_name" content={siteConfig.name} />
           <link rel="icon" href={siteConfig.favicon} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />

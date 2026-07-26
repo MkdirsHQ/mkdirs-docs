@@ -6,6 +6,11 @@
 @theme {
   --font-mono: "JetBrains Mono", monospace;
   --default-font-family: "Geist", sans-serif;
+  --color-fd-primary: oklch(55.639% 0.16448 43.087);
+}
+
+.dark {
+  --color-fd-primary: oklch(76.972% 0.15134 51.001);
 }
 
 html {
