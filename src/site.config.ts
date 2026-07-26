@@ -5,8 +5,8 @@ export const siteConfig = {
   url:
     import.meta.env.PUBLIC_SITE_URL ??
     'https://docs.mksaas.link',
-  logo: '/logo.svg',
-  favicon: '/favicon.svg',
+  logo: '/docs-logo.svg',
+  favicon: '/docs-favicon.svg',
   homeLabel: 'Website',
   homeUrl: 'https://github.com/open-fox/docs-template',
   githubUrl: 'https://github.com/open-fox/docs-template',
