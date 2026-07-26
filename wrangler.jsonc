@@ -3,10 +3,10 @@
   "name": "mkdirs-docs",
   "compatibility_date": "2026-07-26",
   "workers_dev": false,
-  "routes": [
+   "routes": [
     {
-      "pattern": "docs.mkdirs.com/*",
-      "zone_name": "mkdirs.com"
+      "pattern": "docs.mkdirs.com",
+      "custom_domain": true
     }
   ],
   "assets": {
