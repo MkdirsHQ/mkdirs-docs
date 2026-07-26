@@ -1,6 +1,16 @@
 {
   "name": "mkdirs-docs",
+  "description": "The bilingual documentation for Mkdirs, powered by FumaPress and deployed on Cloudflare Workers.",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MkdirsHQ/mkdirs-docs.git"
+  },
+  "homepage": "https://docs.mkdirs.com",
+  "bugs": {
+    "url": "https://github.com/MkdirsHQ/mkdirs-docs/issues"
+  },
   "type": "module",
   "sideEffects": false,
   "scripts": {

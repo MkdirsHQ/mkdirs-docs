@@ -59,14 +59,6 @@ export default defineConfig({
           <meta name="description" content={siteConfig.description} />
           <meta name="theme-color" content="#0b0d12" />
           <meta property="og:site_name" content={siteConfig.name} />
-          <meta
-            property="og:image"
-            content={new URL('/og.png', siteConfig.url).toString()}
-          />
-          <meta
-            name="twitter:image"
-            content={new URL('/og.png', siteConfig.url).toString()}
-          />
           <link rel="icon" href={siteConfig.favicon} />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -133,17 +125,7 @@ export default defineConfig({
           {
             text: siteConfig.homeLabel,
             url: siteConfig.homeUrl,
-            external: true,
-          },
-          {
-            text: 'Roadmap',
-            url: siteConfig.roadmapUrl,
-            external: true,
-          },
-          {
-            text: 'X (Twitter)',
-            url: siteConfig.twitterUrl,
-            external: true,
+            external: siteConfig.homeUrl.startsWith('http'),
           },
         ],
         i18n: false,
@@ -151,13 +133,7 @@ export default defineConfig({
           enabled: false,
         },
         sidebar: {
-          footer: (
-            <SidebarFooter
-              githubUrl={siteConfig.githubUrl}
-              twitterUrl={siteConfig.twitterUrl}
-              youtubeUrl={siteConfig.youtubeUrl}
-            />
-          ),
+          footer: <SidebarFooter githubUrl={siteConfig.githubUrl} />,
         },
       };
     },

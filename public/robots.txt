@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mkdirs-docs.javayhu.workers.dev/sitemap.xml
+Sitemap: https://docs.mkdirs.com/sitemap.xml

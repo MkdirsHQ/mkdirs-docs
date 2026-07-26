@@ -2,7 +2,13 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "mkdirs-docs",
   "compatibility_date": "2026-07-26",
-  "workers_dev": true,
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "docs.mkdirs.com",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": "./dist/public",
     "html_handling": "auto-trailing-slash",
