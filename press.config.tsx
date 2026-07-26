@@ -17,6 +17,7 @@ import * as LucideIcons from 'lucide-react';
 import type { MDXComponents } from 'mdx/types';
 import { docs } from './.source/server';
 import { Github } from './src/components/github-icon';
+import { ModeSwitcher } from './src/components/mode-switcher';
 import { Youtube } from './src/components/youtube-icon';
 import { YoutubeVideo } from './src/components/youtube-video';
 import { siteConfig } from './src/site.config';
@@ -30,8 +31,8 @@ const translations = i18n
   .translations()
   .preset('zh', zhCN())
   .add({
-    en: { displayName: 'English' },
-    zh: { displayName: '简体中文' },
+    en: { displayName: '🇺🇸 English' },
+    zh: { displayName: '🇨🇳 中文' },
   });
 
 const lucideMdxComponents = Object.fromEntries(
@@ -128,7 +129,9 @@ export default defineConfig({
         ],
         themeSwitch: {
           enabled: true,
-          mode: 'light-dark-system',
+        },
+        slots: {
+          themeSwitch: ModeSwitcher,
         },
       };
     },

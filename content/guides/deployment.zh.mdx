@@ -1,0 +1,59 @@
+---
+title: 部署到 Cloudflare Workers
+description: 使用模板内置的 Wrangler 配置完成验证、部署和自定义域名绑定。
+icon: Cloud
+---
+
+模板会构建静态 FumaPress 网站，并通过 Cloudflare Workers Static Assets 提供服务。只有根路径和旧版文档链接会优先执行这个很小的 Worker 脚本。
+
+<Steps>
+  <Step>
+    ### 设置站点信息
+
+    更新 `src/site.config.ts`、`public/robots.txt`，以及 `wrangler.jsonc` 中的 Worker 名称。
+  </Step>
+  <Step>
+    ### 登录 Wrangler
+
+    本地使用 `wrangler login`，或在 CI 中提供 `CLOUDFLARE_API_TOKEN` 和 `CLOUDFLARE_ACCOUNT_ID`。
+  </Step>
+  <Step>
+    ### 执行完整验证
+
+    ```bash
+    pnpm check
+    ```
+
+    这个命令会依次检查生成的内容源、TypeScript、生产构建和 Wrangler dry run。
+  </Step>
+  <Step>
+    ### 部署
+
+    ```bash
+    pnpm deploy
+    ```
+  </Step>
+</Steps>
+
+## 自定义域名
+
+当域名已经托管在当前 Cloudflare 账号时，可以添加 Worker Custom Domain：
+
+```json
+{
+  "routes": [
+    {
+      "pattern": "docs.example.com",
+      "custom_domain": true
+    }
+  ]
+}
+```
+
+<Callout type="warn" title="检查现有 DNS">
+  自定义域名不能覆盖已有冲突 CNAME 的主机名，部署路由前需要先确认 DNS 记录。
+</Callout>
+
+## 旧链接兼容
+
+模板内置的 Worker 会将旧版 `/{locale}/docs/...` 永久重定向到 `/{locale}/...`，同时保留查询参数。基于模板创建新站时，应保留 `assets.run_worker_first` 中的这些重定向匹配规则。

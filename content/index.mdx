@@ -13,6 +13,12 @@ This template keeps the application layer intentionally small so most new sites 
   <Card title="Authoring components" href="/en/guides/components" icon={<Blocks />}>
     Use callouts, steps, tabs, cards, file trees, and video embeds.
   </Card>
+  <Card title="Write maintainable docs" href="/en/guides/authoring" icon={<FileText />}>
+    Organize pages, translations, navigation, metadata, and links.
+  </Card>
+  <Card title="Deploy to Workers" href="/en/guides/deployment" icon={<Cloud />}>
+    Validate and publish the static site with Wrangler.
+  </Card>
 </Cards>
 
 ## Included by default
@@ -22,6 +28,7 @@ This template keeps the application layer intentionally small so most new sites 
 - Syntax highlighting and reusable Fumadocs MDX components
 - Per-page Markdown, `llms.txt`, generated Open Graph images, and sitemap
 - Static Cloudflare Workers deployment through Wrangler
+- Compatibility redirects for legacy `/{locale}/docs/...` links
 
 <Callout title="Template boundary">
   Keep reusable behavior in this repository. A derived documentation site should mainly replace files under `content/`, assets under `public/`, and values in `src/site.config.ts` and `wrangler.jsonc`.

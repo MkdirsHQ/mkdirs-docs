@@ -1,0 +1,59 @@
+---
+title: Writing and organizing content
+description: Structure pages, navigation, translations, links, and metadata with a small set of conventions.
+icon: FileText
+---
+
+## Page structure
+
+Every page starts with frontmatter and continues with standard Markdown or MDX:
+
+```mdx
+---
+title: Billing
+description: Configure plans, products, and customer billing.
+icon: CreditCard
+---
+
+## Create a product
+
+Write the page content here.
+```
+
+The `title` and `description` feed navigation, metadata, search, and generated social cards. Any Lucide icon name can be used as `icon`.
+
+## Navigation order
+
+Use `meta.json` in a folder to name the group and control page order:
+
+```json
+{
+  "title": "Guides",
+  "icon": "Blocks",
+  "pages": ["authoring", "components", "deployment"]
+}
+```
+
+## Bilingual pages
+
+Pair the default English file with a `.zh` translation. Folder metadata follows the same convention:
+
+| English | Simplified Chinese |
+| --- | --- |
+| `billing.mdx` | `billing.zh.mdx` |
+| `meta.json` | `meta.zh.json` |
+
+<Callout type="idea" title="Keep slugs stable">
+  Translate page titles and body copy, but keep matching files on the same slug. The language switcher can then move between equivalent pages reliably.
+</Callout>
+
+## Links and assets
+
+- Use locale-aware absolute links such as `/en/guides/authoring` when a destination language is intentional.
+- Use relative Markdown links when the reader should stay on the same locale.
+- Put downloadable or static files in `public/` and reference them from `/`.
+- Add site-wide React components in `press.config.tsx`; avoid per-page imports for common UI.
+
+## Built-in outputs
+
+Each build also creates searchable indexes, per-page Markdown, `llms.txt`, `sitemap.xml`, and generated Open Graph images. Update `src/site.config.ts` before publishing so every generated URL uses the production domain.

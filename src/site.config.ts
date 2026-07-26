@@ -4,7 +4,7 @@ export const siteConfig = {
     'A fast, bilingual documentation template powered by FumaPress and deployed on Cloudflare Workers.',
   url:
     import.meta.env.PUBLIC_SITE_URL ??
-    'https://docs-template.javayhu.workers.dev',
+    'https://docs.mksaas.link',
   logo: '/logo.svg',
   favicon: '/favicon.svg',
   homeLabel: 'Website',

@@ -1,20 +1,71 @@
 ---
-title: Authoring components
-description: Reusable components available in every Markdown document.
+title: Component showcase
+description: A practical gallery of the reusable components available in every MDX document.
 icon: Blocks
 ---
 
+Every component on this page is registered globally in `press.config.tsx`, so an MDX page can use it without imports.
+
+## Cards
+
+<Cards>
+  <Card title="Internal link" href="/en/getting-started" icon={<Rocket />}>
+    Cards can guide readers to another documentation page.
+  </Card>
+  <Card title="External link" href="https://developers.cloudflare.com/workers/" icon={<ExternalLink />}>
+    They can also open a related external resource.
+  </Card>
+</Cards>
+
 ## Callouts
+
+<Callout type="info" title="Information">
+  Give readers useful context without interrupting the main flow.
+</Callout>
 
 <Callout type="warn" title="Keep it useful">
   Use a callout for information readers may otherwise miss.
 </Callout>
 
+<Callout type="success" title="Ready to ship">
+  The same component supports success, error, warning, idea, and custom icon variants.
+</Callout>
+
+## Guided steps
+
+<Steps>
+  <Step>
+    ### Create the page
+
+    Add an `.mdx` file under `content/`.
+  </Step>
+  <Step>
+    ### Add its translation
+
+    Create a matching `.zh.mdx` file when the page is bilingual.
+  </Step>
+  <Step>
+    ### Add navigation metadata
+
+    Put the page slug in the nearest `meta.json` and `meta.zh.json` files.
+  </Step>
+</Steps>
+
 ## Tabs
 
 <Tabs items={['pnpm', 'npm']}>
-  <Tab value="pnpm">`pnpm install`</Tab>
-  <Tab value="npm">`npm install`</Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm install
+    pnpm dev
+    ```
+  </Tab>
+  <Tab value="npm">
+    ```bash
+    npm install
+    npm run dev
+    ```
+  </Tab>
 </Tabs>
 
 ## Accordions
@@ -23,12 +74,55 @@ icon: Blocks
   <Accordion title="Where should reusable behavior live?">
     Put it in the template, then keep derived sites focused on content.
   </Accordion>
+  <Accordion title="Can a page use React components?">
+    Yes. Register a component in `getMdxComponents()` and it becomes available to every MDX page.
+  </Accordion>
+  <Accordion title="Do translated pages need imports?">
+    No. English and Chinese pages receive the same global component set.
+  </Accordion>
 </Accordions>
+
+## File trees
+
+<Files>
+  <Folder name="content" defaultOpen>
+    <File name="index.mdx" />
+    <File name="index.zh.mdx" />
+    <Folder name="guides" defaultOpen>
+      <File name="components.mdx" />
+      <File name="components.zh.mdx" />
+      <File name="meta.json" />
+      <File name="meta.zh.json" />
+    </Folder>
+  </Folder>
+</Files>
+
+## API properties
+
+<TypeTable
+  type={{
+    title: {
+      description: 'Accessible title shown above the embedded player.',
+      type: 'string',
+      default: 'YouTube video player',
+    },
+    url: {
+      description: 'YouTube embed URL used by the iframe.',
+      type: 'string',
+      required: true,
+    },
+  }}
+/>
 
 ## Video
 
-Use the global `YoutubeVideo` component without importing it inside MDX:
+Use the global `YoutubeVideo` component without importing it inside MDX. It is responsive and includes sensible iframe permissions by default:
 
 ```mdx
 <YoutubeVideo url="https://www.youtube.com/embed/VIDEO_ID" />
 ```
+
+<YoutubeVideo
+  url="https://www.youtube.com/embed/5tfid3SIq00"
+  title="Documentation video example"
+/>

@@ -1,0 +1,59 @@
+---
+title: Cloudflare Workers deployment
+description: Validate, deploy, and connect a custom domain using the included Wrangler configuration.
+icon: Cloud
+---
+
+The template builds a static FumaPress site and serves it with Cloudflare Workers Static Assets. Only root and legacy documentation URLs execute the small Worker script first.
+
+<Steps>
+  <Step>
+    ### Set site identity
+
+    Update `src/site.config.ts`, `public/robots.txt`, and the Worker name in `wrangler.jsonc`.
+  </Step>
+  <Step>
+    ### Authenticate Wrangler
+
+    Use `wrangler login` locally or provide `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` in CI.
+  </Step>
+  <Step>
+    ### Run the full validation
+
+    ```bash
+    pnpm check
+    ```
+
+    This runs generated source checks, TypeScript, the production build, and a Wrangler dry run.
+  </Step>
+  <Step>
+    ### Deploy
+
+    ```bash
+    pnpm deploy
+    ```
+  </Step>
+</Steps>
+
+## Custom domain
+
+Add a Worker Custom Domain when Cloudflare is authoritative for the zone:
+
+```json
+{
+  "routes": [
+    {
+      "pattern": "docs.example.com",
+      "custom_domain": true
+    }
+  ]
+}
+```
+
+<Callout type="warn" title="Check existing DNS">
+  A custom domain cannot replace a hostname that already has a conflicting CNAME record. Confirm the hostname before deploying the route.
+</Callout>
+
+## Legacy links
+
+The included Worker permanently redirects old `/{locale}/docs/...` links to `/{locale}/...` and preserves query parameters. Keep these redirect patterns in `assets.run_worker_first` when deriving a new site from the template.

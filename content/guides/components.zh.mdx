@@ -1,20 +1,71 @@
 ---
-title: 文档组件
-description: 所有 Markdown 文档中都可以直接使用的组件。
+title: 组件展示
+description: 所有 MDX 文档中都能直接使用的可复用组件示例。
 icon: Blocks
 ---
 
+本页的组件均在 `press.config.tsx` 中全局注册，因此 MDX 页面无需导入即可使用。
+
+## 卡片
+
+<Cards>
+  <Card title="站内链接" href="/zh/getting-started" icon={<Rocket />}>
+    使用卡片引导读者前往另一篇文档。
+  </Card>
+  <Card title="外部链接" href="https://developers.cloudflare.com/workers/" icon={<ExternalLink />}>
+    也可以链接到相关的外部资源。
+  </Card>
+</Cards>
+
 ## 提示框
+
+<Callout type="info" title="补充信息">
+  在不打断主线的情况下，为读者提供有用背景。
+</Callout>
 
 <Callout type="warn" title="保持实用">
   只在读者容易忽略重要信息时使用提示框。
 </Callout>
 
+<Callout type="success" title="可以发布">
+  同一组件还支持成功、错误、警告、想法和自定义图标等样式。
+</Callout>
+
+## 步骤引导
+
+<Steps>
+  <Step>
+    ### 创建页面
+
+    在 `content/` 下添加 `.mdx` 文件。
+  </Step>
+  <Step>
+    ### 添加翻译
+
+    双语页面需要创建对应的 `.zh.mdx` 文件。
+  </Step>
+  <Step>
+    ### 配置导航
+
+    将页面 slug 加入最近的 `meta.json` 和 `meta.zh.json`。
+  </Step>
+</Steps>
+
 ## 标签页
 
 <Tabs items={['pnpm', 'npm']}>
-  <Tab value="pnpm">`pnpm install`</Tab>
-  <Tab value="npm">`npm install`</Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm install
+    pnpm dev
+    ```
+  </Tab>
+  <Tab value="npm">
+    ```bash
+    npm install
+    npm run dev
+    ```
+  </Tab>
 </Tabs>
 
 ## 折叠面板
@@ -23,12 +74,55 @@ icon: Blocks
   <Accordion title="通用能力应该放在哪里？">
     放在模板中，让派生的文档站专注于内容。
   </Accordion>
+  <Accordion title="页面可以使用 React 组件吗？">
+    可以。在 `getMdxComponents()` 中注册后，所有 MDX 页面都能使用。
+  </Accordion>
+  <Accordion title="翻译页面需要单独导入吗？">
+    不需要。中英文页面使用相同的全局组件集合。
+  </Accordion>
 </Accordions>
+
+## 文件树
+
+<Files>
+  <Folder name="content" defaultOpen>
+    <File name="index.mdx" />
+    <File name="index.zh.mdx" />
+    <Folder name="guides" defaultOpen>
+      <File name="components.mdx" />
+      <File name="components.zh.mdx" />
+      <File name="meta.json" />
+      <File name="meta.zh.json" />
+    </Folder>
+  </Folder>
+</Files>
+
+## API 属性
+
+<TypeTable
+  type={{
+    title: {
+      description: '显示在嵌入播放器上的无障碍标题。',
+      type: 'string',
+      default: 'YouTube video player',
+    },
+    url: {
+      description: 'iframe 使用的 YouTube 嵌入地址。',
+      type: 'string',
+      required: true,
+    },
+  }}
+/>
 
 ## 视频
 
-`YoutubeVideo` 已经全局注册，无需在 MDX 中导入：
+`YoutubeVideo` 已经全局注册，无需在 MDX 中导入。它默认自适应宽度，并设置了合理的 iframe 权限：
 
 ```mdx
 <YoutubeVideo url="https://www.youtube.com/embed/VIDEO_ID" />
 ```
+
+<YoutubeVideo
+  url="https://www.youtube.com/embed/5tfid3SIq00"
+  title="文档视频示例"
+/>

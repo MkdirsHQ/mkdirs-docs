@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://docs-template.javayhu.workers.dev/sitemap.xml
+Sitemap: https://docs.mksaas.link/sitemap.xml

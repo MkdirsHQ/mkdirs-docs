@@ -4,10 +4,25 @@
   "main": "./src/worker.ts",
   "compatibility_date": "2026-07-26",
   "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "docs.mksaas.link",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": "./dist/public",
     "binding": "ASSETS",
-    "run_worker_first": ["/"],
+    "run_worker_first": [
+      "/",
+      "/docs",
+      "/docs/*",
+      "/en/docs",
+      "/en/docs/*",
+      "/zh/docs",
+      "/zh/docs/*"
+    ],
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   },
